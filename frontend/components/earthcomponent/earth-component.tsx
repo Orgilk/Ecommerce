@@ -21,15 +21,15 @@ const Earthcomponent = () => {
                         transition={{ delay: 0.6 }}
                     >
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold max-w-7xl mx-auto relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-200 dark:via-neutral-100 dark:to-neutral-300">
-                            Buy amazing products <div className="-mt-10">
-                                <br /> with{" "}
+                            Бүтээгдэхүүн худалдан <div className="-mt-10">
+                                <br /> авалтыг{" "}
                                 <Cover>
-                                    <span className="text-red-400">lightning-fast delivery</span>
+                                    <span className="text-red-400">хамгийн хурданаар</span>
                                 </Cover>
                             </div>
                         </h1>
                         <p className="text-lg md:text-xl lg:text-2xl mt-4 text-neutral-600 dark:text-neutral-400">
-                            Shop now and experience speed like never before!
+                           Шуурхай хүргэнэ
                         </p>
                     </motion.div>
 

@@ -28,7 +28,7 @@ interface Product {
 }
 
 export function AppleCardsCarouselDemo() {
-    const selectedProductIds = [30, 31, 32, 33, 36, 37, 41, 44, 45, 46, 161, 186, 191];
+    const selectedProductIds = [30, 31, 32, 33, 34];
     const filteredProducts = products.filter(product =>
         selectedProductIds.includes(product.id)
     );

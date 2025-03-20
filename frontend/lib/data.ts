@@ -2613,8 +2613,8 @@ export const products: Product[] = [
   },
   {
     "id": 30,
-    "name": "Ruby Floral A-line Silk Suit set",
-    "price": 5499,
+    "name": "Натурвит чацарганатай 500гр",
+    "price": 13000,
     "rating": 4.2,
     "reviews": 10200,
     "inStock": 10,
@@ -2634,12 +2634,12 @@ export const products: Product[] = [
       "XXL"
     ],
     "images": [
-      "/detailphotos/30.1.webp",
-      "/detailphotos/30.2.webp",
-      "/detailphotos/30.3.webp",
-      "/detailphotos/30.4.webp",
-      "/detailphotos/30.5.webp",
-      "/detailvideos/30.mp4"
+      "/detailphotos/naturvit.png",
+      // "/detailphotos/30.2.webp",
+      // "/detailphotos/30.3.webp",
+      // "/detailphotos/30.4.webp",
+      // "/detailphotos/30.5.webp",
+      // "/detailvideos/30.mp4"
     ],
     "video": "/detailvideos/30.mp4",
     "features": [
@@ -2650,7 +2650,7 @@ export const products: Product[] = [
       "Kurta length 46",
       "Pant length 38"
     ],
-    "description": "Discover the epitome of refined elegance with this exceptional piece from our premium collection. Each garment represents the perfect fusion of traditional craftsmanship and contemporary design sensibilities, creating an ensemble that stands apart in both quality and style.\n\nOur master craftsmen have selected the finest materials, combining traditional techniques with modern innovation. The fabric's unique composition allows for optimal breathability while maintaining its shape and color through multiple washes. This exceptional quality ensures that the garment remains a cherished part of your wardrobe for years to come.\n\nOur designers have masterfully combined elements of traditional artistry with modern aesthetics. The silhouette has been carefully crafted to flatter various body types, while the thoughtful incorporation of design elements ensures versatility in styling options.\n\nThe versatility of this design allows for creative styling options that suit various occasions. Whether you're attending a formal gathering or enjoying a casual outing, this piece can be accessorized to create the perfect look. Its adaptable nature makes it an essential component of a well-curated wardrobe.\n\nPerfect for a wide range of occasions, from formal celebrations to elegant casual gatherings. The sophisticated design ensures you'll make a lasting impression at any event. Whether you're attending a wedding, corporate function, or social gathering, this piece will help you maintain an air of refined elegance.\n\nTo maintain the pristine condition of your garment, we recommend following our specialized care instructions. The fabric responds well to gentle handling and appropriate cleaning methods. Regular maintenance will ensure that the colors remain vibrant and the material maintains its superior quality throughout its lifetime.\n\nKey Features:\n- Designed to provide optimal comfort throughout the day\n- Created using sustainable practices\n- Easy maintenance and care requirements\n- Premium quality materials ensuring lasting comfort and durability",
+    "description": "НАТУРВИТ - ЧАЦАРГАНАТАЙ ВИТАМИН, Антиоксидант, Томуу, томуу төст өвчнөөс урьдчилан сэргийлэх, Биеийн эсэргүүцлийн сайжруулна, НАТУРВИТ - ЦАЙРТАЙ ВИТАМИН C, Антиоксидант, Биеийн эсэргүүцлийн сайжруулна, Үс, арьс, хумсны коолагены нийлэгжилтийг сайжруулах үйлчилгээтэй, Энэхүү бүтээгдэхүүн оношлох, эмчлэх зорилгоор хийгдээгүй болно.б, Эрүүл энх амьдралын төлөө хамтдаа",
     "chartData": [
       {
         "month": "Jan",
@@ -2704,8 +2704,8 @@ export const products: Product[] = [
   },
   {
     "id": 31,
-    "name": "Ruby Floral A-line Silk Suit set",
-    "price": 5699,
+    "name": "Витамин С 1000мг",
+    "price": 42000,
     "rating": 4.6,
     "reviews": 7450,
     "inStock": 10,
@@ -2715,7 +2715,7 @@ export const products: Product[] = [
     "color": [
       "Green"
     ],
-    "category": "latest-collection",
+    "category": "шинээр нэмэгдсэн",
     "model": "RP-777)",
     "size": [
       "XS",
@@ -2726,11 +2726,11 @@ export const products: Product[] = [
       "XXL"
     ],
     "images": [
-      "/detailphotos/31.1.webp",
-      "/detailphotos/31.2.webp",
-      "/detailphotos/31.3.webp",
-      "/detailphotos/31.4.webp",
-      "/detailphotos/31.5.webp"
+      "/detailphotos/vitaminc.png",
+      "/detailphotos/vitaminc_1.png",
+      // "/detailphotos/31.3.webp",
+      // "/detailphotos/31.4.webp",
+      // "/detailphotos/31.5.webp"
     ],
     "video": "/detailvideos/31.mp4",
     "features": [
@@ -2795,8 +2795,8 @@ export const products: Product[] = [
   },
   {
     "id": 32,
-    "name": "Gerua Chanderi Silk Suit with Handwork Detailing",
-    "price": 5999,
+    "name": "Vitamin A-10000",
+    "price": 23500,
     "rating": 4.5,
     "reviews": 7230,
     "inStock": 10,
@@ -2806,7 +2806,7 @@ export const products: Product[] = [
     "color": [
       "Red"
     ],
-    "category": "latest-collection",
+    "category": "шинээр нэмэгдсэн",
     "model": "RP-814)",
     "size": [
       "XS",
@@ -2817,11 +2817,7 @@ export const products: Product[] = [
       "XXL"
     ],
     "images": [
-      "/detailphotos/32.1.webp",
-      "/detailphotos/32.2.webp",
-      "/detailphotos/32.3.webp",
-      "/detailphotos/32.4.webp",
-      "/detailphotos/32.5.webp"
+      "/detailphotos/vitamina.png",
     ],
     "video": "/detailvideos/32.mp4",
     "features": [
@@ -2886,8 +2882,8 @@ export const products: Product[] = [
   },
   {
     "id": 33,
-    "name": "Jade Oasis Coord Set with Floral Embroidered Detailing",
-    "price": 3299,
+    "name": "Vitamin E-1000",
+    "price": 45000,
     "rating": 4.9,
     "reviews": 12030,
     "inStock": 10,
@@ -2897,7 +2893,7 @@ export const products: Product[] = [
     "color": [
       "Green"
     ],
-    "category": "lounge-wear",
+    "category": "витамин",
     "model": "RP-787)",
     "size": [
       "XS",
@@ -2908,13 +2904,7 @@ export const products: Product[] = [
       "XXL"
     ],
     "images": [
-      "/detailphotos/33.1.webp",
-      "/detailphotos/33.2.webp",
-      "/detailphotos/33.3.webp",
-      "/detailphotos/33.4.webp",
-      "/detailphotos/33.5.webp",
-      "/detailphotos/33.6.webp",
-      "/detailphotos/33.7.webp"
+      "/detailphotos/vitamine.png",
     ],
     "video": "/detailvideos/33.mp4",
     "features": [
@@ -2979,8 +2969,8 @@ export const products: Product[] = [
   },
   {
     "id": 34,
-    "name": "Moonlight silk Embroidered Coord Set",
-    "price": 3299,
+    "name": "Vitamin D-1000",
+    "price": 32500,
     "rating": 4.8,
     "reviews": 10676,
     "inStock": 10,
@@ -2990,7 +2980,7 @@ export const products: Product[] = [
     "color": [
       "Cream"
     ],
-    "category": "lounge-wear",
+    "category": "шинээр нэмэгдсэн",
     "model": "RP-781)",
     "size": [
       "XS",
@@ -3001,9 +2991,7 @@ export const products: Product[] = [
       "XXL"
     ],
     "images": [
-      "/detailphotos/34.1.webp",
-      "/detailphotos/34.2.webp",
-      "/detailphotos/34.3.webp"
+      "/detailphotos/vitamind.png",
     ],
     "video": "/detailvideos/34.mp4",
     "features": [

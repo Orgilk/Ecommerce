@@ -185,10 +185,10 @@ export default function Login() {
                   <User size={40} className="text-white" />
                 </motion.div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-                  Welcome Back
+                  Тавтай морил
                 </h2>
                 <p className="mt-3 text-gray-600">
-                  Sign in to continue your journey
+                 Нэвтрэх
                 </p>
               </motion.div>
 
@@ -228,7 +228,7 @@ export default function Login() {
                 >
                   {isLoading ? 'Signing in...' : (
                     <>
-                      Sign In
+                      Нэвтрэх
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
@@ -242,16 +242,16 @@ export default function Login() {
                     href="/forgot-password"
                     className="text-sm text-red-600 hover:text-red-700 transition-colors"
                   >
-                    Forgot your password?
+                    Нууц үгээ мартсан?
                   </Link>
 
                   <p className="text-gray-600">
-                    Don't have an account?{' '}
+                    Бүртгэл байхгүй бол?{' '}
                     <Link
                       href="/register"
                       className="text-red-600 hover:text-red-700 transition-colors font-medium"
                     >
-                      Sign Up
+                      Бүртгүүлэх
                     </Link>
                   </p>
                 </motion.div>

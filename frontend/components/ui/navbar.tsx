@@ -20,7 +20,7 @@ import Cookies from "js-cookie";
 import { toast, Toaster } from 'react-hot-toast'
 
 const collections = {
-  "New Arrivals": {
+  "ШИНЭЭР ИРСЭН": {
     basePath: "/new-arrival",
     items: [
       { title: "Latest Collections", category: "latest-collection" },
@@ -31,7 +31,17 @@ const collections = {
       { title: "Bedsheets", category: "bedsheets" }
     ]
   },
-  "Ethnic Wear": {
+  "ХАМГИЙН ЭРЭЛТТЭЙ": {
+    basePath: "/bestsellers",
+    items: [
+      { title: "Most Popular", category: "popular" },
+      { title: "Trending Now", category: "trending" },
+      { title: "Top Rated", category: "top-rated" },
+      { title: "Customer Favorites", category: "favorites" },
+      { title: "Premium Collection", category: "premium" }
+    ]
+  },
+  "ЭМ": {
     basePath: "/ethnic-wear",
     items: [
       { title: "Traditional Suits", category: "traditional-suits" },
@@ -42,17 +52,7 @@ const collections = {
       { title: "Traditional Sarees", category: "traditional-sarees" },
     ]
   },
-  "Bestsellers": {
-    basePath: "/bestsellers",
-    items: [
-      { title: "Most Popular", category: "popular" },
-      { title: "Trending Now", category: "trending" },
-      { title: "Top Rated", category: "top-rated" },
-      { title: "Customer Favorites", category: "favorites" },
-      { title: "Premium Collection", category: "premium" }
-    ]
-  },
-  "Fabrics": {
+  "ЭМНЭЛГИЙН ХЭРЭГСЭЛ": {
     basePath: "/fabrics",
     items: [
       { title: "Cotton", category: "cotton" },
@@ -62,15 +62,15 @@ const collections = {
       { title: "Premium Fabrics", category: "premium" }
     ]
   },
-  "Special Offers": {
-    basePath: "/sale",
-    items: [
-      { title: "Clearance Sale", category: "clearance" },
-      { title: "Season End", category: "season-end" },
-      { title: "Bundle Deals", category: "bundles" },
-      { title: "First Order Discount", category: "first-order" }
-    ]
-  }
+  // "Special Offers": {
+  //   basePath: "/sale",
+  //   items: [
+  //     { title: "Clearance Sale", category: "clearance" },
+  //     { title: "Season End", category: "season-end" },
+  //     { title: "Bundle Deals", category: "bundles" },
+  //     { title: "First Order Discount", category: "first-order" }
+  //   ]
+  // }
 };
 
 export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
@@ -343,7 +343,7 @@ export function Navbar() {
         className="flex items-center space-x-2 rounded-full bg-gray-100 px-4 py-2 text-gray-600 hover:bg-gray-200"
       >
         <User className="h-5 w-5" />
-        <span className="hidden sm:inline">Login</span>
+        <span className="hidden sm:inline">Нэвтрэх</span>
       </button>
     );
   };
@@ -369,7 +369,7 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Company logo" />
+            <img src="/logo.png" alt="Company logo" className="h-16" />
           </Link>
 
           <div className="hidden lg:block flex-1 px-8">

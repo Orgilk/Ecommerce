@@ -6,16 +6,18 @@ import { useSearchParams } from "next/navigation";
 import { ProductCard } from "@/components/ui/product-card";
 import { ProductFilters } from "@/components/products/product-filters";
 import { ProductSkeleton } from "@/components/products/product-skeleton";
+import { products } from "@/lib/data";
 
-interface Product {
-  _id: string;
+
+type Product = {
+  id: number;
   name: string;
-  description?: string;
-  category: string;
   price: number;
-  size?: string[];
-  image?: string;
-}
+  inStock: number; // Update accordingly
+  description: string;
+  category: string;
+  // size: number;
+};
 
 const CategoryProductListingPage = () => {
   const searchParams = useSearchParams();
@@ -30,7 +32,8 @@ const CategoryProductListingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Array<Product>>([]);
+
   const [allProducts, setAllProducts] = useState<Product[]>([]);
 
   // Mobile and Responsive Checks
@@ -69,30 +72,36 @@ const CategoryProductListingPage = () => {
   // Fetch Products
   useEffect(() => {
     async function fetchData() {
-      try {
-        setIsLoading(true);
-        const response = await fetch('/api/product');
-        const data = await response.json();
+          const selectedProductIds = [30, 31, 32, 33, 34];
+          const filteredProducts = products.filter(product =>
+              selectedProductIds.includes(product.id)
+          );
+                setAllProducts(products);
+        setFilteredProducts(filteredProducts);
+      // try {
+      //   setIsLoading(true);
+      //   const response = await fetch('/api/product');
+      //   const data = await response.json();
 
-        const productsArray = Array.isArray(data)
-          ? data
-          : data.data
-            ? data.data
-            : [];
+      //   const productsArray = Array.isArray(data)
+      //     ? data
+      //     : data.data
+      //       ? data.data
+      //       : [];
 
-        const productsToSet = categoryFromURL
-          ? productsArray.filter((product: Product) => product.category === categoryFromURL)
-          : productsArray;
+      //   const productsToSet = categoryFromURL
+      //     ? productsArray.filter((product: Product) => product.category === categoryFromURL)
+      //     : productsArray;
 
-        setAllProducts(productsArray);
-        setFilteredProducts(productsToSet);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-        setAllProducts([]);
-        setFilteredProducts([]);
-      } finally {
-        setIsLoading(false);
-      }
+      //   setAllProducts(productsArray);
+      //   setFilteredProducts(productsToSet);
+      // } catch (error) {
+      //   console.error("Error fetching products:", error);
+      //   setAllProducts([]);
+      //   setFilteredProducts([]);
+      // } finally {
+      //   setIsLoading(false);
+      // }
     }
 
     fetchData();
@@ -120,11 +129,11 @@ const CategoryProductListingPage = () => {
         product.price >= priceRange[0] && product.price <= priceRange[1]
       );
 
-      if (selectedSizes.length > 0) {
-        result = result.filter(product =>
-          product.size?.some((size: string) => selectedSizes.includes(size))
-        );
-      }
+      // if (selectedSizes.length > 0) {
+      //   result = result.filter(product =>
+      //     product.size?.some((size: string) => selectedSizes.includes(size))
+      //   );
+      // }
 
       switch (sortBy) {
         case "price-asc":
@@ -286,7 +295,7 @@ const CategoryProductListingPage = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-            Found {filteredProducts.length} products in {selectedCategory}
+             {filteredProducts.length} Бүтээгдэхүүн {selectedCategory}
             {searchQuery && (
               <span className="font-medium text-neutral-900 dark:text-neutral-100">
                 {" "}for "{searchQuery}"
@@ -318,7 +327,7 @@ const CategoryProductListingPage = () => {
             ) : (
               filteredProducts.map((product) => (
                 <motion.div
-                  key={product._id}
+                  key={product.id}
                   variants={productCardVariants}
                   initial="hidden"
                   animate="visible"
@@ -341,13 +350,13 @@ const CategoryProductListingPage = () => {
             className="text-center py-12"
           >
             <p className="text-xl text-neutral-600 dark:text-neutral-400">
-              No products found matching your criteria
+             Таны хайлтанд тохирох бүтээгдэхүүн олдсонгүй
             </p>
             <button
               onClick={resetFilters}
               className="mt-4 px-6 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors duration-300"
             >
-              Reset Filters
+              Шүүлтүүрийг өөрчлөх
             </button>
           </motion.div>
         )}

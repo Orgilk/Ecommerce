@@ -72,11 +72,11 @@ export function ProductFilters({
   const [isAnimating, setIsAnimating] = useState(true);
 
   const uniqueCategories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
-  const uniqueSizes = Array.from(new Set(products.flatMap((p) => p.size || [])));
+  const uniqueSizes = Array.from(new Set(products.flatMap((p) => p.model || [])));
   const uniqueColors = Array.from(new Set(products.flatMap((p) => p.color || ["red"])));
 
   const minPrice = Math.min(...products.map(p => p.price));
-  const maxPrice = Math.max(...products.map(p => p.price));
+  const maxPrice = 20000000;
 
 
   const placeholders = [
@@ -262,7 +262,7 @@ export function ProductFilters({
       </div>
 
       <div className="space-y-2">
-        <h3 className="text-sm font-medium">Price Range</h3>
+        <h3 className="text-sm font-medium">Үнээр</h3>
         <div className="px-2">
           <Slider
             defaultValue={[minPrice, maxPrice]}
@@ -274,8 +274,8 @@ export function ProductFilters({
             className="w-full"
           />
           <div className="mt-2 flex items-center justify-between text-sm text-neutral-600">
-            <span>₹{internalPriceRange[0]}</span>
-            <span>₹{internalPriceRange[1]}</span>
+            <span>{internalPriceRange[0]}₮</span>
+            <span>{internalPriceRange[1]}₮</span>
           </div>
         </div>
       </div>
@@ -283,7 +283,7 @@ export function ProductFilters({
 
       {uniqueSizes.length > 0 && (
         <div className="space-y-2">
-          <h3 className="text-sm font-medium">Sizes</h3>
+          <h3 className="text-sm font-medium">Model</h3>
           <div className="space-y-2">
             {uniqueSizes.map((size) => (
               <div key={size} className="flex items-center space-x-2">

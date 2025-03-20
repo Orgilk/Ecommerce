@@ -32,9 +32,9 @@ const staticImages: Photo[] = [
   },
   {
     id: 'static2',
-    imageUrl: '/corosal/corosal2.webp',
-    title: 'Wedding Specials',
-    source: 'New wedding collection in jaipuri styles',
+    imageUrl: '/corosal/pharmacy.jpg',
+    title: 'Энэ сарын хямдрал',
+    source: 'Эмнэлгийн хэрэгслийн худалдаа',
     link: '/new-arrival?category=indian-sarees'
   },
   {

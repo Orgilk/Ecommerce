@@ -32,7 +32,7 @@ const CategoryProductListingPage = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [allProducts, setAllProducts] = useState<Product[]>([]);
-
+  console.log("all: ", allProducts)
   // Mobile and Responsive Checks
   useEffect(() => {
     const checkMobileSize = () => {
@@ -286,7 +286,7 @@ const CategoryProductListingPage = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-            Found {filteredProducts.length} products in {selectedCategory}
+             {filteredProducts.length} Бүтээгдэхүүн шинээр нэмэгдсэн
             {searchQuery && (
               <span className="font-medium text-neutral-900 dark:text-neutral-100">
                 {" "}for "{searchQuery}"
@@ -341,13 +341,13 @@ const CategoryProductListingPage = () => {
             className="text-center py-12"
           >
             <p className="text-xl text-neutral-600 dark:text-neutral-400">
-              No products found matching your criteria
+            Таны хайлтанд тохирох бүтээгдэхүүн олдсонгүй
             </p>
             <button
               onClick={resetFilters}
               className="mt-4 px-6 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors duration-300"
             >
-              Reset Filters
+            Шүүлтүүрийг өөрчлөх
             </button>
           </motion.div>
         )}

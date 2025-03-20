@@ -103,7 +103,7 @@ function MainComponent() {
     >
       {/* Fashion Carousel Section */}
       <div className="mt-6">
-        <Heading text="Step into Tradition with Rajwadi Poshak" />
+        <Heading text="" />
         <div className="w-full overflow-hidden">
           <FashionCarousel />
         </div>
@@ -111,7 +111,7 @@ function MainComponent() {
 
       {/* Shop the Look Section */}
       <div className="mt-10 sm:mt-20">
-        <Heading text="Shop the Look" />
+        <Heading text="Шинээр нэмэгдсэн" />
         <div className="w-full overflow-hidden">
           <AppleCardsCarouselDemo />
         </div>
@@ -142,7 +142,7 @@ function MainComponent() {
       </div>
 
       <div className="mt-12 sm:mt-20 hidden md:block">
-        <Heading text="Fast, Reliable, and Right to Your Door!" />
+        <Heading text="Хурдан шуурхай хүргэлт, Таны гарт!" />
         <div className="hidden md:block">
           <Earthcomponent />
         </div>
