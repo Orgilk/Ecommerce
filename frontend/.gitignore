@@ -12,7 +12,7 @@
 /.next/
 /out/
 
-# production
+# ion
 /build
 
 # misc

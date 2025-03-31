@@ -6,86 +6,42 @@ import { Star, ImageOff, Info } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { products as productData } from '@/app/product/data';
 
 export interface Product {
-    _id: string;
-    name: string;
+    id: number;
+    name: string | "";
+    sale?: string;
     price: number;
     rating: number;
     reviews: number;
-    inStock: number;
+    answers: number;
+    inStock: boolean;  // Make this a boolean
     delivery: string;
     deliveryDate: string;
     seller: string;
-    color: string[];
+    color?: string[];
     category: string;
+    video?: string;
     model: string;
-    size: string[];
+    size?: string[];
     images: string[];
-    redirectLink: string;
-}
+    features: string[];
+    description: string;
+    chartData: ChartData[];
+  }
+
 
 const ProductGridComponent: React.FC = () => {
-    const [products, setProducts] = useState<Product[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    // Initialize state with the imported product data
+    const [products, setProducts] = useState<Product[]>(productData);
+
     const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
     const router = useRouter();
-
-    useEffect(() => {
-        fetchProducts();
-    }, []);
-
-    const fetchProducts = async () => {
-        try {
-            setIsLoading(true);
-            const response = await fetch('/api/category');
-            if (!response.ok) throw new Error('Failed to fetch products');
-            const result = await response.json();
-            if (result?.data && Array.isArray(result.data)) {
-                setProducts(result.data);
-            } else {
-                throw new Error('Invalid response format');
-            }
-            setError(null);
-        } catch (err: any) {
-            console.error('Fetch Error:', err);
-            setError(err.message || 'Failed to fetch data.');
-        } finally {
-            setIsLoading(false);
-        }
-    };
 
     const handleImageError = (productId: string) => {
         setImageErrors(prev => ({ ...prev, [productId]: true }));
     };
-
-    if (isLoading) {
-        return (
-            <div className="flex justify-center items-center min-h-screen">
-                <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{
-                        repeat: Infinity,
-                        duration: 1,
-                        ease: "linear"
-                    }}
-                    className="w-16 h-16 border-4 border-red-600 border-t-transparent rounded-full"
-                />
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="flex items-center justify-center min-h-[400px]">
-                <div className="text-center p-8 bg-red-50 rounded-lg">
-                    <h3 className="text-red-600 text-xl font-semibold mb-2">Error Loading Products</h3>
-                    <p className="text-red-500">{error}</p>
-                </div>
-            </div>
-        );
-    }
 
     return (
         <motion.div
