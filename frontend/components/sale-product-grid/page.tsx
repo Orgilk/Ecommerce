@@ -29,12 +29,12 @@ export interface Product {
     features: string[];
     description: string;
     chartData: ChartData[];
-  }
-
+}
 
 const ProductGridComponent: React.FC = () => {
-    // Initialize state with the imported product data
-    const [products, setProducts] = useState<Product[]>(productData);
+    const [products, setProducts] = useState<Product[]>(
+        productData.filter(product => product.id >= 30 && product.id <= 34)
+    );
 
     const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
     const router = useRouter();
