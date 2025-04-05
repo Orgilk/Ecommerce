@@ -6,15 +6,29 @@ import { useSearchParams } from "next/navigation";
 import { ProductCard } from "@/components/ui/product-card";
 import { ProductFilters } from "@/components/products/product-filters";
 import { ProductSkeleton } from "@/components/products/product-skeleton";
+import { products as productData } from '@/app/product/data';
 
-interface Product {
-  _id: string;
-  name: string;
-  description?: string;
-  category: string;
+export interface Product {
+  id: number;
+  name: string | "";
+  sale?: string;
   price: number;
+  rating: number;
+  reviews: number;
+  answers: number;
+  inStock: boolean;  // Make this a boolean
+  delivery: string;
+  deliveryDate: string;
+  seller: string;
+  color?: string[];
+  category: string;
+  video?: string;
+  model: string;
   size?: string[];
-  image?: string;
+  images: string[];
+  features: string[];
+  description: string;
+  chartData: ChartData[];
 }
 
 const CategoryProductListingPage = () => {
@@ -32,6 +46,7 @@ const CategoryProductListingPage = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [allProducts, setAllProducts] = useState<Product[]>([]);
+
   console.log("all: ", allProducts)
   // Mobile and Responsive Checks
   useEffect(() => {
@@ -68,23 +83,16 @@ const CategoryProductListingPage = () => {
 
   // Fetch Products
   useEffect(() => {
-    async function fetchData() {
+    const fetchProducts = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('/api/product');
-        const data = await response.json();
-
-        const productsArray = Array.isArray(data)
-          ? data
-          : data.data
-            ? data.data
-            : [];
-
+        const products = productData.filter((product) => product.id >= 30 && product.id <= 34);
+        
         const productsToSet = categoryFromURL
-          ? productsArray.filter((product: Product) => product.category === categoryFromURL)
-          : productsArray;
+          ? products.filter((product: Product) => product.category === categoryFromURL)
+          : products;
 
-        setAllProducts(productsArray);
+        setAllProducts(products);
         setFilteredProducts(productsToSet);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -93,9 +101,9 @@ const CategoryProductListingPage = () => {
       } finally {
         setIsLoading(false);
       }
-    }
+    };
 
-    fetchData();
+    fetchProducts();
   }, [categoryFromURL]);
 
   // Apply Filters and Sorting
@@ -286,7 +294,7 @@ const CategoryProductListingPage = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-             {filteredProducts.length} Бүтээгдэхүүн шинээр нэмэгдсэн
+            {filteredProducts.length} Бүтээгдэхүүн шинээр нэмэгдсэн
             {searchQuery && (
               <span className="font-medium text-neutral-900 dark:text-neutral-100">
                 {" "}for "{searchQuery}"
@@ -318,7 +326,7 @@ const CategoryProductListingPage = () => {
             ) : (
               filteredProducts.map((product) => (
                 <motion.div
-                  key={product._id}
+                  key={product.id}
                   variants={productCardVariants}
                   initial="hidden"
                   animate="visible"
@@ -341,13 +349,13 @@ const CategoryProductListingPage = () => {
             className="text-center py-12"
           >
             <p className="text-xl text-neutral-600 dark:text-neutral-400">
-            Таны хайлтанд тохирох бүтээгдэхүүн олдсонгүй
+              Таны хайлтанд тохирох бүтээгдэхүүн олдсонгүй
             </p>
             <button
               onClick={resetFilters}
               className="mt-4 px-6 py-2 bg-red-400 text-white rounded-lg hover:bg-red-500 transition-colors duration-300"
             >
-            Шүүлтүүрийг өөрчлөх
+              Шүүлтүүрийг өөрчлөх
             </button>
           </motion.div>
         )}

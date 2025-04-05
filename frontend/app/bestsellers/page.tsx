@@ -6,18 +6,32 @@ import { useSearchParams } from "next/navigation";
 import { ProductCard } from "@/components/ui/product-card";
 import { ProductFilters } from "@/components/products/product-filters";
 import { ProductSkeleton } from "@/components/products/product-skeleton";
-import { products } from "@/lib/data";
+import { products as productData } from '@/app/product/data';
 
 
-type Product = {
+export interface Product {
   id: number;
-  name: string;
+  name: string | "";
+  sale?: string;
   price: number;
-  inStock: number; // Update accordingly
-  description: string;
+  rating: number;
+  reviews: number;
+  answers: number;
+  inStock: boolean;  // Make this a boolean
+  delivery: string;
+  deliveryDate: string;
+  seller: string;
+  color?: string[];
   category: string;
-  // size: number;
-};
+  video?: string;
+  model: string;
+  size?: string[];
+  images: string[];
+  features: string[];
+  description: string;
+  chartData: ChartData[];
+}
+
 
 const CategoryProductListingPage = () => {
   const searchParams = useSearchParams();
@@ -70,42 +84,29 @@ const CategoryProductListingPage = () => {
   }, [isMobile]);
 
   // Fetch Products
-  useEffect(() => {
-    async function fetchData() {
-          const selectedProductIds = [30, 31, 32, 33, 34];
-          const filteredProducts = products.filter(product =>
-              selectedProductIds.includes(product.id)
-          );
-                setAllProducts(products);
-        setFilteredProducts(filteredProducts);
-      // try {
-      //   setIsLoading(true);
-      //   const response = await fetch('/api/product');
-      //   const data = await response.json();
-
-      //   const productsArray = Array.isArray(data)
-      //     ? data
-      //     : data.data
-      //       ? data.data
-      //       : [];
-
-      //   const productsToSet = categoryFromURL
-      //     ? productsArray.filter((product: Product) => product.category === categoryFromURL)
-      //     : productsArray;
-
-      //   setAllProducts(productsArray);
-      //   setFilteredProducts(productsToSet);
-      // } catch (error) {
-      //   console.error("Error fetching products:", error);
-      //   setAllProducts([]);
-      //   setFilteredProducts([]);
-      // } finally {
-      //   setIsLoading(false);
-      // }
-    }
-
-    fetchData();
-  }, [categoryFromURL]);
+   useEffect(() => {
+     const fetchProducts = async () => {
+       try {
+         setIsLoading(true);
+         const products = productData.filter((product) => product.id >= 1 && product.id <= 400);
+         
+         const productsToSet = categoryFromURL
+           ? products.filter((product: Product) => product.category === categoryFromURL)
+           : products;
+          console.log("produyct: ", products)
+         setAllProducts(products);
+         setFilteredProducts(products);
+       } catch (error) {
+         console.error("Error fetching products:", error);
+         setAllProducts([]);
+         setFilteredProducts([]);
+       } finally {
+         setIsLoading(false);
+       }
+     };
+ 
+     fetchProducts();
+   }, [categoryFromURL]);
 
   // Apply Filters and Sorting
   useEffect(() => {

@@ -15,7 +15,7 @@ interface ProductCardProps {
 }
 
 // @ts-ignore
-export function ProductCard({ _id, name, price, description, category, images }: ProductCardProps) {
+export function ProductCard({ id, name, price, description, category, images }: ProductCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export function ProductCard({ _id, name, price, description, category, images }:
       transition={{ duration: 0.5 }}
       className="group relative flex flex-col overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300"
     >
-      <Link href={`/product/${_id}`}>
+      <Link href={`/hospital/${id}`}>
         <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
           <Image
             src={images[0]}
