@@ -56,7 +56,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
     }, 2200);
   }, [product._id]);
 
-  const fetchMoreLikeThis = () => {
+  const fetchMoreLikeThis = () => {  //category nemeh
    const products = productData.filter((product) => product.id >= 30 && product.id <= 34);
    setSimmilarProducts(products)
 
@@ -480,13 +480,13 @@ const Product: React.FC<ProductProps> = ({ product }) => {
               {simmilarProducts.slice(0, 10).map((product: any) => {
                 return (
                   <motion.div
-                    key={product._id} // Add a unique key
+                    key={product.id} // Add a unique key
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     className="group relative flex flex-col overflow-hidden rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300"
                   >
-                    <Link href={`/product/${product._id}`}>
+                    <Link href={`/hospital/${product.id}`}>
                       <div className="relative w-full overflow-hidden">
                         <Image
                           src={product.images[0]}
