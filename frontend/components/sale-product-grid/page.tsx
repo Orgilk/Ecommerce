@@ -7,6 +7,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { products as productData } from '@/app/product/data';
+import Product from '@/app/product/id/page';
+import { show } from '@intercom/messenger-js-sdk';
+import { Modal } from '../ui/animated-modal';
 
 export interface Product {
     id: number;
@@ -51,7 +54,7 @@ const ProductGridComponent: React.FC = () => {
         >
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
                 {products.map((product: any) => {
-                    const redirectLink = product.redirectLink || '/404';
+                    const redirectLink = product.redirectLink || `/hospital/${product.id}`;
                     const hasValidImage = !imageErrors[product._id];
 
                     return (
@@ -120,9 +123,10 @@ const ProductGridComponent: React.FC = () => {
                                             <button
                                                 className="w-full bg-red-500 text-white py-2.5 rounded-lg text-sm 
                                         hover:bg-red-600 transition-colors duration-200 flex items-center justify-center gap-2 group"
+                                  
                                             >
                                                 <Info className="w-4 h-4 group-hover:animate-bounce" />
-                                                <span>See More</span>
+                                                <span               onClick={() => router.push("/hospital/1")}>See More</span>
                                             </button>
                                         ) : (
                                             <div className="w-full bg-red-50 text-red-600 text-center py-2.5 rounded-lg text-sm">
@@ -132,10 +136,12 @@ const ProductGridComponent: React.FC = () => {
                                     </div>
                                 </div>
                             </Link>
+
                         </motion.div>
                     );
                 })}
             </div>
+
         </motion.div>
     );
 };
