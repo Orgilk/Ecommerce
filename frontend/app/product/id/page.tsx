@@ -10,7 +10,30 @@ import { AddToCartModal, BuyNowButton } from "@/app/product/component/button-com
 import RevenueChart from '@/app/product/component/price-chart';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import { products as productData } from '@/app/product/data';
 
+export interface Product {
+    id: number;
+    name: string | "";
+    sale?: string;
+    price: number;
+    rating: number;
+    reviews: number;
+    answers: number;
+    inStock: boolean;  // Make this a boolean
+    delivery: string;
+    deliveryDate: string;
+    seller: string;
+    color?: string[];
+    category: string;
+    video?: string;
+    model: string;
+    size?: string[];
+    images: string[];
+    features: string[];
+    description: string;
+    chartData: ChartData[];
+}
 interface ProductProps {
   product: any;
 }
@@ -33,11 +56,14 @@ const Product: React.FC<ProductProps> = ({ product }) => {
     }, 2200);
   }, [product._id]);
 
-  const fetchMoreLikeThis = async () => {
-    const res = await fetch(`/api/product/category/${product.category}`).then((res) => res.json());
-    if (res.success) {
-      setSimmilarProducts(res.data);
-    }
+  const fetchMoreLikeThis = () => {
+   const products = productData.filter((product) => product.id >= 30 && product.id <= 34);
+   setSimmilarProducts(products)
+
+    // const res = await fetch(`/api/product/category/${product.category}`).then((res) => res.json());
+    // if (res.success) {
+    //   setSimmilarProducts(res.data);
+    // }
   }
 
   const handleWishlistToggle = () => {

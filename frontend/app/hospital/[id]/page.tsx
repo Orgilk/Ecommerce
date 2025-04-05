@@ -5,10 +5,10 @@ import { useParams } from "next/navigation";
 import { ProductCard } from "@/components/ui/product-card";
 import { ProductFilters } from "@/components/products/product-filters";
 import { ProductSkeleton } from "@/components/products/product-skeleton";
-import Product from "../../product/id/page";
 import { products as productData } from '@/app/product/data';
+import Product from "@/app/product/id/page";
 
-export interface Product {
+export interface ProductL {
   id: number;
   name: string | "";
   sale?: string;
@@ -38,7 +38,7 @@ const Hospital = () => {
   // Convert string to number (only if it's a single string, not an array)
   const numericId = typeof productId === "string" ? parseInt(productId, 10) : null;
 
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<ProductL | null>(null);
 
   useEffect(() => {
     if (numericId !== null && !isNaN(numericId)) {
