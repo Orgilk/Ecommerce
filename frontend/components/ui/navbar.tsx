@@ -20,48 +20,60 @@ import Cookies from "js-cookie";
 import { toast, Toaster } from 'react-hot-toast'
 
 const collections = {
-  "ШИНЭЭР ИРСЭН": {
-    basePath: "/new-arrival",
-    items: [
-      { title: "Latest Collections", category: "latest-collection" },
-      { title: "Lounge Wear", category: "lounge-wear" },
-      { title: "Solid Wear Clothing", category: "solid-wear-clothing" },
-      { title: "Plus Size Suits", category: "plus-size" },
-      { title: "Indian Sarees", category: "indian-sarees" },
-      { title: "Bedsheets", category: "bedsheets" }
-    ]
-  },
-  "ХАМГИЙН ЭРЭЛТТЭЙ": {
+  // "ШИНЭЭР ИРСЭН": {
+  //   basePath: "/new-arrival",
+  //   items: [
+  //     { title: "Latest Collections", category: "latest-collection" },
+  //     { title: "Lounge Wear", category: "lounge-wear" },
+  //     { title: "Solid Wear Clothing", category: "solid-wear-clothing" },
+  //     { title: "Plus Size Suits", category: "plus-size" },
+  //     { title: "Indian Sarees", category: "indian-sarees" },
+  //     { title: "Bedsheets", category: "bedsheets" }
+  //   ]
+  // },
+  "Бүтээгдэхүүн": {
     basePath: "/bestsellers",
-    items: [
-      { title: "Most Popular", category: "popular" },
-      { title: "Trending Now", category: "trending" },
-      { title: "Top Rated", category: "top-rated" },
-      { title: "Customer Favorites", category: "favorites" },
-      { title: "Premium Collection", category: "premium" }
-    ]
-  },
-  "ЭМ": {
-    basePath: "/ethnic-wear",
     items: [
       { title: "Traditional Suits", category: "traditional-suits" },
       { title: "Kurta Sets", category: "kurta-sets" },
-      { title: "Indian Wear", category: "indian" },
-      { title: "Western Wear", category: "western" },
-      { title: "Festive Collection", category: "festive" },
-      { title: "Traditional Sarees", category: "traditional-sarees" },
+      { title: "Latest Collections", category: "latest-collection" },
+      { title: "Lounge Wear", category: "lounge-wear" },
     ]
   },
-  "ЭМНЭЛГИЙН ХЭРЭГСЭЛ": {
-    basePath: "/fabrics",
+  "БИДНИЙ ТУХАЙ": {
+    basePath: "/aboutus",
     items: [
-      { title: "Cotton", category: "cotton" },
-      { title: "Silk", category: "silk" },
-      { title: "Chiffon", category: "chiffon" },
-      { title: "Georgette", category: "georgette" },
-      { title: "Premium Fabrics", category: "premium" }
+      { title: "Байршил", category: "aboutus" },
+      { title: "Үйл ажиллагаа", category: "aboutus" },
     ]
   },
+  "Нүүр Хуудас": {
+    basePath: "/bestsellers",
+    items: [
+      { title: "Нүүр", category: "traditional-suits" },
+    ]
+  },
+  // "ЭМ": {
+  //   basePath: "/ethnic-wear",
+  //   items: [
+  //     { title: "Traditional Suits", category: "traditional-suits" },
+  //     { title: "Kurta Sets", category: "kurta-sets" },
+  //     { title: "Indian Wear", category: "indian" },
+  //     { title: "Western Wear", category: "western" },
+  //     { title: "Festive Collection", category: "festive" },
+  //     { title: "Traditional Sarees", category: "traditional-sarees" },
+  //   ]
+  // },
+  // "ЭМНЭЛГИЙН ХЭРЭГСЭЛ": {
+  //   basePath: "/fabrics",
+  //   items: [
+  //     { title: "Cotton", category: "cotton" },
+  //     { title: "Silk", category: "silk" },
+  //     { title: "Chiffon", category: "chiffon" },
+  //     { title: "Georgette", category: "georgette" },
+  //     { title: "Premium Fabrics", category: "premium" }
+  //   ]
+  // },
   // "Special Offers": {
   //   basePath: "/sale",
   //   items: [

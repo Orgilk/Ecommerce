@@ -40,7 +40,7 @@ export const products: Product[] = [
       "NavyBlue"
     ],
     "category": "kurta-sets",
-    "model": "JA-729)",
+    "model": "",
     "size": [
       "XS",
       "S",
@@ -2641,7 +2641,7 @@ export const products: Product[] = [
       // "/detailphotos/30.5.webp",
       // "/detailvideos/30.mp4"
     ],
-    "video": "/detailvideos/30.mp4",
+    // "video": "/detailvideos/30.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Cotton",
@@ -2715,7 +2715,7 @@ export const products: Product[] = [
     "color": [
       "Green"
     ],
-    "category": "шинээр нэмэгдсэн",
+    "category": "latest-collection",
     "model": "RP-777)",
     "size": [
       "XS",
@@ -2732,7 +2732,7 @@ export const products: Product[] = [
       // "/detailphotos/31.4.webp",
       // "/detailphotos/31.5.webp"
     ],
-    "video": "/detailvideos/31.mp4",
+    // "video": "/detailvideos/31.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Chanderi Kurta with lining & Chanderi Silk Dupatta & Cotton Pant",
@@ -2806,7 +2806,7 @@ export const products: Product[] = [
     "color": [
       "Red"
     ],
-    "category": "шинээр нэмэгдсэн",
+    "category": "latest-collection",
     "model": "RP-814)",
     "size": [
       "XS",
@@ -2819,7 +2819,7 @@ export const products: Product[] = [
     "images": [
       "/detailphotos/vitamina.png",
     ],
-    "video": "/detailvideos/32.mp4",
+    // "video": "/detailvideos/32.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Cotton",
@@ -2893,7 +2893,7 @@ export const products: Product[] = [
     "color": [
       "Green"
     ],
-    "category": "витамин",
+    "category": "lounge-wear",
     "model": "RP-787)",
     "size": [
       "XS",
@@ -2906,7 +2906,7 @@ export const products: Product[] = [
     "images": [
       "/detailphotos/vitamine.png",
     ],
-    "video": "/detailvideos/33.mp4",
+    // "video": "/detailvideos/33.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Cotton",
@@ -2981,7 +2981,7 @@ export const products: Product[] = [
       "Cream"
     ],
     "category": "шинээр нэмэгдсэн",
-    "model": "RP-781)",
+    "model": "",
     "size": [
       "XS",
       "S",
@@ -2993,7 +2993,7 @@ export const products: Product[] = [
     "images": [
       "/detailphotos/vitamind.png",
     ],
-    "video": "/detailvideos/34.mp4",
+    // "video": "/detailvideos/34.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Cotton",

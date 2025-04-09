@@ -146,7 +146,7 @@ const products = [
             "/detailphotos/33.6.webp",
             "/detailphotos/33.7.webp"
         ],
-        "video": "/detailvideos/33.mp4",
+        // "video": "/detailvideos/33.mp4",
         "features": [
             "Dispatch Time : 5 To 6 Working days",
             "Fabric - Pure Cotton",
@@ -1022,7 +1022,7 @@ const products = [
             "/detailphotos/161.4.webp",
             "/detailphotos/161.5.webp"
         ],
-        "video": "/detailvideos/161.mp4",
+        // "video": "/detailvideos/161.mp4",
         "features": [
             "Dispatch Time : 5 To 6 Working days",
             "Fabric - Pure Cotton",

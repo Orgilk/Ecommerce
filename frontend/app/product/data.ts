@@ -2672,7 +2672,6 @@ export const products: Product[] = [
       "/detailphotos/30.5.webp",
       "/detailvideos/30.mp4"
     ],
-    "video": "/detailvideos/30.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Cotton",
@@ -2764,7 +2763,6 @@ export const products: Product[] = [
       "/detailphotos/31.4.webp",
       "/detailphotos/31.5.webp"
     ],
-    "video": "/detailvideos/31.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Chanderi Kurta with lining & Chanderi Silk Dupatta & Cotton Pant",
@@ -2856,7 +2854,6 @@ export const products: Product[] = [
       "/detailphotos/32.4.webp",
       "/detailphotos/32.5.webp"
     ],
-    "video": "/detailvideos/32.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Cotton",
@@ -2950,7 +2947,6 @@ export const products: Product[] = [
       "/detailphotos/33.6.webp",
       "/detailphotos/33.7.webp"
     ],
-    "video": "/detailvideos/33.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Cotton",
@@ -3026,7 +3022,7 @@ export const products: Product[] = [
       "Cream"
     ],
     "category": "lounge-wear",
-    "model": "RP-781)",
+    "model": "",
     "size": [
       "XS",
       "S",
@@ -3040,7 +3036,7 @@ export const products: Product[] = [
       "/detailphotos/34.2.webp",
       "/detailphotos/34.3.webp"
     ],
-    "video": "/detailvideos/34.mp4",
+    // "video": "/detailvideos/34.mp4",
     "features": [
       "Dispatch Time : 5 To 6 Working days",
       "Fabric - Pure Cotton",

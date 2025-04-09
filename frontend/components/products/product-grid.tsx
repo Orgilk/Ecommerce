@@ -15,19 +15,19 @@ import Intercom from '@intercom/messenger-js-sdk';
 const cards = [
   {
     id: 1,
-    videoUrl: "/website_videos/big1.mp4",
+    // videoUrl: "/website_videos/big1.mp4",
     className: "col-span-2",
     orientation: 'landscape'
   },
   {
     id: 2,
-    videoUrl: "/website_videos/long2.mp4",
+    // videoUrl: "/website_videos/long2.mp4",
     className: "row-span-2",
     orientation: 'portrait'
   },
   {
     id: 3,
-    videoUrl: "/website_videos/landscap.mp4",
+    // videoUrl: "/website_videos/landscap.mp4",
     className: "col-span-2",
     orientation: 'landscape'
   }
