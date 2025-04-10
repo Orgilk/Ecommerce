@@ -34,24 +34,24 @@ const collections = {
   "Нүүр хуудас": {
     basePath: "/",
     items: [
-      { title: "Нүүр хуудас", category: "home" },
+      { title: "Нүүр хуудас", category: "home", href: '/' },
       // { title: "Үйл ажиллагаа", category: "aboutus" },
     ]
   },
   "Бүтээгдэхүүн": {
     basePath: "/bestsellers",
     items: [
-      { title: "Traditional Suits", category: "traditional-suits" },
-      { title: "Kurta Sets", category: "kurta-sets" },
-      { title: "Latest Collections", category: "latest-collection" },
-      { title: "Lounge Wear", category: "lounge-wear" },
+      { title: "Traditional Suits", category: "traditional-suits", href: '/aboutus' },
+      { title: "Kurta Sets", category: "kurta-sets", href: '/aboutus' },
+      { title: "Latest Collections", category: "latest-collection", href: '/aboutus' },
+      { title: "Lounge Wear", category: "lounge-wear", href: '/aboutus' },
     ]
   },
   "БИДНИЙ ТУХАЙ": {
     basePath: "/aboutus",
     items: [
-      { title: "Бидний тухай", category: "aboutus" },
-      // { title: "Үйл ажиллагаа", category: "aboutus" },
+      // { title: 'Бидний тухай', href: '/aboutus' },
+      { title: "Бидний тухай", category: "aboutus", href: '/aboutus' },
     ]
   },
   // "ЭМ": {
@@ -202,13 +202,12 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
             // Directly render 'Бидний ТУХАЙ' items without submenu
             <div className="space-y-1 px-4 py-2">
               {categoryData.items.map((item) => (
-                <button
-                  key={item.title}
-                  onClick={() => handleLinkClick(categoryData.basePath, item.category)}
-                  className="block w-full rounded-md px-3 py-2 text-left text-sm text-gray-600 hover:bg-gray-100"
-                >
-                  {item.title}
-                </button>
+               <Link
+               href={item.href}
+               className="text-gray-800 hover:text-orange-600 transition-colors duration-300 text-sm block py-1"
+             >
+               {item.title}
+             </Link>
               ))}
             </div>
             )}
