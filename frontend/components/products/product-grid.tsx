@@ -10,27 +10,27 @@ import { HeroScrollDemo } from "@/components/scroll-component/page";
 import { InfiniteMovingCardsDemo } from "@/components/infinite-scroll-component/page";
 import ProductGridComponent from "@/components/sale-product-grid/page";
 import Heading from "@/components/title/page";
-import Intercom from '@intercom/messenger-js-sdk';
+import Intercom from "@intercom/messenger-js-sdk";
 
 const cards = [
   {
     id: 1,
     // videoUrl: "/website_videos/big1.mp4",
     className: "col-span-2",
-    orientation: 'landscape'
+    orientation: "landscape",
   },
   {
     id: 2,
     // videoUrl: "/website_videos/long2.mp4",
     className: "row-span-2",
-    orientation: 'portrait'
+    orientation: "portrait",
   },
   {
     id: 3,
     // videoUrl: "/website_videos/landscap.mp4",
     className: "col-span-2",
-    orientation: 'landscape'
-  }
+    orientation: "landscape",
+  },
 ];
 
 const pageTransition = {
@@ -39,9 +39,9 @@ const pageTransition = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 function MainComponent() {
@@ -62,8 +62,8 @@ function MainComponent() {
     };
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
@@ -80,8 +80,8 @@ function MainComponent() {
       lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -91,7 +91,7 @@ function MainComponent() {
   }, [selectedCategory, searchQuery, priceRange, selectedSizes]);
 
   Intercom({
-    app_id: 'bf1hlos5',
+    app_id: "bf1hlos5",
   });
 
   return (
@@ -111,7 +111,7 @@ function MainComponent() {
 
       {/* Shop the Look Section */}
       <div className="mt-10 sm:mt-20">
-        <Heading text="Шинээр нэмэгдсэн" />
+        <Heading text="Шинээр нkurta-setsэгдсэн" />
         <div className="w-full overflow-hidden">
           <AppleCardsCarouselDemo />
         </div>

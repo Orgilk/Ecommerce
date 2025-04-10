@@ -15,7 +15,14 @@ interface ProductCardProps {
 }
 
 // @ts-ignore
-export function ProductCard({ id, name, price, description, category, images }: ProductCardProps) {
+export function ProductCard({
+  id,
+  name,
+  price,
+  description,
+  category,
+  images,
+}: ProductCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -54,7 +61,9 @@ export function ProductCard({ id, name, price, description, category, images }: 
             {name || "Product Name Is Not Printable"}
           </h3>
 
-          <p className="text-xl font-bold text-black">₹ {price.toFixed(2) || 2000}</p>
+          <p className="text-xl font-bold text-black">
+            ₮ {price.toFixed(2) || 2000}
+          </p>
         </div>
       </Link>
     </motion.div>

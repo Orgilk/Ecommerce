@@ -35,8 +35,8 @@
 //     "reviews": 10000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshak Co.",
 //     "color": [
 //       "NavyBlue"
@@ -57,7 +57,7 @@
 //       "/detailphotos/1.4.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :JA-729)",
 //       "Washing instruction-  Quick dip wash or Dry clean, separate wash in cold water, dry in shadow",
@@ -124,7 +124,7 @@
 //     "reviews": 11000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "9 To 12 Working days",
 //     "seller": "Rajwadi Poshak Co.",
 //     "color": [
@@ -214,7 +214,7 @@
 //     "reviews": 9000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -303,7 +303,7 @@
 //     "reviews": 7000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -393,7 +393,7 @@
 //     "reviews": 5200,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -481,7 +481,7 @@
 //     "reviews": 12000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -572,7 +572,7 @@
 //     "reviews": 9000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -662,7 +662,7 @@
 //     "reviews": 8000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -753,8 +753,8 @@
 //     "reviews": 8500,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "White"
@@ -778,7 +778,7 @@
 //     "features": [
 //       "Fit - Relaxed (Code JA-453 WD)",
 //       "Washing instruction-  Quick dip wash or Dry clean",
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Kurta length 46",
 //       "Pant length 38"
@@ -843,7 +843,7 @@
 //     "reviews": 8600,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -932,8 +932,8 @@
 //     "reviews": 7500,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Peach"
@@ -958,7 +958,7 @@
 //       "Fit - Relaxed (code : JA-649-SKP)",
 //       "Kurta- Pure Handblock  Cotton",
 //       "Washing instruction-  Quick dip wash or Dry clean",
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Kurta length 46",
 //       "Pant length 38"
 //     ],
@@ -1022,8 +1022,8 @@
 //     "reviews": 2000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "NavyBlue"
@@ -1048,7 +1048,7 @@
 //       "Fit - Relaxed (code : JA-589-SK)",
 //       "Kurta- Pure Cotton",
 //       "Washing instruction-  Quick dip wash or Dry clean",
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Kurta length 46",
 //       "Pant length 38"
 //     ],
@@ -1112,7 +1112,7 @@
 //     "reviews": 8000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "9 To 12 Working days",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1202,7 +1202,7 @@
 //     "reviews": 2000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1291,7 +1291,7 @@
 //     "reviews": 8000,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1381,7 +1381,7 @@
 //     "reviews": 7500,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1472,7 +1472,7 @@
 //     "reviews": 7800,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1562,7 +1562,7 @@
 //     "reviews": 7600,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1652,7 +1652,7 @@
 //     "reviews": 8300,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1743,7 +1743,7 @@
 //     "reviews": 4500,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1833,7 +1833,7 @@
 //     "reviews": 8900,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
+//     "delivery": "Хүргэлт үнэгүй",
 //     "deliveryDate": "Not specified",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
@@ -1923,8 +1923,8 @@
 //     "reviews": 5000,
 //     "answers": 154,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Maroon",
@@ -1947,7 +1947,7 @@
 //       "/detailphotos/22.4.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-817)",
 //       "Washing instruction-  Dry clean only",
@@ -2014,8 +2014,8 @@
 //     "reviews": 5760,
 //     "answers": 206,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Pink",
@@ -2039,7 +2039,7 @@
 //       "/detailphotos/23.4.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-816)",
 //       "Washing instruction-  Dry clean only",
@@ -2106,8 +2106,8 @@
 //     "reviews": 12000,
 //     "answers": 398,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Brown"
@@ -2128,7 +2128,7 @@
 //       "/detailphotos/24.2.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-806)",
 //       "Washing instruction-  Dry clean only",
@@ -2195,8 +2195,8 @@
 //     "reviews": 7041,
 //     "answers": 234,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Maroon",
@@ -2219,7 +2219,7 @@
 //       "/detailphotos/25.3.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-798)",
 //       "Washing instruction-  Dry clean only",
@@ -2286,8 +2286,8 @@
 //     "reviews": 9496,
 //     "answers": 276,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Brown",
@@ -2310,7 +2310,7 @@
 //       "/detailphotos/26.4.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-812)",
 //       "Washing instruction-  Dry clean only",
@@ -2377,8 +2377,8 @@
 //     "reviews": 4303,
 //     "answers": 122,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Brown"
@@ -2397,7 +2397,7 @@
 //       "/detailphotos/27.2.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-813)",
 //       "Washing instruction-  Dry clean only",
@@ -2464,8 +2464,8 @@
 //     "reviews": 7403,
 //     "answers": 156,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Cream",
@@ -2489,7 +2489,7 @@
 //       "/detailphotos/28.5.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-804)",
 //       "Washing instruction-  Dry clean only",
@@ -2556,8 +2556,8 @@
 //     "reviews": 200,
 //     "answers": 34,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Cream",
@@ -2582,7 +2582,7 @@
 //       "/detailphotos/29.5.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-794)",
 //       "Washing instruction-  Dry clean only",
@@ -2649,8 +2649,8 @@
 //     "reviews": 10200,
 //     "answers": 304,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "SkyBlue"
@@ -2674,7 +2674,7 @@
 //     ],
 //     "video": "/detailvideos/30.mp4",
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-782)",
 //       "Washing instruction-  Dry clean only",
@@ -2741,8 +2741,8 @@
 //     "reviews": 7450,
 //     "answers": 127,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Green"
@@ -2766,7 +2766,7 @@
 //     ],
 //     "video": "/detailvideos/31.mp4",
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Chanderi Kurta with lining & Chanderi Silk Dupatta & Cotton Pant",
 //       "Fit - Relaxed (CODE :RP-782)",
 //       "Washing instruction-  Quick dip wash or Dry clean, separate wash in cold water, dry in shadow",
@@ -2833,8 +2833,8 @@
 //     "reviews": 7230,
 //     "answers": 97,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Red"
@@ -2858,7 +2858,7 @@
 //     ],
 //     "video": "/detailvideos/32.mp4",
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-814)",
 //       "Washing instruction-  Dry clean only",
@@ -2925,8 +2925,8 @@
 //     "reviews": 12030,
 //     "answers": 345,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Green"
@@ -2952,7 +2952,7 @@
 //     ],
 //     "video": "/detailvideos/33.mp4",
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-787)",
 //       "Washing instruction-  Separate wash only (Might bleed color) eferably Dry clean.",
@@ -3019,8 +3019,8 @@
 //     "reviews": 10676,
 //     "answers": 237,
 //     "inStock": true,
-//     "delivery": "FREE delivery",
-//     "deliveryDate": "5 To 6 Working days",
+//     "delivery": "Хүргэлт үнэгүй",
+//     "deliveryDate": "5-7 өдөрт хүргэнэ",
 //     "seller": "Rajwadi Poshaak Co.",
 //     "color": [
 //       "Cream"
@@ -3042,7 +3042,7 @@
 //     ],
 //     "video": "/detailvideos/34.mp4",
 //     "features": [
-//       "Dispatch Time : 5 To 6 Working days",
+//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-781)",
 //       "Washing instruction-  Quick dip wash or Dry clean, separate wash in cold water, dry in shadow",
@@ -3101,5 +3101,5 @@
 //       }
 //     ]
 //   },
-  
+
 // ]

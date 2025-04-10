@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { ProductCard } from "@/components/ui/product-card";
 import { ProductFilters } from "@/components/products/product-filters";
 import { ProductSkeleton } from "@/components/products/product-skeleton";
-import { products as productData } from '@/app/product/data';
+import { products as productData } from "@/app/product/data";
 
 export interface Product {
   id: number;
@@ -16,7 +16,7 @@ export interface Product {
   rating: number;
   reviews: number;
   answers: number;
-  inStock: boolean;  // Make this a boolean
+  inStock: boolean; // Make this a boolean
   delivery: string;
   deliveryDate: string;
   seller: string;
@@ -35,7 +35,9 @@ const CategoryProductListingPage = () => {
   const searchParams = useSearchParams();
   const categoryFromURL = searchParams.get("category");
 
-  const [selectedCategory, setSelectedCategory] = useState(categoryFromURL || "All");
+  const [selectedCategory, setSelectedCategory] = useState(
+    categoryFromURL || "All"
+  );
   const [sortBy, setSortBy] = useState("default");
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
@@ -47,7 +49,7 @@ const CategoryProductListingPage = () => {
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [allProducts, setAllProducts] = useState<Product[]>([]);
 
-  console.log("all: ", allProducts)
+  console.log("all: ", allProducts);
   // Mobile and Responsive Checks
   useEffect(() => {
     const checkMobileSize = () => {
@@ -55,10 +57,10 @@ const CategoryProductListingPage = () => {
     };
 
     checkMobileSize();
-    window.addEventListener('resize', checkMobileSize);
+    window.addEventListener("resize", checkMobileSize);
 
     return () => {
-      window.removeEventListener('resize', checkMobileSize);
+      window.removeEventListener("resize", checkMobileSize);
     };
   }, []);
 
@@ -77,8 +79,8 @@ const CategoryProductListingPage = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile]);
 
   // Fetch Products
@@ -86,10 +88,14 @@ const CategoryProductListingPage = () => {
     const fetchProducts = async () => {
       try {
         setIsLoading(true);
-        const products = productData.filter((product) => product.id >= 30 && product.id <= 34);
-        
+        const products = productData.filter(
+          (product) => product.id >= 30 && product.id <= 34
+        );
+
         const productsToSet = categoryFromURL
-          ? products.filter((product: Product) => product.category === categoryFromURL)
+          ? products.filter(
+              (product: Product) => product.category === categoryFromURL
+            )
           : products;
 
         setAllProducts(products);
@@ -112,24 +118,28 @@ const CategoryProductListingPage = () => {
       let result = [...allProducts];
 
       if (selectedCategory !== "All") {
-        result = result.filter(product => product.category === selectedCategory);
+        result = result.filter(
+          (product) => product.category === selectedCategory
+        );
       }
 
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
-        result = result.filter(product =>
-          product.name.toLowerCase().includes(query) ||
-          product.description?.toLowerCase().includes(query) ||
-          product.category.toLowerCase().includes(query)
+        result = result.filter(
+          (product) =>
+            product.name.toLowerCase().includes(query) ||
+            product.description?.toLowerCase().includes(query) ||
+            product.category.toLowerCase().includes(query)
         );
       }
 
-      result = result.filter(product =>
-        product.price >= priceRange[0] && product.price <= priceRange[1]
+      result = result.filter(
+        (product) =>
+          product.price >= priceRange[0] && product.price <= priceRange[1]
       );
 
       if (selectedSizes.length > 0) {
-        result = result.filter(product =>
+        result = result.filter((product) =>
           product.size?.some((size: string) => selectedSizes.includes(size))
         );
       }
@@ -153,7 +163,14 @@ const CategoryProductListingPage = () => {
     };
 
     applyFilters();
-  }, [selectedCategory, sortBy, searchQuery, priceRange, selectedSizes, allProducts]);
+  }, [
+    selectedCategory,
+    sortBy,
+    searchQuery,
+    priceRange,
+    selectedSizes,
+    allProducts,
+  ]);
 
   // Reset Filters
   const resetFilters = () => {
@@ -177,9 +194,9 @@ const CategoryProductListingPage = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const productCardVariants = {
@@ -189,16 +206,16 @@ const CategoryProductListingPage = () => {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
     hover: {
       scale: 1.05,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   return (
@@ -251,11 +268,13 @@ const CategoryProductListingPage = () => {
       {/* Desktop Filters Sidebar */}
       {!isMobile && (
         <motion.aside
-          className={`lg:w-64 flex-shrink-0 transition-all duration-300 ${isScrolled ? "lg:sticky lg:top-4" : ""}`}
+          className={`lg:w-64 flex-shrink-0 transition-all duration-300 ${
+            isScrolled ? "lg:sticky lg:top-4" : ""
+          }`}
           style={{
             position: isScrolled ? "sticky" : "relative",
             top: isScrolled ? "1rem" : "0",
-            height: "fit-content"
+            height: "fit-content",
           }}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -294,10 +313,11 @@ const CategoryProductListingPage = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-            {filteredProducts.length} Бүтээгдэхүүн шинээр нэмэгдсэн
+            {filteredProducts.length} Бүтээгдэхүүн шинээр нkurta-setsэгдсэн
             {searchQuery && (
               <span className="font-medium text-neutral-900 dark:text-neutral-100">
-                {" "}for "{searchQuery}"
+                {" "}
+                for "{searchQuery}"
               </span>
             )}
           </p>
@@ -311,33 +331,31 @@ const CategoryProductListingPage = () => {
           animate="visible"
         >
           <AnimatePresence mode="wait">
-            {isLoading ? (
-              Array.from({ length: 6 }).map((_, i) => (
-                <motion.div
-                  key={`skeleton-${i}`}
-                  variants={productCardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                >
-                  <ProductSkeleton />
-                </motion.div>
-              ))
-            ) : (
-              filteredProducts.map((product) => (
-                <motion.div
-                  key={product.id}
-                  variants={productCardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover="hover"
-                  className="transform-gpu"
-                >
-                  {/* @ts-ignore */}
-                  <ProductCard {...product} />
-                </motion.div>
-              ))
-            )}
+            {isLoading
+              ? Array.from({ length: 6 }).map((_, i) => (
+                  <motion.div
+                    key={`skeleton-${i}`}
+                    variants={productCardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                  >
+                    <ProductSkeleton />
+                  </motion.div>
+                ))
+              : filteredProducts.map((product) => (
+                  <motion.div
+                    key={product.id}
+                    variants={productCardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover="hover"
+                    className="transform-gpu"
+                  >
+                    {/* @ts-ignore */}
+                    <ProductCard {...product} />
+                  </motion.div>
+                ))}
           </AnimatePresence>
         </motion.div>
 
@@ -364,4 +382,4 @@ const CategoryProductListingPage = () => {
   );
 };
 
-export default CategoryProductListingPage;  
+export default CategoryProductListingPage;

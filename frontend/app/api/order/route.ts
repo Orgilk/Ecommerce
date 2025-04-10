@@ -1,17 +1,17 @@
-import { NextResponse } from 'next/server';
-import Order from '@/models/Order';
-import connectToDatabase from '@/lib/dbConnect';
-import { z } from 'zod';
-import User from '@/models/User';
-import nodemailer from 'nodemailer';
-import { Cart } from '@/models/Cart';
+import { NextResponse } from "next/server";
+import Order from "@/models/Order";
+import connectToDatabase from "@/lib/dbConnect";
+import { z } from "zod";
+import User from "@/models/User";
+import nodemailer from "nodemailer";
+import { Cart } from "@/models/Cart";
 
 const ProductSchema = z.object({
   productId: z.string().nonempty("Product ID is required"),
   name: z.string().nonempty("Product name is required"),
   quantity: z.number().positive("Quantity must be greater than 0"),
   size: z.string().nonempty("Size is required"),
-  price: z.string().nonempty("Price is required")
+  price: z.string().nonempty("Price is required"),
 });
 
 const ShippingAddressSchema = z.object({
@@ -19,14 +19,14 @@ const ShippingAddressSchema = z.object({
   city: z.string().nonempty("City is required"),
   state: z.string().nonempty("State is required"),
   zipCode: z.string().regex(/^\d{6}$/, "Invalid ZIP code"),
-  country: z.string().nonempty("Country is required")
+  country: z.string().nonempty("Country is required"),
 });
 
 const ShippingDetailsSchema = z.object({
   carrier: z.string().optional(),
   trackingNumber: z.string().optional(),
   estimatedDeliveryDate: z.string().optional(),
-  actualDeliveryDate: z.string().optional()
+  actualDeliveryDate: z.string().optional(),
 });
 
 const OrderSchema = z.object({
@@ -34,12 +34,30 @@ const OrderSchema = z.object({
   products: z.array(ProductSchema).nonempty("Products list cannot be empty"),
   totalPrice: z.number().positive("Total price must be greater than 0"),
   shippingAddress: ShippingAddressSchema,
-  status: z.enum(['pending', 'processing', 'shipped', 'delivered', 'cancelled', 'returned']).optional(),
-  paymentMethod: z.enum(['credit_card', 'paypal', 'bank_transfer', 'cod', 'upi','razorpay']),
-  paymentStatus: z.enum(['pending', 'completed', 'failed', 'refunded']).optional(),
+  status: z
+    .enum([
+      "pending",
+      "processing",
+      "shipped",
+      "delivered",
+      "cancelled",
+      "returned",
+    ])
+    .optional(),
+  paymentMethod: z.enum([
+    "credit_card",
+    "paypal",
+    "bank_transfer",
+    "cod",
+    "upi",
+    "razorpay",
+  ]),
+  paymentStatus: z
+    .enum(["pending", "completed", "failed", "refunded"])
+    .optional(),
   orderNotes: z.string().optional(),
   urgent: z.boolean().optional(),
-  shippingDetails: ShippingDetailsSchema.optional()
+  shippingDetails: ShippingDetailsSchema.optional(),
 });
 
 export async function POST(req: Request) {
@@ -51,7 +69,10 @@ export async function POST(req: Request) {
 
     const user = await User.findById(parsedData.userId);
     if (!user) {
-      return NextResponse.json({ success: false, error: 'User not found' }, { status: 404 });
+      return NextResponse.json(
+        { success: false, error: "User not found" },
+        { status: 404 }
+      );
     }
 
     const newOrder = new Order({
@@ -59,12 +80,12 @@ export async function POST(req: Request) {
       products: parsedData.products,
       totalPrice: parsedData.totalPrice,
       shippingAddress: parsedData.shippingAddress,
-      status: 'pending',
+      status: "pending",
       paymentMethod: parsedData.paymentMethod,
-      paymentStatus: parsedData.paymentStatus || 'pending',
-      orderNotes: parsedData.orderNotes || '',
+      paymentStatus: parsedData.paymentStatus || "pending",
+      orderNotes: parsedData.orderNotes || "",
       urgent: parsedData.urgent || false,
-      shippingDetails: parsedData.shippingDetails || {}
+      shippingDetails: parsedData.shippingDetails || {},
     });
 
     const savedOrder = await newOrder.save();
@@ -73,24 +94,35 @@ export async function POST(req: Request) {
 
     await sendEmail(savedOrder, user.email);
     await Cart.deleteOne({ userId: parsedData.userId });
-    return NextResponse.json({ success: true, data: savedOrder }, { status: 200 });
-
+    return NextResponse.json(
+      { success: true, data: savedOrder },
+      { status: 200 }
+    );
   } catch (error) {
     if (error instanceof z.ZodError) {
       const validationErrors = error.errors.map((err) => ({
-        path: err.path.join('.'),
-        message: err.message
+        path: err.path.join("."),
+        message: err.message,
       }));
-      return NextResponse.json({ success: false, error: 'Validation failed', details: validationErrors }, { status: 400 });
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Validation failed",
+          details: validationErrors,
+        },
+        { status: 400 }
+      );
     }
 
-    console.error('Error creating order:', error);
-    return NextResponse.json({ success: false, error: 'Failed to create order' }, { status: 500 });
+    console.error("Error creating order:", error);
+    return NextResponse.json(
+      { success: false, error: "Failed to create order" },
+      { status: 500 }
+    );
   }
 }
 
 const sendEmail = async (orderDetails: any, email: string) => {
-
   const generateEmailHTML = (orderDetails: any) => {
     const productRows = orderDetails.products
       .map(
@@ -196,18 +228,24 @@ const sendEmail = async (orderDetails: any, email: string) => {
               ${productRows}
             </tbody>
           </table>
-          <p><strong>Total Price:</strong> ₹${orderDetails.totalPrice}</p>
+          <p><strong>Total Price:</strong> ₮${orderDetails.totalPrice}</p>
           <p><strong>Shipping Address:</strong></p>
           <p>
             ${orderDetails.shippingAddress.street}<br>
-            ${orderDetails.shippingAddress.city}, ${orderDetails.shippingAddress.state} ${orderDetails.shippingAddress.zipCode}<br>
+            ${orderDetails.shippingAddress.city}, ${
+      orderDetails.shippingAddress.state
+    } ${orderDetails.shippingAddress.zipCode}<br>
             ${orderDetails.shippingAddress.country}
           </p>
-          <p><strong>Estimated Delivery Date:</strong> ${new Date(orderDetails.shippingDetails.estimatedDeliveryDate).toDateString()}</p>
+          <p><strong>Estimated Delivery Date:</strong> ${new Date(
+            orderDetails.shippingDetails.estimatedDeliveryDate
+          ).toDateString()}</p>
           <a href="${process.env.NEXTAUTH_URL}" class="btn">View Order</a>
         </div>
         <div class="footer">
-          <p>If you have any questions about your order, please contact us at support@${process.env.NEXTAUTH_URL}.</p>
+          <p>If you have any questions about your order, please contact us at support@${
+            process.env.NEXTAUTH_URL
+          }.</p>
           <p>Thank you for shopping with us!</p>
         </div>
       </div>
@@ -216,11 +254,10 @@ const sendEmail = async (orderDetails: any, email: string) => {
   `;
   };
 
-
   const emailHTML = generateEmailHTML(orderDetails);
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
@@ -230,14 +267,14 @@ const sendEmail = async (orderDetails: any, email: string) => {
   const mailOptions = {
     from: process.env.EMAIL_FROM,
     to: email,
-    subject: 'Order Confirmation',
+    subject: "Order Confirmation",
     html: emailHTML,
   };
 
   try {
     await transporter.sendMail(mailOptions);
   } catch (error) {
-    console.error('Error sending email:', error);
-    throw new Error('Failed to send email');
+    console.error("Error sending email:", error);
+    throw new Error("Failed to send email");
   }
 };

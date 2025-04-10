@@ -14,18 +14,18 @@ import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 
 const collections = {
-  "Шинээр нэмэгдсэн": [
+  "Шинээр нkurta-setsэгдсэн": [
     { title: "Spring Collection", href: "#" },
     { title: "Summer Essentials", href: "#" },
     { title: "Limited Edition", href: "#" },
   ],
-  "Collections": [
+  Collections: [
     { title: "Casual Wear", href: "#" },
     { title: "Formal Attire", href: "#" },
     { title: "Sports & Active", href: "#" },
     { title: "Seasonal Trends", href: "#" },
   ],
-  "Brands": [
+  Brands: [
     { title: "Premium Brands", href: "#" },
     { title: "Designer Labels", href: "#" },
     { title: "Sustainable Fashion", href: "#" },

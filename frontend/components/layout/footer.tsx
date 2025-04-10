@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Github, Instagram, Youtube, Linkedin } from 'lucide-react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { Github, Instagram, Youtube, Linkedin } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -27,32 +27,35 @@ const itemVariants = {
 };
 
 const categories = [
-  { title: 'Kurta Sets', href: '/ethnic-wear?category=kurta-sets' },
-  { title: 'Indian wear', href: '/ethnic-wear?category=indian' },
-  { title: 'Top rated products', href: '/ethnic-wear?category=top-rated' },
-  { title: 'Premium Fabric', href: '/bestsellers?category=premium' },
-  { title: 'Chiffons', href: '/ethnic-wear?category=chiffon' },
-  { title: 'Solid wear clothing', href: '/ethnic-wear?category=solid-wear-clothing' },
+  { title: "Kurta Sets", href: "/ethnic-wear?category=kurta-sets" },
+  { title: "Indian wear", href: "/ethnic-wear?category=indian" },
+  { title: "Top rated products", href: "/ethnic-wear?category=top-rated" },
+  { title: "Premium Fabric", href: "/bestsellers?category=premium" },
+  { title: "Chiffons", href: "/ethnic-wear?category=chiffon" },
+  {
+    title: "Solid wear clothing",
+    href: "/ethnic-wear?category=solid-wear-clothing",
+  },
 ];
 
-const basePath = '/customer';
+const basePath = "/customer";
 const information = [
-  { title: 'About Us', href: '/aboutus' },
-  { title: 'Admin ', href: '/admin' },
-  { title: 'Exchange/Return Policy', href: `${basePath}/returnpolicy` },
-  { title: 'Track Your Order', href: `/trackyourorder` },
-  { title: 'Privacy Policy', href: `${basePath}/privacypolicy` },
-  { title: 'Terms and Conditions', href: `${basePath}/terms-and-conditions` },
-  { title: 'Customize Products', href: `${basePath}/customize-products` },
-  { title: 'Cancellation Policy', href: `${basePath}/cancellation-policy` },
-  { title: 'Shipping Policy', href: `${basePath}/shipping-policy` },
+  { title: "About Us", href: "/aboutus" },
+  { title: "Admin ", href: "/admin" },
+  { title: "Exchange/Return Policy", href: `${basePath}/returnpolicy` },
+  { title: "Track Your Order", href: `/trackyourorder` },
+  { title: "Privacy Policy", href: `${basePath}/privacypolicy` },
+  { title: "Terms and Conditions", href: `${basePath}/terms-and-conditions` },
+  { title: "Customize Products", href: `${basePath}/customize-products` },
+  { title: "Cancellation Policy", href: `${basePath}/cancellation-policy` },
+  { title: "Shipping Policy", href: `${basePath}/shipping-policy` },
 ];
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com' },
-  { icon: Instagram, href: 'https://instagram.com' },
-  { icon: Youtube, href: 'https://www.youtube.com' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/' },
+  { icon: Github, href: "https://github.com" },
+  { icon: Instagram, href: "https://instagram.com" },
+  { icon: Youtube, href: "https://www.youtube.com" },
+  { icon: Linkedin, href: "https://www.linkedin.com/" },
 ];
 
 export default function Footer() {
@@ -122,7 +125,7 @@ export default function Footer() {
               </h3>
               <div className="space-y-3 text-sm">
                 <p className="text-gray-800">
-                  Email us at{' '}
+                  Email us at{" "}
                   <a
                     href="mailto:contact@rajwadiposhak.com"
                     className="text-orange-600 hover:text-orange-700 font-medium"
@@ -131,7 +134,7 @@ export default function Footer() {
                   </a>
                 </p>
                 <p className="text-gray-800">
-                  Call us at{' '}
+                  Call us at{" "}
                   <a
                     href="tel:+918849251028"
                     className="text-orange-600 hover:text-orange-700 font-medium"
@@ -169,7 +172,10 @@ export default function Footer() {
           variants={itemVariants}
           className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-orange-200/50 text-center text-gray-800"
         >
-          <p className="text-sm">&copy; {new Date().getFullYear()} Rajwadi Poshak. All rights reserved.</p>
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} Rajwadi Poshak. All rights
+            reserved.
+          </p>
         </motion.div>
       </motion.div>
     </footer>

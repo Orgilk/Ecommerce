@@ -1,38 +1,53 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Star, Heart, Share2, Check, AlertCircle, Facebook, Twitter, Plus, Minus, Linkedin, GitCompare } from "lucide-react";
-import { FaWhatsapp } from 'react-icons/fa';
-import Link from 'next/link';
+import {
+  Star,
+  Heart,
+  Share2,
+  Check,
+  AlertCircle,
+  Facebook,
+  Twitter,
+  Plus,
+  Minus,
+  Linkedin,
+  GitCompare,
+} from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import ImageSwapper from "@/components/image/page";
-import { AddToCartModal, BuyNowButton } from "@/app/product/component/button-component";
-import RevenueChart from '@/app/product/component/price-chart';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
-import { products as productData } from '@/app/product/data';
+import {
+  AddToCartModal,
+  BuyNowButton,
+} from "@/app/product/component/button-component";
+import RevenueChart from "@/app/product/component/price-chart";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
+import { products as productData } from "@/app/product/data";
 
 export interface Product {
-    id: number;
-    name: string | "";
-    sale?: string;
-    price: number;
-    rating: number;
-    reviews: number;
-    answers: number;
-    inStock: boolean;  // Make this a boolean
-    delivery: string;
-    deliveryDate: string;
-    seller: string;
-    color?: string[];
-    category: string;
-    video?: string;
-    model: string;
-    size?: string[];
-    images: string[];
-    features: string[];
-    description: string;
-    chartData: ChartData[];
+  id: number;
+  name: string | "";
+  sale?: string;
+  price: number;
+  rating: number;
+  reviews: number;
+  answers: number;
+  inStock: boolean; // Make this a boolean
+  delivery: string;
+  deliveryDate: string;
+  seller: string;
+  color?: string[];
+  category: string;
+  video?: string;
+  model: string;
+  size?: string[];
+  images: string[];
+  features: string[];
+  description: string;
+  chartData: ChartData[];
 }
 interface ProductProps {
   product: any;
@@ -41,47 +56,61 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ product }) => {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
-  const [selectedSize, setSelectedSize] = useState(product.size ? product.size[0] : '5 meter');
-  const [selectedColor, setSelectedColor] = useState(product.color ? product.color[0] : 'Red Color');
+  const [selectedSize, setSelectedSize] = useState(
+    product.size ? product.size[0] : "5 meter"
+  );
+  const [selectedColor, setSelectedColor] = useState(
+    product.color ? product.color[0] : "Red Color"
+  );
   const [isSaved, setIsSaved] = useState(false);
   const [showShareMenu, setShowShareMenu] = useState(false);
   const [simmilarProducts, setSimmilarProducts] = useState<any>([]);
 
   useEffect(() => {
-    const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
-    const isProductSaved = wishlist.some((item: any) => item._id === product._id);
+    const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+    const isProductSaved = wishlist.some(
+      (item: any) => item._id === product._id
+    );
     setIsSaved(isProductSaved);
     setTimeout(() => {
       fetchMoreLikeThis();
     }, 2200);
   }, [product._id]);
 
-  const fetchMoreLikeThis = () => {  //category nemeh
-   const products = productData.filter((product) => product.id >= 30 && product.id <= 34);
-   setSimmilarProducts(products)
+  const fetchMoreLikeThis = () => {
+    //category nemeh
+    const products = productData.filter(
+      (product) => product.id >= 30 && product.id <= 34
+    );
+    setSimmilarProducts(products);
 
     // const res = await fetch(`/api/product/category/${product.category}`).then((res) => res.json());
     // if (res.success) {
     //   setSimmilarProducts(res.data);
     // }
-  }
+  };
 
   const handleWishlistToggle = () => {
-    const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+    const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
 
     if (!isSaved) {
-      const updatedWishlist = [...wishlist, {
-        _id: product._id,
-        name: product.name,
-        price: product.price,
-        image: product.images[0]
-      }];
-      localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+      const updatedWishlist = [
+        ...wishlist,
+        {
+          _id: product._id,
+          name: product.name,
+          price: product.price,
+          image: product.images[0],
+        },
+      ];
+      localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
       setIsSaved(true);
     } else {
       // Remove product from wishlist
-      const updatedWishlist = wishlist.filter((item: any) => item._id !== product._id);
-      localStorage.setItem('wishlist', JSON.stringify(updatedWishlist));
+      const updatedWishlist = wishlist.filter(
+        (item: any) => item._id !== product._id
+      );
+      localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
       setIsSaved(false);
     }
   };
@@ -93,30 +122,40 @@ const Product: React.FC<ProductProps> = ({ product }) => {
     const text = `Check out this amazing product: ${product.name}`;
 
     const shareUrls: { [key: string]: string } = {
-      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
-      whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(text + ' ' + url)}`,
-      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+        url
+      )}`,
+      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+        url
+      )}&text=${encodeURIComponent(text)}`,
+      whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(
+        text + " " + url
+      )}`,
+      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+        url
+      )}`,
     };
 
     if (platform in shareUrls) {
-      window.open(shareUrls[platform], '_blank', 'width=600,height=400');
+      window.open(shareUrls[platform], "_blank", "width=600,height=400");
       setShowShareMenu(false);
     }
   };
 
-  const handleQuantityChange = (type: 'increase' | 'decrease') => {
-    setQuantity(prev => {
-      if (type === 'increase' && prev < 10) return prev + 1;
-      if (type === 'decrease' && prev > 1) return prev - 1;
+  const handleQuantityChange = (type: "increase" | "decrease") => {
+    setQuantity((prev) => {
+      if (type === "increase" && prev < 10) return prev + 1;
+      if (type === "decrease" && prev > 1) return prev - 1;
       return prev;
     });
   };
 
-  const handleManualQuantityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleManualQuantityChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const value = e.target.value;
 
-    if (value === '') {
+    if (value === "") {
       setQuantity(1);
       return;
     }
@@ -139,7 +178,9 @@ const Product: React.FC<ProductProps> = ({ product }) => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <AlertCircle className="mx-auto h-12 w-12 text-red-500" />
-          <h1 className="mt-4 text-2xl font-bold text-gray-800">Product Not Found</h1>
+          <h1 className="mt-4 text-2xl font-bold text-gray-800">
+            Product Not Found
+          </h1>
           <p className="text-gray-600 mt-2">
             The product you are looking for does not exist or has been removed.
           </p>
@@ -195,28 +236,28 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                       >
                         <div className="py-1">
                           <button
-                            onClick={() => handleShare('facebook')}
+                            onClick={() => handleShare("facebook")}
                             className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
                           >
                             <Facebook className="w-4 h-4 text-blue-600" />
                             Facebook
                           </button>
                           <button
-                            onClick={() => handleShare('twitter')}
+                            onClick={() => handleShare("twitter")}
                             className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
                           >
                             <Twitter className="w-4 h-4 text-blue-400" />
                             Twitter
                           </button>
                           <button
-                            onClick={() => handleShare('whatsapp')}
+                            onClick={() => handleShare("whatsapp")}
                             className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
                           >
                             <FaWhatsapp className="w-4 h-4 text-green-600" />
                             WhatsApp
                           </button>
                           <button
-                            onClick={() => handleShare('linkedin')}
+                            onClick={() => handleShare("linkedin")}
                             className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
                           >
                             <Linkedin className="w-4 h-4 text-blue-600" />
@@ -239,7 +280,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                     fill={isSaved ? "#ef4444" : "none"}
                     color={isSaved ? "#ef4444" : "currentColor"}
                   />
-                  {isSaved ? 'Saved' : 'Save'}
+                  {isSaved ? "Saved" : "Save"}
                 </motion.button>
 
                 <Link href={`/product/compare/${product.name}`}>
@@ -263,7 +304,9 @@ const Product: React.FC<ProductProps> = ({ product }) => {
             transition={{ delay: 0.2 }}
           >
             <div className="space-y-4">
-              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">{product.name}</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                {product.name}
+              </h1>
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                 <span className="text-blue-500 hover:underline cursor-pointer">
@@ -277,10 +320,11 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-5 h-5 ${i < Math.floor(product.rating)
-                        ? "text-yellow-400 fill-yellow-400"
-                        : "text-gray-300"
-                        }`}
+                      className={`w-5 h-5 ${
+                        i < Math.floor(product.rating)
+                          ? "text-yellow-400 fill-yellow-400"
+                          : "text-gray-300"
+                      }`}
                     />
                   ))}
                 </div>
@@ -298,7 +342,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                 <div className="flex items-baseline gap-2">
                   <span className="text-sm text-gray-500">Price:</span>
                   <span className="text-2xl sm:text-3xl font-medium">
-                    ₹{product.price.toFixed(2)}
+                    ₮{product.price.toFixed(2)}
                   </span>
                 </div>
                 <div className="text-sm text-gray-500 mt-1">
@@ -307,7 +351,9 @@ const Product: React.FC<ProductProps> = ({ product }) => {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-gray-700">Size</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Size
+                </label>
                 <div className="flex gap-2 flex-wrap">
                   {product.size?.map((size: any) => {
                     const available = isSizeAvailable(size);
@@ -318,13 +364,14 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                         disabled={!available}
                         className={`
                           px-4 py-2 rounded-md relative
-                          ${available
-                            ? selectedSize === size
-                              ? 'bg-red-500 text-white'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                            : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                          ${
+                            available
+                              ? selectedSize === size
+                                ? "bg-red-500 text-white"
+                                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                              : "bg-gray-100 text-gray-400 cursor-not-allowed"
                           }
-                          ${!available && 'hover:cursor-not-allowed'}
+                          ${!available && "hover:cursor-not-allowed"}
                         `}
                       >
                         {size}
@@ -341,7 +388,9 @@ const Product: React.FC<ProductProps> = ({ product }) => {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-gray-700">Colors</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Colors
+                </label>
                 <div className="flex gap-2 flex-wrap">
                   {product.color && product.color.length > 0 && (
                     <div className="space-y-2 mt-4">
@@ -354,9 +403,11 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                             onClick={() => setSelectedColor(color)}
                             className={`
                           w-8 h-8 rounded-full border-2 
-                          ${selectedColor === color
-                                ? 'ring-2 ring-offset-2 ring-red-500'
-                                : 'hover:ring-1 hover:ring-gray-300'}
+                          ${
+                            selectedColor === color
+                              ? "ring-2 ring-offset-2 ring-red-500"
+                              : "hover:ring-1 hover:ring-gray-300"
+                          }
                         `}
                             style={{ backgroundColor: color }}
                           />
@@ -369,14 +420,19 @@ const Product: React.FC<ProductProps> = ({ product }) => {
               </div>
 
               <div className="space-y-2">
-                <label className="block text-sm font-medium text-gray-700">Quantity</label>
+                <label className="block text-sm font-medium text-gray-700">
+                  Quantity
+                </label>
                 <div className="flex items-center space-x-2">
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className={`p-2 rounded-full ${quantity <= 1 ? 'bg-gray-100 text-gray-400' : 'bg-blue-100 text-blue-500 hover:bg-blue-200'
-                      }`}
-                    onClick={() => handleQuantityChange('decrease')}
+                    className={`p-2 rounded-full ${
+                      quantity <= 1
+                        ? "bg-gray-100 text-gray-400"
+                        : "bg-blue-100 text-blue-500 hover:bg-blue-200"
+                    }`}
+                    onClick={() => handleQuantityChange("decrease")}
                     disabled={quantity <= 1}
                   >
                     <Minus className="w-4 h-4" />
@@ -405,14 +461,20 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className={`p-2 rounded-full ${quantity >= 10 ? 'bg-gray-100 text-gray-400' : 'bg-blue-100 text-blue-500 hover:bg-blue-200'
-                      }`}
-                    onClick={() => handleQuantityChange('increase')}
-                    disabled={quantity >= 10}>
+                    className={`p-2 rounded-full ${
+                      quantity >= 10
+                        ? "bg-gray-100 text-gray-400"
+                        : "bg-blue-100 text-blue-500 hover:bg-blue-200"
+                    }`}
+                    onClick={() => handleQuantityChange("increase")}
+                    disabled={quantity >= 10}
+                  >
                     <Plus className="w-4 h-4" />
                   </motion.button>
                 </div>
-                <p className="text-xs text-gray-500 mt-1">Enter a quantity between 1 and 10</p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Enter a quantity between 1 and 10
+                </p>
               </div>
 
               <div className="space-y-4">
@@ -501,14 +563,17 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                       <h3 className="text-lg font-semibold text-gray-800 group-hover:text-red-600 truncate">
                         {product.name}
                       </h3>
-                      <p className="mt-1 text-sm text-gray-600 truncate">{product.description || "No description available"}</p>
-                      <div className="mt-2 text-black font-bold group-hover:text-red-500">Price : ₹{product.price}</div>
+                      <p className="mt-1 text-sm text-gray-600 truncate">
+                        {product.description || "No description available"}
+                      </p>
+                      <div className="mt-2 text-black font-bold group-hover:text-red-500">
+                        Price : ₮{product.price}
+                      </div>
                     </div>
                   </motion.div>
                 );
               })}
             </div>
-
           </CardContent>
         </Card>
       </div>

@@ -7,17 +7,27 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger
+  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Menu, X, ChevronDown, Heart, Package, ShoppingCart, LogOut, BrainCircuit } from "lucide-react";
+import {
+  User,
+  Menu,
+  X,
+  ChevronDown,
+  Heart,
+  Package,
+  ShoppingCart,
+  LogOut,
+  BrainCircuit,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useRenderContext } from "@/contexts/RenderContext";
 import Cookies from "js-cookie";
-import { toast, Toaster } from 'react-hot-toast'
+import { toast, Toaster } from "react-hot-toast";
 
 const collections = {
   // "ШИНЭЭР ИРСЭН": {
@@ -34,27 +44,35 @@ const collections = {
   "Нүүр хуудас": {
     basePath: "/",
     items: [
-      { title: "Нүүр хуудас", category: "home", href: '/' },
+      { title: "Нүүр хуудас", category: "home", href: "/" },
       // { title: "Үйл ажиллагаа", category: "aboutus" },
-    ]
+    ],
   },
-  "Бүтээгдэхүүн": {
+  Бүтээгдэхүүн: {
     basePath: "/bestsellers",
     items: [
-      { title: "Traditional Suits", category: "traditional-suits", href: '/aboutus' },
-      { title: "Kurta Sets", category: "kurta-sets", href: '/aboutus' },
-      { title: "Latest Collections", category: "latest-collection", href: '/aboutus' },
-      { title: "Lounge Wear", category: "lounge-wear", href: '/aboutus' },
-    ]
+      {
+        title: "Traditional Suits",
+        category: "traditional-suits",
+        href: "/aboutus",
+      },
+      { title: "kurta-sets", category: "kurta-sets", href: "/aboutus" },
+      {
+        title: "Latest Collections",
+        category: "latest-collection",
+        href: "/aboutus",
+      },
+      { title: "Lounge Wear", category: "lounge-wear", href: "/aboutus" },
+    ],
   },
   "БИДНИЙ ТУХАЙ": {
     basePath: "/aboutus",
     items: [
       // { title: 'Бидний тухай', href: '/aboutus' },
-      { title: "Бидний тухай", category: "aboutus", href: '/aboutus' },
-    ]
+      { title: "Бидний тухай", category: "aboutus", href: "/aboutus" },
+    ],
   },
-  // "ЭМ": {
+  // "kurta-sets": {
   //   basePath: "/ethnic-wear",
   //   items: [
   //     { title: "Traditional Suits", category: "traditional-suits" },
@@ -65,7 +83,7 @@ const collections = {
   //     { title: "Traditional Sarees", category: "traditional-sarees" },
   //   ]
   // },
-  // "ЭМНЭЛГИЙН ХЭРЭГСЭЛ": {
+  // "kurta-setsНЭЛГИЙН ХЭРЭГСЭЛ": {
   //   basePath: "/fabrics",
   //   items: [
   //     { title: "Cotton", category: "cotton" },
@@ -86,7 +104,7 @@ const collections = {
   // }
 };
 
-export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
+export function MainMenu({ isMobile = false, onLinkClick = () => {} }) {
   const [openCategory, setOpenCategory] = useState(null);
   const { triggerRender } = useRenderContext();
   const router = useRouter();
@@ -115,7 +133,9 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
                   onClick={() => handleCategoryClick(categoryName)}
                   className="flex w-full items-center justify-between px-4 py-3 text-left hover:bg-gray-50"
                 >
-                  <span className="text-sm font-medium text-gray-700">{categoryName}</span>
+                  <span className="text-sm font-medium text-gray-700">
+                    {categoryName}
+                  </span>
                   <ChevronDown
                     className={cn(
                       "h-4 w-4 text-gray-500 transition-transform duration-200",
@@ -137,7 +157,12 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
                         {categoryData.items.map((item) => (
                           <button
                             key={item.title}
-                            onClick={() => handleLinkClick(categoryData.basePath, item.category)}
+                            onClick={() =>
+                              handleLinkClick(
+                                categoryData.basePath,
+                                item.category
+                              )
+                            }
                             className="block w-full rounded-md px-3 py-2 text-left text-sm text-gray-600 hover:bg-gray-100"
                           >
                             {item.title}
@@ -154,7 +179,9 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
                 {categoryData.items.map((item) => (
                   <button
                     key={item.title}
-                    onClick={() => handleLinkClick(categoryData.basePath, item.category)}
+                    onClick={() =>
+                      handleLinkClick(categoryData.basePath, item.category)
+                    }
                     className="block w-full rounded-md px-3 py-2 text-left text-sm text-gray-600 hover:bg-gray-100"
                   >
                     {item.title}
@@ -185,7 +212,12 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
                       <li key={item.title}>
                         <NavigationMenuLink asChild>
                           <button
-                            onClick={() => handleLinkClick(categoryData.basePath, item.category)}
+                            onClick={() =>
+                              handleLinkClick(
+                                categoryData.basePath,
+                                item.category
+                              )
+                            }
                             className="block w-full select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-red-700 text-left"
                           >
                             <div className="text-sm font-medium leading-none">
@@ -197,19 +229,19 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
                     ))}
                   </ul>
                 </NavigationMenuContent>
-                </>
+              </>
             ) : (
-            // Directly render 'Бидний ТУХАЙ' items without submenu
-            <div className="space-y-1 px-4 py-2">
-              {categoryData.items.map((item) => (
-               <Link
-               href={item.href}
-               className="text-gray-800 hover:text-orange-600 transition-colors duration-300 text-sm block py-1"
-             >
-               {item.title}
-             </Link>
-              ))}
-            </div>
+              // Directly render 'Бидний ТУХАЙ' items without submenu
+              <div className="space-y-1 px-4 py-2">
+                {categoryData.items.map((item) => (
+                  <Link
+                    href={item.href}
+                    className="text-gray-800 hover:text-orange-600 transition-colors duration-300 text-sm block py-1"
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
             )}
           </NavigationMenuItem>
         ))}
@@ -217,7 +249,6 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
     </NavigationMenu>
   );
 }
-
 
 export function Navbar() {
   const router = useRouter();
@@ -229,7 +260,7 @@ export function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [username, setUsername] = useState("");
   const { triggerRender } = useRenderContext();
-  const userId = Cookies.get('userId');
+  const userId = Cookies.get("userId");
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -242,20 +273,28 @@ export function Navbar() {
           try {
             const response = await fetch(`/api/user/get/${userId}`, {
               headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-              }
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+              },
             });
 
             if (response.ok) {
               const userData = await response.json();
               setUsername(userData.data.username);
             } else {
-              setUsername(session?.user?.name || session?.user?.email?.split('@')[0] || "User");
+              setUsername(
+                session?.user?.name ||
+                  session?.user?.email?.split("@")[0] ||
+                  "User"
+              );
             }
           } catch (error) {
             toast.error("Failed to fetch username!");
-            setUsername(session?.user?.name || session?.user?.email?.split('@')[0] || "User");
+            setUsername(
+              session?.user?.name ||
+                session?.user?.email?.split("@")[0] ||
+                "User"
+            );
           }
         }
         setIsAuthChecked(true);
@@ -279,7 +318,7 @@ export function Navbar() {
     triggerRender();
     try {
       await signOut({ redirect: false });
-      Object.keys(Cookies.get()).forEach(cookie => Cookies.remove(cookie));
+      Object.keys(Cookies.get()).forEach((cookie) => Cookies.remove(cookie));
       setIsAuthenticated(false);
       setIsDropdownOpen(false);
       triggerRender();
@@ -288,7 +327,7 @@ export function Navbar() {
         router.push("/");
       }, 1000);
     } catch (error) {
-      toast.error("logout failed!")
+      toast.error("logout failed!");
     }
   };
 
@@ -303,7 +342,9 @@ export function Navbar() {
             className="flex items-center space-x-2 rounded-full bg-gray-100 px-4 py-2 text-gray-600 hover:bg-gray-200"
           >
             <User className="h-5 w-5" />
-            <span className="hidden sm:inline capitalize truncate max-w-[100px]">{username}</span>
+            <span className="hidden sm:inline capitalize truncate max-w-[100px]">
+              {username}
+            </span>
           </button>
 
           <AnimatePresence>
@@ -319,7 +360,9 @@ export function Navbar() {
                   <div className="px-4 py-2 text-sm text-gray-900 border-b border-gray-100">
                     <p className="font-medium capitalize">{username}</p>
                     {session?.user?.email && (
-                      <p className="text-xs text-gray-500 truncate">{session.user.email}</p>
+                      <p className="text-xs text-gray-500 truncate">
+                        {session.user.email}
+                      </p>
                     )}
                   </div>
                   <button
@@ -378,7 +421,6 @@ export function Navbar() {
                     <LogOut size={16} /> Sign Out
                   </button>
                 </div>
-
               </motion.div>
             )}
           </AnimatePresence>
@@ -399,13 +441,13 @@ export function Navbar() {
 
   useEffect(() => {
     const handleClickOutside = (event: any) => {
-      if (isDropdownOpen && !event.target.closest('.relative')) {
+      if (isDropdownOpen && !event.target.closest(".relative")) {
         setIsDropdownOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isDropdownOpen]);
 
   return (
@@ -432,7 +474,11 @@ export function Navbar() {
               onClick={() => setMenuOpen(!isMenuOpen)}
               className="block lg:hidden p-2 rounded-md text-gray-500 hover:bg-gray-100"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>

@@ -152,7 +152,7 @@
 //                                         <div className="flex items-center justify-between mb-3">
 //                                             <div className="flex flex-col">
 //                                                 <span className="text-sm sm:text-xl font-bold text-gray-900">
-//                                                     ₹{product.price.toLocaleString('en-IN')}
+//                                                     ₮{product.price.toLocaleString('en-IN')}
 //                                                 </span>
 //                                                 {product.delivery && (
 //                                                     <span className="text-xs text-gray-500">
@@ -164,7 +164,7 @@
 
 //                                         {product.inStock > 0 ? (
 //                                             <button
-//                                                 className="w-full bg-red-500 text-white py-2.5 rounded-lg text-sm 
+//                                                 className="w-full bg-red-500 text-white py-2.5 rounded-lg text-sm
 //                                         hover:bg-red-600 transition-colors duration-200 flex items-center justify-center gap-2 group"
 //                                             >
 //                                                 <Info className="w-4 h-4 group-hover:animate-bounce" />

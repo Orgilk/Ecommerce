@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart } from "lucide-react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 interface ProductCardProps {
   _id: any;
@@ -20,7 +20,7 @@ export function ProductCard({
   description,
   category,
   images,
-  className
+  className,
 }: ProductCardProps) {
   return (
     <Link href={`/product/${_id}`}>
@@ -67,16 +67,14 @@ export function ProductCard({
             </motion.span>
           )}
 
-          <h3 className="text-lg font-medium text-gray-900 truncate">
-            {name}
-          </h3>
+          <h3 className="text-lg font-medium text-gray-900 truncate">{name}</h3>
 
           <div className="flex items-center justify-between mt-3">
             <motion.span
               className="text-xl font-bold text-gray-900"
               whileHover={{ scale: 1.05 }}
             >
-              ₹{price.toFixed(2)}
+              ₮{price.toFixed(2)}
             </motion.span>
 
             <motion.button
@@ -96,5 +94,5 @@ export function ProductCard({
         </div>
       </motion.div>
     </Link>
-  )
+  );
 }
