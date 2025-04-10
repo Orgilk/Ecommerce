@@ -28,21 +28,21 @@ const staticImages: Photo[] = [
     imageUrl: "/corosal/pharmacy.jpg",
     title: "Худалдаа",
     source: "Худалдаа",
-    link: "/bestsellers?category=traditional-suits",
+    link: "/bestsellers?category=Эм",
   },
   {
     id: "static2",
     imageUrl: "/corosal/pharmacy.jpg",
     title: "Энэ сарын хямдрал",
-    source: "kurta-setsнэлгийн хэрэгслийн худалдаа",
-    link: "/bestsellers?category=traditional-suits",
+    source: "Тарианэлгийн хэрэгслийн худалдаа",
+    link: "/bestsellers?category=Эм",
   },
   {
     id: "static3",
     imageUrl: "/corosal/pharmacy.jpg",
     title: "Худалдаа",
     source: "Худалдаа",
-    link: "/bestsellers?category=traditional-suits",
+    link: "/bestsellers?category=Эм",
   },
 ];
 

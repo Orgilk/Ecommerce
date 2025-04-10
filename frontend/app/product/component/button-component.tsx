@@ -127,7 +127,7 @@ export function AddToCartModal({
                 animate={{ x: isHovered ? -500 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                Add to Cart
+                Барааг картанд нэмэх
               </motion.div>
               <motion.div
                 className="absolute inset-0 flex items-center justify-center"
@@ -175,7 +175,7 @@ export function AddToCartModal({
                 className="p-6"
               >
                 <h4 className="text-lg md:text-2xl text-gray-900 dark:text-white font-bold text-center mb-6">
-                  Add to Cart
+                  Барааг картанд нэмэх
                 </h4>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
@@ -315,7 +315,7 @@ export function BuyNowButton({
           animate={{ x: isHovered ? -500 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          Buy Now
+          Худалдаж авах
         </motion.div>
         <motion.div
           className="absolute inset-0 flex items-center justify-center"

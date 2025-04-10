@@ -52,11 +52,11 @@ const collections = {
     basePath: "/bestsellers",
     items: [
       {
-        title: "Traditional Suits",
-        category: "traditional-suits",
+        title: "Эм",
+        category: "Эм",
         href: "/aboutus",
       },
-      { title: "kurta-sets", category: "kurta-sets", href: "/aboutus" },
+      { title: "Тариа", category: "Тариа", href: "/aboutus" },
       {
         title: "Latest Collections",
         category: "latest-collection",
@@ -72,18 +72,18 @@ const collections = {
       { title: "Бидний тухай", category: "aboutus", href: "/aboutus" },
     ],
   },
-  // "kurta-sets": {
+  // "Тариа": {
   //   basePath: "/ethnic-wear",
   //   items: [
-  //     { title: "Traditional Suits", category: "traditional-suits" },
-  //     { title: "Kurta Sets", category: "kurta-sets" },
+  //     { title: "Эм", category: "Эм" },
+  //     { title: "Тариа", category: "Тариа" },
   //     { title: "Indian Wear", category: "indian" },
   //     { title: "Western Wear", category: "western" },
   //     { title: "Festive Collection", category: "festive" },
   //     { title: "Traditional Sarees", category: "traditional-sarees" },
   //   ]
   // },
-  // "kurta-setsНЭЛГИЙН ХЭРЭГСЭЛ": {
+  // "ТариаНЭЛГИЙН ХЭРЭГСЭЛ": {
   //   basePath: "/fabrics",
   //   items: [
   //     { title: "Cotton", category: "cotton" },

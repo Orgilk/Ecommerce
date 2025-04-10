@@ -310,9 +310,9 @@ const Product: React.FC<ProductProps> = ({ product }) => {
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                 <span className="text-blue-500 hover:underline cursor-pointer">
-                  by {product.seller}
+                  {product.seller}
                 </span>
-                <span className="text-gray-500">Model: {product.model}</span>
+                <span className="text-gray-500">Төрөл: {product.model}</span>
               </div>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -330,29 +330,27 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                 </div>
                 <div className="flex flex-wrap items-center gap-4 text-sm">
                   <span className="text-blue-500 hover:text-blue-600 cursor-pointer">
-                    {product.reviews.toLocaleString()} ratings
+                    {product.reviews.toLocaleString()} үнэлгээ
                   </span>
                   <span className="text-blue-500 hover:text-blue-600 cursor-pointer">
-                    {product.answers} answered questions
+                    {product.answers} хариулсан асуултууд
                   </span>
                 </div>
               </div>
 
               <div className="border-b border-gray-200 pb-4">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-sm text-gray-500">Price:</span>
+                  <span className="text-sm text-gray-500">Үнэ:</span>
                   <span className="text-2xl sm:text-3xl font-medium">
                     ₮{product.price.toFixed(2)}
                   </span>
                 </div>
-                <div className="text-sm text-gray-500 mt-1">
-                  No Import Fees & Free Shipping Included
-                </div>
+                <div className="text-sm text-gray-500 mt-1"></div>
               </div>
 
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Size
+                  size
                 </label>
                 <div className="flex gap-2 flex-wrap">
                   {product.size?.map((size: any) => {
@@ -385,9 +383,9 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                   })}
                   {product.size == undefined ? <h1>5 meter</h1> : null}
                 </div>
-              </div>
+              </div> */}
 
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
                   Colors
                 </label>
@@ -417,11 +415,11 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                   )}
                   {product.color == undefined ? <h1>Red Color</h1> : null}
                 </div>
-              </div>
+              </div> */}
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Quantity
+                  Тоо ширхэг
                 </label>
                 <div className="flex items-center space-x-2">
                   <motion.button
@@ -472,13 +470,13 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                     <Plus className="w-4 h-4" />
                   </motion.button>
                 </div>
-                <p className="text-xs text-gray-500 mt-1">
+                {/* <p className="text-xs text-gray-500 mt-1">
                   Enter a quantity between 1 and 10
-                </p>
+                </p> */}
               </div>
 
               <div className="space-y-4">
-                <h2 className="font-bold text-lg">About this item</h2>
+                <h2 className="font-bold text-lg">Барааны тухай</h2>
                 <ul className="space-y-2">
                   {product.features.map((feature: any, index: any) => (
                     <motion.li
@@ -517,7 +515,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <h2 className="text-2xl font-bold mb-6">Product Description</h2>
+          <h2 className="text-2xl font-bold mb-6">Барааны мэдээлэл</h2>
           <div className="prose max-w-none text-gray-600">
             <p className="whitespace-pre-line">{product.description}</p>
           </div>
@@ -535,7 +533,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
 
         <Card className="w-full mt-8">
           <CardHeader>
-            <CardTitle>More Like this</CardTitle>
+            <CardTitle>Санал болгох бараанууд</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

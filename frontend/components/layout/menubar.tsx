@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 
 const collections = {
-  "Шинээр нkurta-setsэгдсэн": [
+  "Шинээр нТариаэгдсэн": [
     { title: "Spring Collection", href: "#" },
     { title: "Summer Essentials", href: "#" },
     { title: "Limited Edition", href: "#" },

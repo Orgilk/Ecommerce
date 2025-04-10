@@ -50,7 +50,7 @@ export function ProductCard({
               className="bg-white bg-opacity-90 p-2 rounded-full shadow-md hover:bg-opacity-100"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              aria-label="Add to cart"
+              aria-label="Барааг нэмэх"
             >
               <ShoppingCart size={20} className="text-blue-600" />
             </motion.button>
@@ -83,7 +83,7 @@ export function ProductCard({
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10 flex items-center gap-2">
-                Buy Now
+                Худалдаж авах
                 <span className="hidden group-hover:inline">
                   <ShoppingCart size={16} className="ml-2" />
                 </span>

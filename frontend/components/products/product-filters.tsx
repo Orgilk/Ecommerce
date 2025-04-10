@@ -71,13 +71,19 @@ export function ProductFilters({
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
 
-  const uniqueCategories = ["All", ...Array.from(new Set(products.map((p) => p.category)))];
-  const uniqueSizes = Array.from(new Set(products.flatMap((p) => p.model || [])));
-  const uniqueColors = Array.from(new Set(products.flatMap((p) => p.color || ["red"])));
+  const uniqueCategories = [
+    "All",
+    ...Array.from(new Set(products.map((p) => p.category))),
+  ];
+  const uniqueSizes = Array.from(
+    new Set(products.flatMap((p) => p.model || []))
+  );
+  const uniqueColors = Array.from(
+    new Set(products.flatMap((p) => p.color || ["red"]))
+  );
 
-  const minPrice = Math.min(...products.map(p => p.price));
+  const minPrice = Math.min(...products.map((p) => p.price));
   const maxPrice = 20000000;
-
 
   const placeholders = [
     "What's you looking for.",
@@ -85,7 +91,6 @@ export function ProductFilters({
     "What's in your mind",
     "Find what you need.",
   ];
-
 
   const debouncedPriceRangeChange = useDebounce((range: number[]) => {
     onPriceRangeChange(range);
@@ -132,7 +137,7 @@ export function ProductFilters({
 
   const handleSizeToggle = (size: string) => {
     const updatedSizes = selectedSizes.includes(size)
-      ? selectedSizes.filter(s => s !== size)
+      ? selectedSizes.filter((s) => s !== size)
       : [...selectedSizes, size];
     onSizesChange(updatedSizes);
     filterProducts(selectedCategory, searchTerm, localPriceRange, updatedSizes);
@@ -140,10 +145,15 @@ export function ProductFilters({
 
   const handleColorToggle = (color: string) => {
     const updatedColors = selectedColors.includes(color)
-      ? selectedColors.filter(c => c !== color)
+      ? selectedColors.filter((c) => c !== color)
       : [...selectedColors, color];
     onColorChange(updatedColors); // Use onColorChange instead of onSizesChange
-    filterProducts(selectedCategory, searchTerm, localPriceRange, selectedSizes);
+    filterProducts(
+      selectedCategory,
+      searchTerm,
+      localPriceRange,
+      selectedSizes
+    );
   };
 
   const filterProducts = (
@@ -170,7 +180,7 @@ export function ProductFilters({
 
     if (size.length > 0) {
       filtered = filtered.filter((product) =>
-        size.some(size => product.size?.includes(size))
+        size.some((size) => product.size?.includes(size))
       );
     }
 
@@ -200,7 +210,6 @@ export function ProductFilters({
           )}
         </div>
 
-
         <div className="relative w-full max-w-xl">
           <div className="relative w-full max-w-xl">
             <Search className="absolute left-2 top-2.5 h-4 w-4 text-neutral-500" />
@@ -216,7 +225,11 @@ export function ProductFilters({
                   <motion.span
                     key={currentPlaceholder}
                     initial={{ y: 10, opacity: 0 }}
-                    animate={isAnimating ? { y: 0, opacity: 0.5 } : { y: -10, opacity: 0 }}
+                    animate={
+                      isAnimating
+                        ? { y: 0, opacity: 0.5 }
+                        : { y: -10, opacity: 0 }
+                    }
                     exit={{ y: -10, opacity: 0 }}
                     transition={{ duration: 0.2, ease: "easeInOut" }}
                     className="pointer-events-none absolute left-8 top-2 text-sm text-neutral-400"
@@ -280,7 +293,6 @@ export function ProductFilters({
         </div>
       </div>
 
-
       {uniqueSizes.length > 0 && (
         <div className="space-y-2">
           <h3 className="text-sm font-medium">Model</h3>
@@ -303,7 +315,6 @@ export function ProductFilters({
           </div>
         </div>
       )}
-
 
       {/* {uniqueColors.length > 0 && (
         <div className="space-y-2">
@@ -328,8 +339,6 @@ export function ProductFilters({
         </div>
       )} */}
 
-
-
       <div className="space-y-2">
         <h3 className="text-sm font-medium">Sort By</h3>
         <Select value={sortBy} onValueChange={handleSortChange}>
@@ -337,13 +346,22 @@ export function ProductFilters({
             <SelectValue placeholder="Choose sorting" />
           </SelectTrigger>
           <SelectContent className="bg-white">
-            <SelectItem value="default" className="hover:bg-red-50 focus:bg-red-50 cursor-pointer">
+            <SelectItem
+              value="default"
+              className="hover:bg-red-50 focus:bg-red-50 cursor-pointer"
+            >
               Default
             </SelectItem>
-            <SelectItem value="price-asc" className="hover:bg-red-50 focus:bg-red-50 cursor-pointer">
+            <SelectItem
+              value="price-asc"
+              className="hover:bg-red-50 focus:bg-red-50 cursor-pointer"
+            >
               Price: Low to High
             </SelectItem>
-            <SelectItem value="price-desc" className="hover:bg-red-50 focus:bg-red-50 cursor-pointer">
+            <SelectItem
+              value="price-desc"
+              className="hover:bg-red-50 focus:bg-red-50 cursor-pointer"
+            >
               Price: High to Low
             </SelectItem>
           </SelectContent>

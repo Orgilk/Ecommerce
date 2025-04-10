@@ -11,7 +11,7 @@ const RevenueChart = ({ data }: { data: ChartData[] }) => {
     return (
         <Card className="w-full mt-8">
             <CardHeader>
-                <CardTitle>Last One Year Product Demand</CardTitle>
+                <CardTitle>Өнгөрсөн жилийн барааны эрэлт</CardTitle>
             </CardHeader>
             <CardContent>
                 <div className="h-64 w-full">

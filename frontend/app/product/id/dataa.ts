@@ -41,7 +41,7 @@
 //     "color": [
 //       "NavyBlue"
 //     ],
-//     "category": "kurta-sets",
+//     "category": "Тариа",
 //     "model": "JA-729)",
 //     "size": [
 //       "XS",
@@ -57,7 +57,7 @@
 //       "/detailphotos/1.4.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :JA-729)",
 //       "Washing instruction-  Quick dip wash or Dry clean, separate wash in cold water, dry in shadow",
@@ -125,12 +125,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "9 To 12 Working days",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Rajwadi Poshak Co.",
 //     "color": [
 //       "Yellow"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA-792)",
 //     "size": [
 //       "XS",
@@ -148,7 +148,7 @@
 //     ],
 //     "features": [
 //       "Fit - Relaxed (Code JA-792)",
-//       "Dispatch Time : 9 To 12 Working days",
+//       "Хүргэлт : 9-12 ажлын өдөр",
 //       "Hand wash separately in cold water.",
 //       "Always use mild detergent.",
 //       "Kurta length 46",
@@ -215,12 +215,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Green"
 //     ],
-//     "category": "kurta-sets",
+//     "category": "Тариа",
 //     "model": "Fit - Relaxed (Code JA-704)",
 //     "size": [
 //       "XS",
@@ -304,12 +304,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Blue"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA-701)",
 //     "size": [
 //       "XS",
@@ -394,12 +394,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "White"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA-478)",
 //     "size": [
 //       "S",
@@ -417,7 +417,7 @@
 //       "Fit - Relaxed (Code JA-478)",
 //       " Quick dip wash or Dry clean, separate wash in cold water, dry in shadow",
 //       "First Wash- Color may bleed slightly",
-//       "DISPATCH TIME 5 To 6 Working day",
+//       "Хүргэлт 5-7 ажлын өдөр",
 //       "Kurta length 46",
 //       "Pant length 38"
 //     ],
@@ -482,12 +482,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Megenta"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA-718)",
 //     "size": [
 //       "XS",
@@ -573,12 +573,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Mud"
 //     ],
-//     "category": "kurta-sets",
+//     "category": "Тариа",
 //     "model": "Fit - Relaxed (Code JA-SKU-769)",
 //     "size": [
 //       "XS",
@@ -663,12 +663,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Green"
 //     ],
-//     "category": "kurta-sets",
+//     "category": "Тариа",
 //     "model": "Fit - Relaxed (Code JA-657 WD)",
 //     "size": [
 //       "XS",
@@ -759,7 +759,7 @@
 //     "color": [
 //       "White"
 //     ],
-//     "category": "kurta-sets",
+//     "category": "Тариа",
 //     "model": "Fit - Relaxed (Code JA-453 WD)",
 //     "size": [
 //       "XS",
@@ -778,7 +778,7 @@
 //     "features": [
 //       "Fit - Relaxed (Code JA-453 WD)",
 //       "Washing instruction-  Quick dip wash or Dry clean",
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Kurta length 46",
 //       "Pant length 38"
@@ -844,12 +844,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Green"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA_607_SKP)",
 //     "size": [
 //       "XS",
@@ -938,8 +938,8 @@
 //     "color": [
 //       "Peach"
 //     ],
-//     "category": "traditional-suits",
-//     "model": "Not specified",
+//     "category": "Эм",
+//     "model": "9-12 ажлын өдөр",
 //     "size": [
 //       "XS",
 //       "S",
@@ -958,7 +958,7 @@
 //       "Fit - Relaxed (code : JA-649-SKP)",
 //       "Kurta- Pure Handblock  Cotton",
 //       "Washing instruction-  Quick dip wash or Dry clean",
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Kurta length 46",
 //       "Pant length 38"
 //     ],
@@ -1028,8 +1028,8 @@
 //     "color": [
 //       "NavyBlue"
 //     ],
-//     "category": "traditional-suits",
-//     "model": "Not specified",
+//     "category": "Эм",
+//     "model": "9-12 ажлын өдөр",
 //     "size": [
 //       "XS",
 //       "S",
@@ -1048,7 +1048,7 @@
 //       "Fit - Relaxed (code : JA-589-SK)",
 //       "Kurta- Pure Cotton",
 //       "Washing instruction-  Quick dip wash or Dry clean",
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Kurta length 46",
 //       "Pant length 38"
 //     ],
@@ -1113,12 +1113,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "9 To 12 Working days",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Yellow"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA-792)",
 //     "size": [
 //       "XS",
@@ -1138,7 +1138,7 @@
 //       "Fit - Relaxed (Code JA-792)",
 //       "Hand wash separately in cold water",
 //       "Always use mild detergent",
-//       "Dispatch Time : 9 To 12 Working days",
+//       "Хүргэлт : 9-12 ажлын өдөр",
 //       "Kurta length 46",
 //       "Pant length 38"
 //     ],
@@ -1203,13 +1203,13 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Green"
 //     ],
-//     "category": "traditional-suits",
-//     "model": "Not specified",
+//     "category": "Эм",
+//     "model": "9-12 ажлын өдөр",
 //     "size": [
 //       "S",
 //       "M",
@@ -1292,12 +1292,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Maroon"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA-687)",
 //     "size": [
 //       "XS",
@@ -1382,12 +1382,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Green"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA-819)",
 //     "size": [
 //       "XS",
@@ -1473,12 +1473,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Peach"
 //     ],
-//     "category": "traditional-suits",
+//     "category": "Эм",
 //     "model": "Fit - Relaxed (Code JA-649)",
 //     "size": [
 //       "XS",
@@ -1563,13 +1563,13 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "SkyBlue"
 //     ],
-//     "category": "traditional-suits",
-//     "model": "Not specified",
+//     "category": "Эм",
+//     "model": "9-12 ажлын өдөр",
 //     "size": [
 //       "XS",
 //       "S",
@@ -1653,12 +1653,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Green"
 //     ],
-//     "category": "kurta-sets",
+//     "category": "Тариа",
 //     "model": "Fit - Relaxed (Code JA-622)",
 //     "size": [
 //       "XS",
@@ -1744,12 +1744,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Yellow"
 //     ],
-//     "category": "kurta-sets",
+//     "category": "Тариа",
 //     "model": "Fit - Relaxed (Code JA-615)",
 //     "size": [
 //       "XS",
@@ -1834,12 +1834,12 @@
 //     "answers": 234,
 //     "inStock": true,
 //     "delivery": "Хүргэлт үнэгүй",
-//     "deliveryDate": "Not specified",
+//     "deliveryDate": "9-12 ажлын өдөр",
 //     "seller": "Indigo Apparel Co.",
 //     "color": [
 //       "Purple"
 //     ],
-//     "category": "kurta-sets",
+//     "category": "Тариа",
 //     "model": "Fit - Relaxed (Code JA-627)",
 //     "size": [
 //       "XS",
@@ -1947,7 +1947,7 @@
 //       "/detailphotos/22.4.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-817)",
 //       "Washing instruction-  Dry clean only",
@@ -2039,7 +2039,7 @@
 //       "/detailphotos/23.4.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-816)",
 //       "Washing instruction-  Dry clean only",
@@ -2128,7 +2128,7 @@
 //       "/detailphotos/24.2.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-806)",
 //       "Washing instruction-  Dry clean only",
@@ -2219,7 +2219,7 @@
 //       "/detailphotos/25.3.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-798)",
 //       "Washing instruction-  Dry clean only",
@@ -2310,7 +2310,7 @@
 //       "/detailphotos/26.4.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-812)",
 //       "Washing instruction-  Dry clean only",
@@ -2397,7 +2397,7 @@
 //       "/detailphotos/27.2.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-813)",
 //       "Washing instruction-  Dry clean only",
@@ -2489,7 +2489,7 @@
 //       "/detailphotos/28.5.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-804)",
 //       "Washing instruction-  Dry clean only",
@@ -2582,7 +2582,7 @@
 //       "/detailphotos/29.5.webp"
 //     ],
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-794)",
 //       "Washing instruction-  Dry clean only",
@@ -2674,7 +2674,7 @@
 //     ],
 //     "video": "/detailvideos/30.mp4",
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-782)",
 //       "Washing instruction-  Dry clean only",
@@ -2766,7 +2766,7 @@
 //     ],
 //     "video": "/detailvideos/31.mp4",
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Chanderi Kurta with lining & Chanderi Silk Dupatta & Cotton Pant",
 //       "Fit - Relaxed (CODE :RP-782)",
 //       "Washing instruction-  Quick dip wash or Dry clean, separate wash in cold water, dry in shadow",
@@ -2858,7 +2858,7 @@
 //     ],
 //     "video": "/detailvideos/32.mp4",
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-814)",
 //       "Washing instruction-  Dry clean only",
@@ -2952,7 +2952,7 @@
 //     ],
 //     "video": "/detailvideos/33.mp4",
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-787)",
 //       "Washing instruction-  Separate wash only (Might bleed color) eferably Dry clean.",
@@ -3042,7 +3042,7 @@
 //     ],
 //     "video": "/detailvideos/34.mp4",
 //     "features": [
-//       "Dispatch Time : 5-7 өдөрт хүргэнэ",
+//       "Хүргэлт : 5-7 өдөрт хүргэнэ",
 //       "Fabric - Pure Cotton",
 //       "Fit - Relaxed (CODE :RP-781)",
 //       "Washing instruction-  Quick dip wash or Dry clean, separate wash in cold water, dry in shadow",

@@ -19,10 +19,10 @@ const CategoryGrid = () => {
     { title: "Indian Sarees", path: `${basePath}/category/indian-sarees` },
     { title: "Bedsheets", path: `${basePath}/category/bedsheets` },
     {
-      title: "Traditional Suits",
-      path: `${basePath}/category/traditional-suits`,
+      title: "Эм",
+      path: `${basePath}/category/Эм`,
     },
-    { title: "Kurta Sets", path: `${basePath}/category/kurta-sets` },
+    { title: "Тариа", path: `${basePath}/category/Тариа` },
     { title: "Indian Wear", path: `${basePath}/category/indian` },
     { title: "Western Wear", path: `${basePath}/category/western` },
     { title: "Festive Collection", path: `${basePath}/category/festive` },
@@ -48,7 +48,7 @@ const CategoryGrid = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-6">All Categories</h2>
+      <h2 className="text-2xl font-bold mb-6">Бүгд Categories</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {categories.map((category, index) => (
           <Link

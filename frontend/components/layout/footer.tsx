@@ -27,7 +27,7 @@ const itemVariants = {
 };
 
 const categories = [
-  { title: "Kurta Sets", href: "/ethnic-wear?category=kurta-sets" },
+  { title: "Тариа", href: "/ethnic-wear?category=Тариа" },
   { title: "Indian wear", href: "/ethnic-wear?category=indian" },
   { title: "Top rated products", href: "/ethnic-wear?category=top-rated" },
   { title: "Premium Fabric", href: "/bestsellers?category=premium" },

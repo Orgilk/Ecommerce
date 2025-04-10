@@ -22,8 +22,6 @@ export interface Product {
   inStock: boolean; // Make this a boolean
   delivery: string;
   deliveryDate: string;
-  seller: string;
-  color?: string[];
   category: string;
   video?: string;
   model: string;
@@ -36,7 +34,7 @@ export interface Product {
 
 const ProductGridComponent: React.FC = () => {
   const [products, setProducts] = useState<Product[]>(
-    productData.filter((product) => product.id >= 30 && product.id <= 34)
+    productData.filter((product) => product.id >= 11 && product.id <= 17)
   );
 
   const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});

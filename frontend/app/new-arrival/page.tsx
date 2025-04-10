@@ -313,7 +313,7 @@ const CategoryProductListingPage = () => {
           animate={{ opacity: 1, y: 0 }}
         >
           <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-            {filteredProducts.length} Бүтээгдэхүүн шинээр нkurta-setsэгдсэн
+            {filteredProducts.length} Бүтээгдэхүүн шинээр нТариаэгдсэн
             {searchQuery && (
               <span className="font-medium text-neutral-900 dark:text-neutral-100">
                 {" "}
