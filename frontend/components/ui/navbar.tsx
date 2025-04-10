@@ -31,6 +31,13 @@ const collections = {
   //     { title: "Bedsheets", category: "bedsheets" }
   //   ]
   // },
+  "Нүүр хуудас": {
+    basePath: "/",
+    items: [
+      { title: "Нүүр хуудас", category: "home" },
+      // { title: "Үйл ажиллагаа", category: "aboutus" },
+    ]
+  },
   "Бүтээгдэхүүн": {
     basePath: "/bestsellers",
     items: [
@@ -43,14 +50,8 @@ const collections = {
   "БИДНИЙ ТУХАЙ": {
     basePath: "/aboutus",
     items: [
-      { title: "Байршил", category: "aboutus" },
-      { title: "Үйл ажиллагаа", category: "aboutus" },
-    ]
-  },
-  "Нүүр Хуудас": {
-    basePath: "/bestsellers",
-    items: [
-      { title: "Нүүр", category: "traditional-suits" },
+      { title: "Бидний тухай", category: "aboutus" },
+      // { title: "Үйл ажиллагаа", category: "aboutus" },
     ]
   },
   // "ЭМ": {
@@ -107,42 +108,60 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
       <div className="w-full space-y-1">
         {Object.entries(collections).map(([categoryName, categoryData]) => (
           <div key={categoryName} className="border-b border-gray-100">
-            <button
-              onClick={() => handleCategoryClick(categoryName)}
-              className="flex w-full items-center justify-between px-4 py-3 text-left hover:bg-gray-50"
-            >
-              <span className="text-sm font-medium text-gray-700">{categoryName}</span>
-              <ChevronDown
-                className={cn(
-                  "h-4 w-4 text-gray-500 transition-transform duration-200",
-                  openCategory === categoryName && "rotate-180"
-                )}
-              />
-            </button>
-
-            <AnimatePresence initial={false}>
-              {openCategory === categoryName && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="overflow-hidden bg-gray-50"
+            {/* Skip submenu for 'Бидний ТУХАЙ' */}
+            {categoryName === "Бүтээгдэхүүн" ? (
+              <>
+                <button
+                  onClick={() => handleCategoryClick(categoryName)}
+                  className="flex w-full items-center justify-between px-4 py-3 text-left hover:bg-gray-50"
                 >
-                  <div className="space-y-1 px-4 py-2">
-                    {categoryData.items.map((item) => (
-                      <button
-                        key={item.title}
-                        onClick={() => handleLinkClick(categoryData.basePath, item.category)}
-                        className="block w-full rounded-md px-3 py-2 text-left text-sm text-gray-600 hover:bg-gray-100"
-                      >
-                        {item.title}
-                      </button>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+                  <span className="text-sm font-medium text-gray-700">{categoryName}</span>
+                  <ChevronDown
+                    className={cn(
+                      "h-4 w-4 text-gray-500 transition-transform duration-200",
+                      openCategory === categoryName && "rotate-180"
+                    )}
+                  />
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {openCategory === categoryName && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden bg-gray-50"
+                    >
+                      <div className="space-y-1 px-4 py-2">
+                        {categoryData.items.map((item) => (
+                          <button
+                            key={item.title}
+                            onClick={() => handleLinkClick(categoryData.basePath, item.category)}
+                            className="block w-full rounded-md px-3 py-2 text-left text-sm text-gray-600 hover:bg-gray-100"
+                          >
+                            {item.title}
+                          </button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </>
+            ) : (
+              // No submenu for "Бидний ТУХАЙ", so directly render its items
+              <div className="space-y-1 px-4 py-2">
+                {categoryData.items.map((item) => (
+                  <button
+                    key={item.title}
+                    onClick={() => handleLinkClick(categoryData.basePath, item.category)}
+                    className="block w-full rounded-md px-3 py-2 text-left text-sm text-gray-600 hover:bg-gray-100"
+                  >
+                    {item.title}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -154,33 +173,52 @@ export function MainMenu({ isMobile = false, onLinkClick = () => { } }) {
       <NavigationMenuList className="flex space-x-4">
         {Object.entries(collections).map(([categoryName, categoryData]) => (
           <NavigationMenuItem key={categoryName}>
-            <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-slate-500 transition-colors">
-              {categoryName}
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[300px] gap-3 p-4 lg:w-[650px] lg:grid-cols-2 bg-white shadow-lg rounded-lg">
-                {categoryData.items.map((item) => (
-                  <li key={item.title}>
-                    <NavigationMenuLink asChild>
-                      <button
-                        onClick={() => handleLinkClick(categoryData.basePath, item.category)}
-                        className="block w-full select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-red-700 text-left"
-                      >
-                        <div className="text-sm font-medium leading-none">
-                          {item.title}
-                        </div>
-                      </button>
-                    </NavigationMenuLink>
-                  </li>
-                ))}
-              </ul>
-            </NavigationMenuContent>
+            {/* Skip submenu for 'Бидний ТУХАЙ' */}
+            {categoryName === "Бүтээгдэхүүн" ? (
+              <>
+                <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-slate-500 transition-colors">
+                  {categoryName}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[300px] gap-3 p-4 lg:w-[650px] lg:grid-cols-2 bg-white shadow-lg rounded-lg">
+                    {categoryData.items.map((item) => (
+                      <li key={item.title}>
+                        <NavigationMenuLink asChild>
+                          <button
+                            onClick={() => handleLinkClick(categoryData.basePath, item.category)}
+                            className="block w-full select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-slate-100 hover:text-red-700 text-left"
+                          >
+                            <div className="text-sm font-medium leading-none">
+                              {item.title}
+                            </div>
+                          </button>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+                </>
+            ) : (
+            // Directly render 'Бидний ТУХАЙ' items without submenu
+            <div className="space-y-1 px-4 py-2">
+              {categoryData.items.map((item) => (
+                <button
+                  key={item.title}
+                  onClick={() => handleLinkClick(categoryData.basePath, item.category)}
+                  className="block w-full rounded-md px-3 py-2 text-left text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  {item.title}
+                </button>
+              ))}
+            </div>
+            )}
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
     </NavigationMenu>
   );
 }
+
 
 export function Navbar() {
   const router = useRouter();
@@ -247,9 +285,9 @@ export function Navbar() {
       setIsDropdownOpen(false);
       triggerRender();
       toast.success("logout successfully!");
-      setTimeout(()=>{
+      setTimeout(() => {
         router.push("/");
-      },1000);
+      }, 1000);
     } catch (error) {
       toast.error("logout failed!")
     }
@@ -377,7 +415,7 @@ export function Navbar() {
       animate={{ y: 0 }}
       className="sticky top-0 z-50 bg-white shadow-sm"
     >
-      <Toaster position="top-right"/>
+      <Toaster position="top-right" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
