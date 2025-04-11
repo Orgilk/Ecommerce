@@ -1930,7 +1930,7 @@
 //       "Maroon",
 //       "Green"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-817)",
 //     "size": [
 //       "XS",
@@ -2021,7 +2021,7 @@
 //       "Pink",
 //       "Green"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-816)",
 //     "size": [
 //       "XS",
@@ -2112,7 +2112,7 @@
 //     "color": [
 //       "Brown"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-806)",
 //     "size": [
 //       "XS",
@@ -2202,7 +2202,7 @@
 //       "Maroon",
 //       "Grey"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-798)",
 //     "size": [
 //       "XS",
@@ -2293,7 +2293,7 @@
 //       "Brown",
 //       "Green"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-812)",
 //     "size": [
 //       "XS",
@@ -2383,7 +2383,7 @@
 //     "color": [
 //       "Brown"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-813)",
 //     "size": [
 //       "XS",
@@ -2471,7 +2471,7 @@
 //       "Cream",
 //       "Yellow"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-804)",
 //     "size": [
 //       "XS",
@@ -2563,7 +2563,7 @@
 //       "Cream",
 //       "Yellow"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-794)",
 //     "size": [
 //       "XS",
@@ -2655,7 +2655,7 @@
 //     "color": [
 //       "SkyBlue"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-782)",
 //     "size": [
 //       "S",
@@ -2747,7 +2747,7 @@
 //     "color": [
 //       "Green"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-777)",
 //     "size": [
 //       "XS",
@@ -2839,7 +2839,7 @@
 //     "color": [
 //       "Red"
 //     ],
-//     "category": "latest-collection",
+//     "category": "Нэг удаагын хэрэгсэл",
 //     "model": "RP-814)",
 //     "size": [
 //       "XS",
@@ -2931,7 +2931,7 @@
 //     "color": [
 //       "Green"
 //     ],
-//     "category": "lounge-wear",
+//     "category": "Захиалгат хэрэгсэл",
 //     "model": "RP-787)",
 //     "size": [
 //       "XS",
@@ -3025,7 +3025,7 @@
 //     "color": [
 //       "Cream"
 //     ],
-//     "category": "lounge-wear",
+//     "category": "Захиалгат хэрэгсэл",
 //     "model": "",
 //     "size": [
 //       "XS",

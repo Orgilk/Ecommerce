@@ -36,7 +36,7 @@ const products = [
     deliveryDate: "5-7 өдөрт хүргэнэ",
     seller: "Rajwadi Poshaak Co.",
     color: ["Maroon", "Green"],
-    category: "latest-collection",
+    category: "Нэг удаагын хэрэгсэл",
     model: "RP-817)",
     size: ["XS", "S", "M", "L", "XL", "XXL"],
     images: [
@@ -116,7 +116,7 @@ const products = [
     deliveryDate: "5-7 өдөрт хүргэнэ",
     seller: "Rajwadi Poshaak Co.",
     color: ["Green"],
-    category: "lounge-wear",
+    category: "Захиалгат хэрэгсэл",
     model: "RP-787)",
     size: ["XS", "S", "M", "L", "XL", "XXL"],
     images: [

@@ -33,8 +33,8 @@ const collections = {
   // "ШИНЭЭР ИРСЭН": {
   //   basePath: "/new-arrival",
   //   items: [
-  //     { title: "Latest Collections", category: "latest-collection" },
-  //     { title: "Lounge Wear", category: "lounge-wear" },
+  //     { title: "", category: "Нэг удаагын хэрэгсэл" },
+  //     { title: "Захиалгат хэрэгсэл", category: "Захиалгат хэрэгсэл" },
   //     { title: "Solid Wear Clothing", category: "solid-wear-clothing" },
   //     { title: "Plus Size Suits", category: "plus-size" },
   //     { title: "Indian Sarees", category: "indian-sarees" },
@@ -58,11 +58,15 @@ const collections = {
       },
       { title: "Тариа", category: "Тариа", href: "/aboutus" },
       {
-        title: "Latest Collections",
-        category: "latest-collection",
+        title: "Нэг удаагын хэрэгсэл",
+        category: "Нэг удаагын хэрэгсэл",
         href: "/aboutus",
       },
-      { title: "Lounge Wear", category: "lounge-wear", href: "/aboutus" },
+      {
+        title: "Захиалгат хэрэгсэл",
+        category: "Захиалгат хэрэгсэл",
+        href: "/aboutus",
+      },
     ],
   },
   "БИДНИЙ ТУХАЙ": {

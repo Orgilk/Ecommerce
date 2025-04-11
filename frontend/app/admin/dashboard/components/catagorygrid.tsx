@@ -7,10 +7,13 @@ const CategoryGrid = () => {
   const basePath = "/admin/dashboard";
   const categories = [
     {
-      title: "Latest Collections",
-      path: `${basePath}/category/latest-collection`,
+      title: "Нэг удаагын хэрэгсэл",
+      path: `${basePath}/category/Нэг удаагын хэрэгсэл`,
     },
-    { title: "Lounge Wear", path: `${basePath}/category/lounge-wear` },
+    {
+      title: "Захиалгат хэрэгсэл",
+      path: `${basePath}/category/Захиалгат хэрэгсэл`,
+    },
     {
       title: "Solid Wear Clothing",
       path: `${basePath}/category/solid-wear-clothing`,

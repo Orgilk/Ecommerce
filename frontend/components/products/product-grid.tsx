@@ -111,7 +111,7 @@ function MainComponent() {
 
       {/* Shop the Look Section */}
       <div className="mt-10 sm:mt-20">
-        <Heading text="Шинээр нТариаэгдсэн" />
+        <Heading text="Шинээр нэмэгдсэн" />
         <div className="w-full overflow-hidden">
           <AppleCardsCarouselDemo />
         </div>
