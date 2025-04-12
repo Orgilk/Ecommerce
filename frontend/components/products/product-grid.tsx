@@ -124,13 +124,12 @@ function MainComponent() {
         </div>
       </div>
 
-      <div className="mt-10 sm:mt-20">
+      {/* <div className="mt-10 sm:mt-20">
         <Heading text="Video Gallery" />
         <div className="w-full mt-32 lg:mt-0 md:mt-0">
-          {/* @ts-ignore */}
           <VideoGrid cards={cards} />
         </div>
-      </div>
+      </div> */}
 
       {/* Hero Scroll Section */}
       {/* <div className="-mt-20 sm:-mt-32">
