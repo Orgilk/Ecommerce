@@ -579,7 +579,7 @@ export const products: Product[] = [
     answers: 234,
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
-    deliveryDate: "5-7 ажлын өдөрs",
+    deliveryDate: "5-7 ажлын өдөр",
     category: "Тариа",
     model: "Үрэвслийн эсрэг тариа",
     images: [
@@ -814,7 +814,7 @@ export const products: Product[] = [
     answers: 156,
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
-    deliveryDate: "5-7 ажлын өдөрs",
+    deliveryDate: "5-7 ажлын өдөр",
     category: "Нэг удаагын хэрэгсэл",
     model: "Нэг удаагын хэрэглэл",
     images: [
@@ -893,7 +893,7 @@ export const products: Product[] = [
     answers: 34,
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
-    deliveryDate: "5-7 ажлын өдөрs",
+    deliveryDate: "5-7 ажлын өдөр",
     category: "Нэг удаагын хэрэгсэл",
     model: "Нэг удаагын хэрэглэл",
     images: [
@@ -972,7 +972,7 @@ export const products: Product[] = [
     answers: 304,
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
-    deliveryDate: "5-7 ажлын өдөрs",
+    deliveryDate: "5-7 ажлын өдөр",
     category: "Нэг удаагын хэрэгсэл",
     model: "Нэг удаагын хэрэглэл",
     images: [
@@ -1052,7 +1052,7 @@ export const products: Product[] = [
     answers: 127,
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
-    deliveryDate: "5-7 ажлын өдөрs",
+    deliveryDate: "5-7 ажлын өдөр",
     category: "Нэг удаагын хэрэгсэл",
     model: "Нэг удаагын эмчилгээний хэрэглэл",
     images: [
@@ -1131,7 +1131,7 @@ export const products: Product[] = [
     answers: 97,
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
-    deliveryDate: "5-7 ажлын өдөрs",
+    deliveryDate: "5-7 ажлын өдөр",
     category: "Нэг удаагын хэрэгсэл",
     model: "Нэг удаагын эмчилгээний хэрэглэл",
     images: [
@@ -1210,7 +1210,7 @@ export const products: Product[] = [
     answers: 345,
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
-    deliveryDate: "5-7 ажлын өдөрs",
+    deliveryDate: "5-7 ажлын өдөр",
     category: "Захиалгат хэрэгсэл",
     model: "Эмнэлэгийн хэрэгсэл(урт хугацааны)",
     images: [
@@ -1291,7 +1291,7 @@ export const products: Product[] = [
     answers: 237,
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
-    deliveryDate: "5-7 ажлын өдөрs",
+    deliveryDate: "5-7 ажлын өдөр",
     category: "Захиалгат хэрэгсэл",
     model: "Эмнэлэгийн төхөөрөмж",
     images: [

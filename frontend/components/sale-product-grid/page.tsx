@@ -81,7 +81,7 @@ const ProductGridComponent: React.FC = () => {
                     )}
                     {product.inStock <= 5 && product.inStock > 0 && (
                       <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded-md text-xs">
-                        Only {product.inStock} left!
+                        барааны үлдэгдэл {product.inStock} !
                       </div>
                     )}
                   </div>
@@ -116,7 +116,7 @@ const ProductGridComponent: React.FC = () => {
                         </span>
                         {product.delivery && (
                           <span className="text-xs text-gray-500">
-                            Delivery by {product.deliveryDate}
+                            {product.deliveryDate}
                           </span>
                         )}
                       </div>
@@ -129,12 +129,12 @@ const ProductGridComponent: React.FC = () => {
                       >
                         <Info className="w-4 h-4 group-hover:animate-bounce" />
                         <span onClick={() => router.push("/hospital/1")}>
-                          See More
+                          Барааг харах
                         </span>
                       </button>
                     ) : (
                       <div className="w-full bg-red-50 text-red-600 text-center py-2.5 rounded-lg text-sm">
-                        Out of Stock
+                        Дууссан
                       </div>
                     )}
                   </div>

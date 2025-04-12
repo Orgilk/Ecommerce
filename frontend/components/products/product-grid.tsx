@@ -118,7 +118,7 @@ function MainComponent() {
       </div>
 
       <div className="mt-10 sm:mt-20">
-        <Heading text="Our Products" />
+        <Heading text="Манай бараанууд " />
         <div className="w-full">
           <ProductGridComponent />
         </div>
@@ -133,13 +133,13 @@ function MainComponent() {
       </div>
 
       {/* Hero Scroll Section */}
-      <div className="-mt-20 sm:-mt-32">
+      {/* <div className="-mt-20 sm:-mt-32">
         <HeroScrollDemo
           title="Top Pick of the Season"
           discription="Checkout Here"
           imageId={`678fc51e553541b1cace06b4`}
         />
-      </div>
+      </div> */}
 
       <div className="mt-12 sm:mt-20 hidden md:block">
         <Heading text="Хурдан шуурхай хүргэлт, Таны гарт!" />
