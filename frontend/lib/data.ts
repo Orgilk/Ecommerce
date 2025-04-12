@@ -27,7 +27,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Витагрипп Чацарганатай 20гр",
-    price: 2899,
+    price: 3000,
     rating: 5,
     reviews: 1500,
     answers: 120,

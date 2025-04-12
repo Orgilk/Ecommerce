@@ -83,7 +83,7 @@ export function AddToCartModal({
       }).then((res) => res.json());
 
       if (!response.success) {
-        alert("Failed to add to cart. Please try again.");
+        alert("1Failed to add to cart. Please try again.");
         return;
       }
       setIsSuccess(true);
@@ -295,7 +295,7 @@ export function BuyNowButton({
       router.push("/cart");
     } catch (error) {
       console.error("Add to cart error:", error);
-      alert("Failed to add to cart. Please try again.");
+      alert("1Failed to add to cart. Please try again.");
     } finally {
       setIsHovered(false);
     }
