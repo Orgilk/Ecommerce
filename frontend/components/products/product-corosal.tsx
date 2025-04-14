@@ -25,23 +25,23 @@ interface Photo {
 const staticImages: Photo[] = [
   {
     id: "static1",
-    imageUrl: "/corosal/pharmacy.jpg",
-    title: "Худалдаа",
-    source: "Худалдаа",
+    imageUrl: "/corosal/cold.jpg",
+    title: "Ханиадны эм",
+    source: "Ханиадны эмийн худалдаа",
     link: "/bestsellers?category=Эм",
   },
   {
     id: "static2",
     imageUrl: "/corosal/pharmacy.jpg",
     title: "Энэ сарын хямдрал",
-    source: "Тарианэлгийн хэрэгслийн худалдаа",
+    source: "Эмнэлэгийн хэрэгслийн худалдаа",
     link: "/bestsellers?category=Эм",
   },
   {
     id: "static3",
-    imageUrl: "/corosal/pharmacy.jpg",
-    title: "Худалдаа",
-    source: "Худалдаа",
+    imageUrl: "/corosal/medical.webp",
+    title: "Захиалгын бараа",
+    source: "Захиалгын барааны худалдаа",
     link: "/bestsellers?category=Эм",
   },
 ];
