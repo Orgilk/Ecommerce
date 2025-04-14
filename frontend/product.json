@@ -411,7 +411,7 @@
   },
   {
     "id": 11,
-    "name": "Нэг удаагын малгай",
+    "name": "Нэг удаагийн малгай",
     "price": 5999,
     "rating": 4.5,
     "reviews": 740,
@@ -419,8 +419,8 @@
     "inStock": true,
     "delivery": "Хүргэлт үнэгүй",
     "deliveryDate": "5-7 ажлын өдөр",
-    "category": "Нэг удаагын хэрэгсэл",
-    "model": "Нэг удаагын хэрэглэл",
+    "category": "Нэг удаагийн хэрэгсэл",
+    "model": "Нэг удаагийн хэрэглэл",
     "images": [
       "/detailphotos/28.1.webp",
       "/detailphotos/28.2.webp",
@@ -461,8 +461,8 @@
     "inStock": true,
     "delivery": "Хүргэлт үнэгүй",
     "deliveryDate": "5-7 ажлын өдөр",
-    "category": "Нэг удаагын хэрэгсэл",
-    "model": "Нэг удаагын хэрэглэл",
+    "category": "Нэг удаагийн хэрэгсэл",
+    "model": "Нэг удаагийн хэрэглэл",
     "images": [
       "/detailphotos/29.1.webp",
       "/detailphotos/29.2.webp",
@@ -503,8 +503,8 @@
     "inStock": true,
     "delivery": "Хүргэлт үнэгүй",
     "deliveryDate": "5-7 ажлын өдөр",
-    "category": "Нэг удаагын хэрэгсэл",
-    "model": "Нэг удаагын хэрэглэл",
+    "category": "Нэг удаагийн хэрэгсэл",
+    "model": "Нэг удаагийн хэрэглэл",
     "images": [
       "/detailphotos/30.1.webp",
       "/detailphotos/30.2.webp",
@@ -538,7 +538,7 @@
   },
   {
     "id": 14,
-    "name": "Зүү 1 удаагын 21гр",
+    "name": "Зүү 1 удаагийн 21гр",
     "price": 5699,
     "rating": 4.6,
     "reviews": 745,
@@ -546,8 +546,8 @@
     "inStock": true,
     "delivery": "Хүргэлт үнэгүй",
     "deliveryDate": "5-7 ажлын өдөр",
-    "category": "Нэг удаагын хэрэгсэл",
-    "model": "Нэг удаагын эмчилгээний хэрэглэл",
+    "category": "Нэг удаагийн хэрэгсэл",
+    "model": "Нэг удаагийн эмчилгээний хэрэглэл",
     "images": [
       "/detailphotos/31.1.webp",
       "/detailphotos/31.2.webp",
@@ -580,7 +580,7 @@
   },
   {
     "id": 15,
-    "name": "Зүү 1 удаагын 22гр",
+    "name": "Зүү 1 удаагийн 22гр",
     "price": 5999,
     "rating": 4.5,
     "reviews": 723,
@@ -588,8 +588,8 @@
     "inStock": true,
     "delivery": "Хүргэлт үнэгүй",
     "deliveryDate": "5-7 ажлын өдөр",
-    "category": "Нэг удаагын хэрэгсэл",
-    "model": "Нэг удаагын эмчилгээний хэрэглэл",
+    "category": "Нэг удаагийн хэрэгсэл",
+    "model": "Нэг удаагийн эмчилгээний хэрэглэл",
     "images": [
       "/detailphotos/32.1.webp",
       "/detailphotos/32.2.webp",

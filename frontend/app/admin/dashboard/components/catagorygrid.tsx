@@ -7,8 +7,8 @@ const CategoryGrid = () => {
   const basePath = "/admin/dashboard";
   const categories = [
     {
-      title: "Нэг удаагын хэрэгсэл",
-      path: `${basePath}/category/Нэг удаагын хэрэгсэл`,
+      title: "Нэг удаагийн хэрэгсэл",
+      path: `${basePath}/category/Нэг удаагийн хэрэгсэл`,
     },
     {
       title: "Захиалгат хэрэгсэл",

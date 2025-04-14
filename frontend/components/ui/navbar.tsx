@@ -33,7 +33,7 @@ const collections = {
   // "ШИНЭЭР ИРСЭН": {
   //   basePath: "/new-arrival",
   //   items: [
-  //     { title: "", category: "Нэг удаагын хэрэгсэл" },
+  //     { title: "", category: "Нэг удаагийн хэрэгсэл" },
   //     { title: "Захиалгат хэрэгсэл", category: "Захиалгат хэрэгсэл" },
   //     { title: "Solid Wear Clothing", category: "solid-wear-clothing" },
   //     { title: "Plus Size Suits", category: "plus-size" },
@@ -58,8 +58,8 @@ const collections = {
       },
       { title: "Тариа", category: "Тариа", href: "/aboutus" },
       {
-        title: "Нэг удаагын хэрэгсэл",
-        category: "Нэг удаагын хэрэгсэл",
+        title: "Нэг удаагийн хэрэгсэл",
+        category: "Нэг удаагийн хэрэгсэл",
         href: "/aboutus",
       },
       {
@@ -289,7 +289,7 @@ export function Navbar() {
               setUsername(
                 session?.user?.name ||
                   session?.user?.email?.split("@")[0] ||
-                  "User"
+                  "Хэрэглэгч"
               );
             }
           } catch (error) {
@@ -297,7 +297,7 @@ export function Navbar() {
             setUsername(
               session?.user?.name ||
                 session?.user?.email?.split("@")[0] ||
-                "User"
+                "Хэрэглэгч"
             );
           }
         }
@@ -386,7 +386,7 @@ export function Navbar() {
                     }}
                     className="flex items-center gap-2 w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    <Package size={16} /> Your Orders
+                    <Package size={16} /> Миний захиалгууд
                   </button>
                   <button
                     onClick={() => {
@@ -396,7 +396,7 @@ export function Navbar() {
                     }}
                     className="flex items-center gap-2 w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    <User size={16} /> Profile Settings
+                    <User size={16} /> Профайл
                   </button>
                   <button
                     onClick={() => {
@@ -416,13 +416,13 @@ export function Navbar() {
                     }}
                     className="flex items-center gap-2 w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    <ShoppingCart size={16} /> Cart
+                    <ShoppingCart size={16} /> Карт
                   </button>
                   <button
                     onClick={handleLogout}
                     className="flex items-center gap-2 w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    <LogOut size={16} /> Sign Out
+                    <LogOut size={16} /> Гарах
                   </button>
                 </div>
               </motion.div>

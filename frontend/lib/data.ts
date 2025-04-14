@@ -807,7 +807,7 @@ export const products: Product[] = [
 
   {
     id: 11,
-    name: "Нэг удаагын малгай",
+    name: "Нэг удаагийн малгай",
     price: 5999,
     rating: 4.5,
     reviews: 740,
@@ -815,8 +815,8 @@ export const products: Product[] = [
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
     deliveryDate: "5-7 ажлын өдөр",
-    category: "Нэг удаагын хэрэгсэл",
-    model: "Нэг удаагын хэрэглэл",
+    category: "Нэг удаагийн хэрэгсэл",
+    model: "Нэг удаагийн хэрэглэл",
     images: [
       "/detailphotos/11.png",
       "/detailphotos/11.png",
@@ -894,8 +894,8 @@ export const products: Product[] = [
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
     deliveryDate: "5-7 ажлын өдөр",
-    category: "Нэг удаагын хэрэгсэл",
-    model: "Нэг удаагын хэрэглэл",
+    category: "Нэг удаагийн хэрэгсэл",
+    model: "Нэг удаагийн хэрэглэл",
     images: [
       "/detailphotos/12.jpg",
       "/detailphotos/12.jpg",
@@ -973,8 +973,8 @@ export const products: Product[] = [
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
     deliveryDate: "5-7 ажлын өдөр",
-    category: "Нэг удаагын хэрэгсэл",
-    model: "Нэг удаагын хэрэглэл",
+    category: "Нэг удаагийн хэрэгсэл",
+    model: "Нэг удаагийн хэрэглэл",
     images: [
       "/detailphotos/13.jpg",
       "/detailphotos/13.jpg",
@@ -1044,7 +1044,7 @@ export const products: Product[] = [
   },
   {
     id: 14,
-    name: "Зүү 1 удаагын 21гр",
+    name: "Зүү 1 удаагийн 21гр",
     price: 5699,
     rating: 4.6,
     reviews: 745,
@@ -1052,8 +1052,8 @@ export const products: Product[] = [
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
     deliveryDate: "5-7 ажлын өдөр",
-    category: "Нэг удаагын хэрэгсэл",
-    model: "Нэг удаагын эмчилгээний хэрэглэл",
+    category: "Нэг удаагийн хэрэгсэл",
+    model: "Нэг удаагийн эмчилгээний хэрэглэл",
     images: [
       "/detailphotos/14.jpeg",
       "/detailphotos/14.jpeg",
@@ -1123,7 +1123,7 @@ export const products: Product[] = [
   },
   {
     id: 15,
-    name: "Зүү 1 удаагын 22гр",
+    name: "Зүү 1 удаагийн 22гр",
     price: 5999,
     rating: 4.5,
     reviews: 723,
@@ -1131,8 +1131,8 @@ export const products: Product[] = [
     inStock: true,
     delivery: "Хүргэлт үнэгүй",
     deliveryDate: "5-7 ажлын өдөр",
-    category: "Нэг удаагын хэрэгсэл",
-    model: "Нэг удаагын эмчилгээний хэрэглэл",
+    category: "Нэг удаагийн хэрэгсэл",
+    model: "Нэг удаагийн эмчилгээний хэрэглэл",
     images: [
       "/detailphotos/15.jpg",
       "/detailphotos/15.jpg",

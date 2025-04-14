@@ -27,28 +27,32 @@ const itemVariants = {
 };
 
 const categories = [
-  { title: "Тариа", href: "/ethnic-wear?category=Тариа" },
-  { title: "Indian wear", href: "/ethnic-wear?category=indian" },
-  { title: "Top rated products", href: "/ethnic-wear?category=top-rated" },
-  { title: "Premium Fabric", href: "/bestsellers?category=premium" },
-  { title: "Chiffons", href: "/ethnic-wear?category=chiffon" },
+  { title: "Тариа", href: "/bestsellers?category=Тариа" },
+  { title: "Эм", href: "/bestsellers?category=Эм" },
   {
-    title: "Solid wear clothing",
-    href: "/ethnic-wear?category=solid-wear-clothing",
+    title: "Нэг удаагийн хэрэгсэл",
+    href: "/bestsellers?category=Нэг%20удаагийн%20хэрэгсэл",
+  },
+  {
+    title: "Захиалгат хэрэгсэл",
+    href: "/bestsellers?category=Захиалгат%20хэрэгсэл",
   },
 ];
 
 const basePath = "/customer";
 const information = [
-  { title: "About Us", href: "/aboutus" },
-  { title: "Admin ", href: "/admin" },
-  { title: "Exchange/Return Policy", href: `${basePath}/returnpolicy` },
-  { title: "Track Your Order", href: `/trackyourorder` },
-  { title: "Privacy Policy", href: `${basePath}/privacypolicy` },
-  { title: "Terms and Conditions", href: `${basePath}/terms-and-conditions` },
-  { title: "Customize Products", href: `${basePath}/customize-products` },
-  { title: "Cancellation Policy", href: `${basePath}/cancellation-policy` },
-  { title: "Shipping Policy", href: `${basePath}/shipping-policy` },
+  { title: "Бидний тухай", href: "/aboutus" },
+  { title: "Aдмин ", href: "/admin" },
+  { title: "Солих,буцаах", href: `${basePath}/returnpolicy` },
+  { title: "Захиалгаа удирдах", href: `/trackyourorder` },
+  { title: "Нууцлалын бодлого", href: `${basePath}/privacypolicy` },
+  { title: "Дүрэм,журам", href: `${basePath}/terms-and-conditions` },
+  {
+    title: "Бүтээгдэхүүнийг тохируулах",
+    href: `${basePath}/customize-products`,
+  },
+  { title: "Цуцлах бодлого", href: `${basePath}/cancellation-policy` },
+  { title: "Хүргэлтийн бодлого", href: `${basePath}/shipping-policy` },
 ];
 
 const socialLinks = [
@@ -83,7 +87,7 @@ export default function Footer() {
             {/* Categories Section */}
             <div className="space-y-4">
               <h3 className="text-lg md:text-xl font-bold text-orange-900 border-b border-orange-200 pb-2 md:border-none">
-                Categories
+                Төрлүүд
               </h3>
               <ul className="space-y-2">
                 {categories.map((item) => (
@@ -102,7 +106,7 @@ export default function Footer() {
             {/* Information Section */}
             <div className="space-y-4">
               <h3 className="text-lg md:text-xl font-bold text-orange-900 border-b border-orange-200 pb-2 md:border-none">
-                Information
+                Мэдээлэл
               </h3>
               <ul className="space-y-2">
                 {information.map((item) => (
@@ -121,11 +125,11 @@ export default function Footer() {
             {/* Contact Us Section */}
             <div className="space-y-4">
               <h3 className="text-lg md:text-xl font-bold text-orange-900 border-b border-orange-200 pb-2 md:border-none">
-                Contact Us
+                Бидэнтэй холбогдох
               </h3>
               <div className="space-y-3 text-sm">
                 <p className="text-gray-800">
-                  Email us at{" "}
+                  Email{" "}
                   <a
                     href="mailto:contact@rajwadiposhak.com"
                     className="text-orange-600 hover:text-orange-700 font-medium"
@@ -134,18 +138,15 @@ export default function Footer() {
                   </a>
                 </p>
                 <p className="text-gray-800">
-                  Call us at{" "}
+                  Call{" "}
                   <a
                     href="tel:+918849251028"
                     className="text-orange-600 hover:text-orange-700 font-medium"
                   >
-                    +91 8849251028
+                    +976 99999999
                   </a>
                   <br />
                   (10:00 AM to 6:00 PM, Mon-Sat)
-                </p>
-                <p className="text-gray-700 italic text-sm">
-                  Rajwadi Poshak is a part of Ethniclore
                 </p>
                 <div className="flex space-x-5 pt-4">
                   {socialLinks.map((social, index) => (
@@ -173,8 +174,7 @@ export default function Footer() {
           className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-orange-200/50 text-center text-gray-800"
         >
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} Rajwadi Poshak. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} All rights reserved.
           </p>
         </motion.div>
       </motion.div>

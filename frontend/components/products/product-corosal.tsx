@@ -182,7 +182,7 @@ const FashionCarousel = () => {
                                            hover:scale-105 transition-transform duration-300 
                                            opacity-100 sm:opacity-0 sm:group-hover:opacity-100"
                             >
-                              Shop Now
+                              Харах
                             </button>
                           </div>
                         </div>
