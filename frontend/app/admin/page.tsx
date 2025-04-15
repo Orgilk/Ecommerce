@@ -224,7 +224,7 @@ export default function Login() {
                     font-medium flex items-center justify-center gap-2 group hover:shadow-lg transition-shadow"
                 >
                   {isLoading ? (
-                    "Signing in..."
+                    "Нэвтэрч байна..."
                   ) : (
                     <>
                       Нэвтрэх

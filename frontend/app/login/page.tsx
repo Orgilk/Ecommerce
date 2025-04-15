@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { toast, Toaster } from 'react-hot-toast'
-import { signIn, useSession } from 'next-auth/react';
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { toast, Toaster } from "react-hot-toast";
+import { signIn, useSession } from "next-auth/react";
 import { useRenderContext } from "@/contexts/RenderContext";
-import Cookies from 'js-cookie';
-import { User, Lock, Mail, ArrowRight } from 'lucide-react';
+import Cookies from "js-cookie";
+import { User, Lock, Mail, ArrowRight } from "lucide-react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -27,7 +27,7 @@ const itemVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 100,
     },
   },
@@ -39,17 +39,21 @@ const floatingBubbleVariants = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+      ease: "easeInOut",
+    },
+  },
 };
 
-const CustomInput = ({ icon: Icon, error, ...props }: { icon: React.ComponentType<{ size: number }>, error?: string }) => {
+const CustomInput = ({
+  icon: Icon,
+  error,
+  ...props
+}: {
+  icon: React.ComponentType<{ size: number }>;
+  error?: string;
+}) => {
   return (
-    <motion.div
-      variants={itemVariants}
-      className="relative group"
-    >
+    <motion.div variants={itemVariants} className="relative group">
       <div className="relative">
         <div className="absolute left-3 top-1/2 -translate-y-1/2 text-red-400 group-focus-within:text-red-600 transition-colors">
           <Icon size={20} />
@@ -57,7 +61,11 @@ const CustomInput = ({ icon: Icon, error, ...props }: { icon: React.ComponentTyp
         <input
           {...props}
           className={`w-full pl-12 pr-4 py-3 bg-white/50 backdrop-blur-sm border-2 rounded-xl
-          ${error ? 'border-red-400' : 'border-red-200 group-focus-within:border-red-400'}
+          ${
+            error
+              ? "border-red-400"
+              : "border-red-200 group-focus-within:border-red-400"
+          }
           transition-all duration-300 outline-none`}
         />
       </div>
@@ -68,53 +76,56 @@ const CustomInput = ({ icon: Icon, error, ...props }: { icon: React.ComponentTyp
 
 export default function Login() {
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const { triggerRender } = useRenderContext();
-  const { data: session, status } = useSession() as { data: { user: { token?: string, message?: string } } | null, status: string };
+  const { data: session, status } = useSession() as {
+    data: { user: { token?: string; message?: string } } | null;
+    status: string;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/user/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/user/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           identifier: formData.email,
-          password: formData.password
+          password: formData.password,
         }),
       });
 
       const result = await response.json();
 
       if (response.ok && result.success) {
-        toast.success('Logged in successfully!');
+        toast.success("Logged in successfully!");
         location.reload();
-        setFormData({ email: '', password: '' });
+        setFormData({ email: "", password: "" });
 
         if (result.token) {
-          Cookies.set('token', result.token, {
+          Cookies.set("token", result.token, {
             expires: 7,
-            secure: process.env.NODE_ENV === 'production',
-            httpOnly: false
+            secure: process.env.NODE_ENV === "production",
+            httpOnly: false,
           });
         }
 
         setTimeout(() => {
           triggerRender();
-          router.push('/');
+          router.push("/");
         }, 1100);
       } else {
-        toast.error(result.message || 'Login failed, please try again.');
+        toast.error(result.message || "Login failed, please try again.");
       }
     } catch (error) {
-      console.error('Login error:', error);
-      toast.error('An error occurred. Please try again.');
+      console.error("Login error:", error);
+      toast.error("An error occurred. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -129,30 +140,28 @@ export default function Login() {
   };
 
   useEffect(() => {
-    const token = Cookies.get('token');
+    const token = Cookies.get("token");
     if (token) {
       triggerRender();
-      router.push('/');
+      router.push("/");
     }
   }, []);
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-red-50 via-red-100 to-red-200">
-      <Toaster
-        position="top-right"
-      />
+      <Toaster position="top-right" />
       <div className="absolute inset-0 -z-10">
         <motion.div
           animate={{
             rotate: 360,
-            transition: { duration: 20, repeat: Infinity, ease: "linear" }
+            transition: { duration: 20, repeat: Infinity, ease: "linear" },
           }}
           className="absolute top-1/4 -left-12 w-96 h-96 bg-red-200/30 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
             rotate: -360,
-            transition: { duration: 25, repeat: Infinity, ease: "linear" }
+            transition: { duration: 25, repeat: Infinity, ease: "linear" },
           }}
           className="absolute bottom-1/4 -right-12 w-96 h-96 bg-red-200/30 rounded-full blur-3xl"
         />
@@ -187,21 +196,16 @@ export default function Login() {
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
                   Тавтай морил
                 </h2>
-                <p className="mt-3 text-gray-600">
-                 Нэвтрэх
-                </p>
+                <p className="mt-3 text-gray-600">Нэвтрэх</p>
               </motion.div>
 
-              <motion.form
-                onSubmit={handleSubmit}
-                className="space-y-6"
-              >
+              <motion.form onSubmit={handleSubmit} className="space-y-6">
                 <CustomInput
                   // @ts-ignore
                   icon={Mail}
                   name="email"
                   type="text"
-                  placeholder="Enter your email"
+                  placeholder="Email оруулна уу"
                   value={formData.email}
                   onChange={handleInputChange}
                   error={undefined}
@@ -211,7 +215,7 @@ export default function Login() {
                   icon={Lock}
                   name="password"
                   type="password"
-                  placeholder="Enter your password"
+                  placeholder="Нууц үгээ оруулна уу"
                   value={formData.password}
                   onChange={handleInputChange}
                   error={undefined}
@@ -226,7 +230,9 @@ export default function Login() {
                   className="w-full py-3 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-xl
                     font-medium flex items-center justify-center gap-2 group hover:shadow-lg transition-shadow"
                 >
-                  {isLoading ? 'Signing in...' : (
+                  {isLoading ? (
+                    "Нэвтэрч байна..."
+                  ) : (
                     <>
                       Нэвтрэх
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -246,7 +252,7 @@ export default function Login() {
                   </Link>
 
                   <p className="text-gray-600">
-                    Бүртгэл байхгүй бол?{' '}
+                    Бүртгэл байхгүй бол?{" "}
                     <Link
                       href="/register"
                       className="text-red-600 hover:text-red-700 transition-colors font-medium"

@@ -355,10 +355,10 @@ export default function Register() {
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold bg-gradient-to-r from-red-600 to-red-600 bg-clip-text text-transparent">
-                Join Our Community
+                Манайд нэгдээрэй
               </h2>
               <p className="mt-4 text-gray-600">
-                Create your account and start your journey with us
+                Өөрийн хэрэглэгчийн эрхийг үүсгэнэ үү
               </p>
             </motion.div>
 
