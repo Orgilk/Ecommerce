@@ -139,12 +139,12 @@ export default function AdminOrdersPage() {
   return (
     <div className="container mx-auto px-4 py-8 bg-white min-h-screen">
       <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
-        Order Management
+        Захиалга удирдах
       </h1>
       <div className="mb-6 relative">
         <Input
           type="text"
-          placeholder="Search orders by ID or status..."
+          placeholder="ID,status-аар бараа хайх..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="pl-10 pr-4 py-2 w-full"
@@ -341,7 +341,7 @@ export default function AdminOrdersPage() {
           transition={{ delay: 0.2 }}
           className="text-center text-gray-500 mt-8"
         >
-          No orders found matching your search.
+          Олдсонгүй
         </motion.p>
       )}
     </div>

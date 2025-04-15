@@ -78,17 +78,17 @@ const DashboardStats = () => {
   const stats = orderStats
     ? [
         {
-          title: "Today Order",
+          title: "Өнөөдрийн захиалгууд",
           amount: `₮${orderStats.totalMoneyToday.toLocaleString("en-IN")}`,
           bgColor: "bg-teal-600",
         },
         {
-          title: "This Month",
+          title: "Энэ сард",
           amount: `₮${orderStats.totalMoneyThisMonth.toLocaleString("en-IN")}`,
           bgColor: "bg-blue-500",
         },
         {
-          title: "Total Revenue",
+          title: "Нийт орлого",
           amount: `₮${orderStats.totalMoneyTillNow.toLocaleString("en-IN")}`,
           bgColor: "bg-green-600",
         },
@@ -98,35 +98,35 @@ const DashboardStats = () => {
   const orderStatusCards = orderStats
     ? [
         {
-          label: "Total Orders",
+          label: "Нийт захиалгууд",
           value: orderStats.totalOrders.toString(),
           icon: ShoppingCart,
           bgColor: "bg-orange-50",
           iconColor: "text-orange-500",
         },
         {
-          label: "Orders Pending",
+          label: "Хүлээгдэж буй захиалгууд",
           value: orderStats.totalPendingOrders.toString(),
           icon: Package,
           bgColor: "bg-blue-50",
           iconColor: "text-blue-500",
         },
         {
-          label: "Orders Processing",
+          label: "Боловсруулж буй захиалгууд",
           value: orderStats.totalProcessingOrders.toString(),
           icon: Box,
           bgColor: "bg-teal-50",
           iconColor: "text-teal-500",
         },
         {
-          label: "Orders Delivered",
+          label: "Хүргэгдсэн захиалгууд",
           value: orderStats.totalDeliveredOrders.toString(),
           icon: Check,
           bgColor: "bg-green-50",
           iconColor: "text-green-500",
         },
         {
-          label: "Orders Cancelled",
+          label: "Цуцлагдсан захиалгууд",
           value: orderStats.totalCancelledOrders.toString(),
           icon: Ban,
           bgColor: "bg-red-50",
@@ -205,26 +205,26 @@ const DashboardStats = () => {
       <div className="p-6 bg-white rounded-lg shadow-md">
         <div className="flex flex-col sm:flex-row justify-between gap-4">
           <h3 className="text-lg font-semibold">
-            Last Year Sales Overview (2024)
+            Өнгөрсөн жилийн зарсан бүтээгдэхүүний тоо (2024)
           </h3>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-5">
             <button
               className="p-4 bg-blue-300 border border-black rounded-full h-10 w-full sm:w-56 flex items-center justify-center"
               onClick={handleAddNewProduct}
             >
-              Manage Products
+              Бүтээгдэхүүн удирдах
             </button>
             <button
               className="p-4 bg-orange-300 border border-black rounded-full h-10 w-full sm:w-56 flex items-center justify-center"
               onClick={handleCheckUser}
             >
-              Check All Customers
+              Хэрэглэгчдийг харах
             </button>
             <button
               className="p-4 bg-white border border-black rounded-full h-10 w-full sm:w-56 flex items-center justify-center"
               onClick={handleChnagePage}
             >
-              Check All Orders
+              Бүх захиалгыг харах
             </button>
             {/* <button
                             className="p-4 bg-green-300 border border-black rounded-full h-10 w-full sm:w-56 flex items-center justify-center"
