@@ -339,7 +339,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Кардионат 250мг",
-    price: 4899,
+    price: 190000,
     rating: 5,
     reviews: 1200,
     answers: 234,

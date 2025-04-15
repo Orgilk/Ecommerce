@@ -515,7 +515,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <h2 className="text-2xl font-bold mb-6">Барааны мэдээлэл</h2>
+          <h2 className="text-2xl font-bold">Барааны мэдээлэл</h2>
           <div className="prose max-w-none text-gray-600">
             <p className="whitespace-pre-line">{product.description}</p>
           </div>

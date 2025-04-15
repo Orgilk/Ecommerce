@@ -15,7 +15,7 @@ const containerVariants = {
       staggerChildren: 0.15,
     },
   },
-};
+};"
 
 const itemVariants = {
   hidden: { opacity: 0, y: 10 },
@@ -134,7 +134,7 @@ export default function Footer() {
                     href="mailto:contact@rajwadiposhak.com"
                     className="text-orange-600 hover:text-orange-700 font-medium"
                   >
-                    orgio111@gmail.com
+                    pharmacy1111@gmail.com
                   </a>
                 </p>
                 <p className="text-gray-800">
