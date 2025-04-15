@@ -144,7 +144,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
 
   const handleQuantityChange = (type: "increase" | "decrease") => {
     setQuantity((prev) => {
-      if (type === "increase" && prev < 10) return prev + 1;
+      if (type === "increase" && prev < 100) return prev + 1;
       if (type === "decrease" && prev > 1) return prev - 1;
       return prev;
     });
@@ -163,8 +163,8 @@ const Product: React.FC<ProductProps> = ({ product }) => {
     const numValue = parseInt(value);
 
     if (!isNaN(numValue)) {
-      if (numValue > 10) {
-        setQuantity(10);
+      if (numValue > 100) {
+        setQuantity(100);
       } else if (numValue < 1) {
         setQuantity(1);
       } else {
