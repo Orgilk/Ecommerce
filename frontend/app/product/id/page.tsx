@@ -162,6 +162,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
 
     const numValue = parseInt(value);
 
+    
     if (!isNaN(numValue)) {
       if (numValue > 10) {
         setQuantity(10);
