@@ -255,7 +255,7 @@ export function ProductFilters({
       </div>
 
       <div className="space-y-2">
-        <h3 className="text-sm font-medium">Categories</h3>
+        <h3 className="text-sm font-medium">Төрлөөр</h3>
         <Select value={selectedCategory} onValueChange={handleCategoryChange}>
           <SelectTrigger className="w-full bg-white hover:bg-gray-50">
             <SelectValue placeholder="Select a category" />
@@ -267,7 +267,7 @@ export function ProductFilters({
                 value={category}
                 className="hover:bg-red-50 focus:bg-red-50 cursor-pointer"
               >
-                {category}
+                {category === "All" ? "Бүгд" : category}
               </SelectItem>
             ))}
           </SelectContent>
