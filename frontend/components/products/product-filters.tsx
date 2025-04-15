@@ -160,7 +160,7 @@ export function ProductFilters({
     category: string,
     search: string,
     price: number[],
-    size: string[]
+    model: string[]
   ) => {
     let filtered = products;
 
@@ -178,9 +178,9 @@ export function ProductFilters({
       (product) => product.price >= price[0] && product.price <= price[1]
     );
 
-    if (size.length > 0) {
+    if (model.length > 0) {
       filtered = filtered.filter((product) =>
-        size.some((size) => product.size?.includes(size))
+        model.some((m) => product.model?.includes(m))
       );
     }
 
@@ -315,29 +315,6 @@ export function ProductFilters({
           </div>
         </div>
       )}
-
-      {/* {uniqueColors.length > 0 && (
-        <div className="space-y-2">
-          <h3 className="text-sm font-medium">Colors</h3>
-          <div className="space-y-2">
-            {uniqueColors.map((color) => (
-              <div key={color} className="flex items-center space-x-2">
-                <Checkbox
-                  id={`color-${color}`}
-                  checked={selectedColors?.includes(color) ?? false}
-                  onCheckedChange={() => handleColorToggle(color)}
-                />
-                <label
-                  htmlFor={`color-${color}`}
-                  className="text-sm text-neutral-600"
-                >
-                  {color}
-                </label>
-              </div>
-            ))}
-          </div>
-        </div>
-      )} */}
 
       <div className="space-y-2">
         <h3 className="text-sm font-medium">Ангилах</h3>
