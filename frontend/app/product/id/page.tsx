@@ -172,6 +172,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
       }
     }
   };
+  
 
   if (!product) {
     return (
