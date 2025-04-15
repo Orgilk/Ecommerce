@@ -54,51 +54,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 446,
+        revenue: 446000,
       },
       {
         month: "Feb",
-        revenue: 989,
+        revenue: 989000,
       },
       {
         month: "Mar",
-        revenue: 446,
+        revenue: 446000,
       },
       {
         month: "Apr",
-        revenue: 329,
+        revenue: 329000,
       },
       {
         month: "May",
-        revenue: 840,
+        revenue: 840000,
       },
       {
         month: "Jun",
-        revenue: 547,
+        revenue: 547000,
       },
       {
         month: "Jul",
-        revenue: 790,
+        revenue: 790000,
       },
       {
         month: "Aug",
-        revenue: 804,
+        revenue: 804000,
       },
       {
         month: "Sep",
-        revenue: 725,
+        revenue: 725000,
       },
       {
         month: "Oct",
-        revenue: 837,
+        revenue: 837000,
       },
       {
         month: "Nov",
-        revenue: 467,
+        revenue: 467000,
       },
       {
         month: "Dec",
-        revenue: 945,
+        revenue: 945000,
       },
     ],
   },
@@ -132,51 +132,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 813,
+        revenue: 813000,
       },
       {
         month: "Feb",
-        revenue: 543,
+        revenue: 543000,
       },
       {
         month: "Mar",
-        revenue: 216,
+        revenue: 216000,
       },
       {
         month: "Apr",
-        revenue: 626,
+        revenue: 626000,
       },
       {
         month: "May",
-        revenue: 225,
+        revenue: 225000,
       },
       {
         month: "Jun",
-        revenue: 167,
+        revenue: 167000,
       },
       {
         month: "Jul",
-        revenue: 377,
+        revenue: 377000,
       },
       {
         month: "Aug",
-        revenue: 534,
+        revenue: 534000,
       },
       {
         month: "Sep",
-        revenue: 783,
+        revenue: 783000,
       },
       {
         month: "Oct",
-        revenue: 550,
+        revenue: 550000,
       },
       {
         month: "Nov",
-        revenue: 748,
+        revenue: 748000,
       },
       {
         month: "Dec",
-        revenue: 283,
+        revenue: 283000,
       },
     ],
   },
@@ -210,51 +210,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 515,
+        revenue: 515000,
       },
       {
         month: "Feb",
-        revenue: 805,
+        revenue: 805000,
       },
       {
         month: "Mar",
-        revenue: 485,
+        revenue: 485000,
       },
       {
         month: "Apr",
-        revenue: 798,
+        revenue: 798000,
       },
       {
         month: "May",
-        revenue: 299,
+        revenue: 299000,
       },
       {
         month: "Jun",
-        revenue: 930,
+        revenue: 930000,
       },
       {
         month: "Jul",
-        revenue: 182,
+        revenue: 182000,
       },
       {
         month: "Aug",
-        revenue: 618,
+        revenue: 618000,
       },
       {
         month: "Sep",
-        revenue: 109,
+        revenue: 109000,
       },
       {
         month: "Oct",
-        revenue: 159,
+        revenue: 159000,
       },
       {
         month: "Nov",
-        revenue: 883,
+        revenue: 883000,
       },
       {
         month: "Dec",
-        revenue: 317,
+        revenue: 317000,
       },
     ],
   },
@@ -288,51 +288,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 326,
+        revenue: 326000,
       },
       {
         month: "Feb",
-        revenue: 382,
+        revenue: 382000,
       },
       {
         month: "Mar",
-        revenue: 410,
+        revenue: 410000,
       },
       {
         month: "Apr",
-        revenue: 555,
+        revenue: 555000,
       },
       {
         month: "May",
-        revenue: 787,
+        revenue: 787000,
       },
       {
         month: "Jun",
-        revenue: 196,
+        revenue: 196000,
       },
       {
         month: "Jul",
-        revenue: 866,
+        revenue: 866000,
       },
       {
         month: "Aug",
-        revenue: 379,
+        revenue: 379000,
       },
       {
         month: "Sep",
-        revenue: 197,
+        revenue: 197000,
       },
       {
         month: "Oct",
-        revenue: 330,
+        revenue: 330000,
       },
       {
         month: "Nov",
-        revenue: 537,
+        revenue: 537000,
       },
       {
         month: "Dec",
-        revenue: 288,
+        revenue: 288000,
       },
     ],
   },
@@ -366,51 +366,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 281,
+        revenue: 281000,
       },
       {
         month: "Feb",
-        revenue: 783,
+        revenue: 783000,
       },
       {
         month: "Mar",
-        revenue: 211,
+        revenue: 211000,
       },
       {
         month: "Apr",
-        revenue: 676,
+        revenue: 676000,
       },
       {
         month: "May",
-        revenue: 825,
+        revenue: 825000,
       },
       {
         month: "Jun",
-        revenue: 806,
+        revenue: 806000,
       },
       {
         month: "Jul",
-        revenue: 266,
+        revenue: 266000,
       },
       {
         month: "Aug",
-        revenue: 724,
+        revenue: 724000,
       },
       {
         month: "Sep",
-        revenue: 279,
+        revenue: 279000,
       },
       {
         month: "Oct",
-        revenue: 423,
+        revenue: 423000,
       },
       {
         month: "Nov",
-        revenue: 482,
+        revenue: 482000,
       },
       {
         month: "Dec",
-        revenue: 808,
+        revenue: 808000,
       },
     ],
   },
@@ -444,51 +444,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 668,
+        revenue: 668000,
       },
       {
         month: "Feb",
-        revenue: 946,
+        revenue: 946000,
       },
       {
         month: "Mar",
-        revenue: 468,
+        revenue: 468000,
       },
       {
         month: "Apr",
-        revenue: 537,
+        revenue: 537000,
       },
       {
         month: "May",
-        revenue: 776,
+        revenue: 776000,
       },
       {
         month: "Jun",
-        revenue: 155,
+        revenue: 155000,
       },
       {
         month: "Jul",
-        revenue: 137,
+        revenue: 137000,
       },
       {
         month: "Aug",
-        revenue: 659,
+        revenue: 659000,
       },
       {
         month: "Sep",
-        revenue: 745,
+        revenue: 745000,
       },
       {
         month: "Oct",
-        revenue: 155,
+        revenue: 155000,
       },
       {
         month: "Nov",
-        revenue: 684,
+        revenue: 684000,
       },
       {
         month: "Dec",
-        revenue: 836,
+        revenue: 836000,
       },
     ],
   },
@@ -522,23 +522,23 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 446,
+        revenue: 446000,
       },
       {
         month: "Feb",
-        revenue: 767,
+        revenue: 767000,
       },
       {
         month: "Mar",
-        revenue: 577,
+        revenue: 577000,
       },
       {
         month: "Apr",
-        revenue: 511,
+        revenue: 511000,
       },
       {
         month: "May",
-        revenue: 165,
+        revenue: 165000,
       },
       {
         month: "Jun",
@@ -546,27 +546,27 @@ export const products: Product[] = [
       },
       {
         month: "Jul",
-        revenue: 759,
+        revenue: 759000,
       },
       {
         month: "Aug",
-        revenue: 595,
+        revenue: 595000,
       },
       {
         month: "Sep",
-        revenue: 516,
+        revenue: 516000,
       },
       {
         month: "Oct",
-        revenue: 332,
+        revenue: 332000,
       },
       {
         month: "Nov",
-        revenue: 678,
+        revenue: 678000,
       },
       {
         month: "Dec",
-        revenue: 909,
+        revenue: 909000,
       },
     ],
   },
@@ -600,51 +600,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 885,
+        revenue: 885000,
       },
       {
         month: "Feb",
-        revenue: 709,
+        revenue: 709000,
       },
       {
         month: "Mar",
-        revenue: 627,
+        revenue: 627000,
       },
       {
         month: "Apr",
-        revenue: 878,
+        revenue: 878000,
       },
       {
         month: "May",
-        revenue: 837,
+        revenue: 837000,
       },
       {
         month: "Jun",
-        revenue: 509,
+        revenue: 509000,
       },
       {
         month: "Jul",
-        revenue: 912,
+        revenue: 912000,
       },
       {
         month: "Aug",
-        revenue: 352,
+        revenue: 352000,
       },
       {
         month: "Sep",
-        revenue: 391,
+        revenue: 391000,
       },
       {
         month: "Oct",
-        revenue: 890,
+        revenue: 890000,
       },
       {
         month: "Nov",
-        revenue: 378,
+        revenue: 378000,
       },
       {
         month: "Dec",
-        revenue: 533,
+        revenue: 533000,
       },
     ],
   },
@@ -678,51 +678,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 712,
+        revenue: 712000,
       },
       {
         month: "Feb",
-        revenue: 675,
+        revenue: 675000,
       },
       {
         month: "Mar",
-        revenue: 926,
+        revenue: 926000,
       },
       {
         month: "Apr",
-        revenue: 108,
+        revenue: 108000,
       },
       {
         month: "May",
-        revenue: 584,
+        revenue: 584000,
       },
       {
         month: "Jun",
-        revenue: 651,
+        revenue: 651000,
       },
       {
         month: "Jul",
-        revenue: 129,
+        revenue: 129000,
       },
       {
         month: "Aug",
-        revenue: 454,
+        revenue: 454000,
       },
       {
         month: "Sep",
-        revenue: 776,
+        revenue: 776000,
       },
       {
         month: "Oct",
-        revenue: 597,
+        revenue: 597000,
       },
       {
         month: "Nov",
-        revenue: 174,
+        revenue: 174000,
       },
       {
         month: "Dec",
-        revenue: 536,
+        revenue: 536000,
       },
     ],
   },
@@ -756,51 +756,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 320,
+        revenue: 320000,
       },
       {
         month: "Feb",
-        revenue: 594,
+        revenue: 594000,
       },
       {
         month: "Mar",
-        revenue: 495,
+        revenue: 495000,
       },
       {
         month: "Apr",
-        revenue: 892,
+        revenue: 892000,
       },
       {
         month: "May",
-        revenue: 260,
+        revenue: 260000,
       },
       {
         month: "Jun",
-        revenue: 724,
+        revenue: 724000,
       },
       {
         month: "Jul",
-        revenue: 278,
+        revenue: 278000,
       },
       {
         month: "Aug",
-        revenue: 311,
+        revenue: 311000,
       },
       {
         month: "Sep",
-        revenue: 972,
+        revenue: 972000,
       },
       {
         month: "Oct",
-        revenue: 324,
+        revenue: 324000,
       },
       {
         month: "Nov",
-        revenue: 342,
+        revenue: 342000,
       },
       {
         month: "Dec",
-        revenue: 190,
+        revenue: 190000,
       },
     ],
   },
@@ -836,51 +836,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 5860,
+        revenue: 586000,
       },
       {
         month: "Feb",
-        revenue: 1300,
+        revenue: 130000,
       },
       {
         month: "Mar",
-        revenue: 2849,
+        revenue: 284900,
       },
       {
         month: "Apr",
-        revenue: 5449,
+        revenue: 544900,
       },
       {
         month: "May",
-        revenue: 7790,
+        revenue: 779000,
       },
       {
         month: "Jun",
-        revenue: 3713,
+        revenue: 371300,
       },
       {
         month: "Jul",
-        revenue: 5802,
+        revenue: 580200,
       },
       {
         month: "Aug",
-        revenue: 9518,
+        revenue: 951800,
       },
       {
         month: "Sep",
-        revenue: 1020,
+        revenue: 102000,
       },
       {
         month: "Oct",
-        revenue: 8313,
+        revenue: 831300,
       },
       {
         month: "Nov",
-        revenue: 9275,
+        revenue: 927500,
       },
       {
         month: "Dec",
-        revenue: 5843,
+        revenue: 584300,
       },
     ],
   },
@@ -915,51 +915,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 8216,
+        revenue: 821600,
       },
       {
         month: "Feb",
-        revenue: 8600,
+        revenue: 860000,
       },
       {
         month: "Mar",
-        revenue: 6442,
+        revenue: 644200,
       },
       {
         month: "Apr",
-        revenue: 7475,
+        revenue: 747500,
       },
       {
         month: "May",
-        revenue: 2149,
+        revenue: 214900,
       },
       {
         month: "Jun",
-        revenue: 9706,
+        revenue: 970600,
       },
       {
         month: "Jul",
-        revenue: 6919,
+        revenue: 691900,
       },
       {
         month: "Aug",
-        revenue: 7004,
+        revenue: 700400,
       },
       {
         month: "Sep",
-        revenue: 3081,
+        revenue: 308100,
       },
       {
         month: "Oct",
-        revenue: 3032,
+        revenue: 303200,
       },
       {
         month: "Nov",
-        revenue: 3662,
+        revenue: 366200,
       },
       {
         month: "Dec",
-        revenue: 5814,
+        revenue: 581400,
       },
     ],
   },
@@ -994,51 +994,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 5941,
+        revenue: 594100,
       },
       {
         month: "Feb",
-        revenue: 2378,
+        revenue: 237800,
       },
       {
         month: "Mar",
-        revenue: 4888,
+        revenue: 488800,
       },
       {
         month: "Apr",
-        revenue: 6838,
+        revenue: 683800,
       },
       {
         month: "May",
-        revenue: 6765,
+        revenue: 676500,
       },
       {
         month: "Jun",
-        revenue: 5782,
+        revenue: 578200,
       },
       {
         month: "Jul",
-        revenue: 9616,
+        revenue: 961600,
       },
       {
         month: "Aug",
-        revenue: 4010,
+        revenue: 401000,
       },
       {
         month: "Sep",
-        revenue: 8054,
+        revenue: 805400,
       },
       {
         month: "Oct",
-        revenue: 7718,
+        revenue: 771800,
       },
       {
         month: "Nov",
-        revenue: 9264,
+        revenue: 926400,
       },
       {
         month: "Dec",
-        revenue: 7966,
+        revenue: 796600,
       },
     ],
   },
@@ -1073,51 +1073,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 6189,
+        revenue: 618900,
       },
       {
         month: "Feb",
-        revenue: 5232,
+        revenue: 523200,
       },
       {
         month: "Mar",
-        revenue: 4825,
+        revenue: 482500,
       },
       {
         month: "Apr",
-        revenue: 9224,
+        revenue: 922400,
       },
       {
         month: "May",
-        revenue: 6857,
+        revenue: 685700,
       },
       {
         month: "Jun",
-        revenue: 4785,
+        revenue: 478500,
       },
       {
         month: "Jul",
-        revenue: 3779,
+        revenue: 377900,
       },
       {
         month: "Aug",
-        revenue: 8205,
+        revenue: 820500,
       },
       {
         month: "Sep",
-        revenue: 5596,
+        revenue: 559600,
       },
       {
         month: "Oct",
-        revenue: 7249,
+        revenue: 724900,
       },
       {
         month: "Nov",
-        revenue: 6391,
+        revenue: 639100,
       },
       {
         month: "Dec",
-        revenue: 5739,
+        revenue: 573900,
       },
     ],
   },
@@ -1152,51 +1152,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 4217,
+        revenue: 421700,
       },
       {
         month: "Feb",
-        revenue: 8806,
+        revenue: 880600,
       },
       {
         month: "Mar",
-        revenue: 5912,
+        revenue: 591200,
       },
       {
         month: "Apr",
-        revenue: 6154,
+        revenue: 615400,
       },
       {
         month: "May",
-        revenue: 9117,
+        revenue: 911700,
       },
       {
         month: "Jun",
-        revenue: 8776,
+        revenue: 877600,
       },
       {
         month: "Jul",
-        revenue: 7599,
+        revenue: 759900,
       },
       {
         month: "Aug",
-        revenue: 7024,
+        revenue: 702400,
       },
       {
         month: "Sep",
-        revenue: 8607,
+        revenue: 860700,
       },
       {
         month: "Oct",
-        revenue: 5559,
+        revenue: 555900,
       },
       {
         month: "Nov",
-        revenue: 7469,
+        revenue: 746900,
       },
       {
         month: "Dec",
-        revenue: 8374,
+        revenue: 837400,
       },
     ],
   },
@@ -1233,51 +1233,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 4353,
+        revenue: 435300,
       },
       {
         month: "Feb",
-        revenue: 9585,
+        revenue: 958500,
       },
       {
         month: "Mar",
-        revenue: 9849,
+        revenue: 984900,
       },
       {
         month: "Apr",
-        revenue: 3679,
+        revenue: 367900,
       },
       {
         month: "May",
-        revenue: 2966,
+        revenue: 296600,
       },
       {
         month: "Jun",
-        revenue: 2645,
+        revenue: 264500,
       },
       {
         month: "Jul",
-        revenue: 2561,
+        revenue: 256100,
       },
       {
         month: "Aug",
-        revenue: 7296,
+        revenue: 729600,
       },
       {
         month: "Sep",
-        revenue: 8925,
+        revenue: 892500,
       },
       {
         month: "Oct",
-        revenue: 8388,
+        revenue: 838800,
       },
       {
         month: "Nov",
-        revenue: 1402,
+        revenue: 140200,
       },
       {
         month: "Dec",
-        revenue: 4318,
+        revenue: 431800,
       },
     ],
   },
@@ -1311,51 +1311,51 @@ export const products: Product[] = [
     chartData: [
       {
         month: "Jan",
-        revenue: 5905,
+        revenue: 590500,
       },
       {
         month: "Feb",
-        revenue: 3177,
+        revenue: 317700,
       },
       {
         month: "Mar",
-        revenue: 5024,
+        revenue: 502400,
       },
       {
         month: "Apr",
-        revenue: 2296,
+        revenue: 229600,
       },
       {
         month: "May",
-        revenue: 2468,
+        revenue: 246800,
       },
       {
         month: "Jun",
-        revenue: 7977,
+        revenue: 797700,
       },
       {
         month: "Jul",
-        revenue: 1363,
+        revenue: 136300,
       },
       {
         month: "Aug",
-        revenue: 1971,
+        revenue: 197100,
       },
       {
         month: "Sep",
-        revenue: 4363,
+        revenue: 436300,
       },
       {
         month: "Oct",
-        revenue: 2843,
+        revenue: 284300,
       },
       {
         month: "Nov",
-        revenue: 9247,
+        revenue: 924700,
       },
       {
         month: "Dec",
-        revenue: 5682,
+        revenue: 568200,
       },
     ],
   },

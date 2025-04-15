@@ -162,7 +162,6 @@ const Product: React.FC<ProductProps> = ({ product }) => {
 
     const numValue = parseInt(value);
 
-    
     if (!isNaN(numValue)) {
       if (numValue > 100) {
         setQuantity(100);
@@ -173,7 +172,6 @@ const Product: React.FC<ProductProps> = ({ product }) => {
       }
     }
   };
-
 
   if (!product) {
     return (
@@ -285,7 +283,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                   {isSaved ? "Saved" : "Save"}
                 </motion.button>
 
-                <Link href={`/product/compare/${product.name}`}>
+                {/* <Link href={`/product/compare/${product.name}`}>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -294,7 +292,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                     <GitCompare />
                     Compare Products
                   </motion.button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </motion.div>
