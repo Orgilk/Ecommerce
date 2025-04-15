@@ -76,17 +76,17 @@ export function RedesignedLinkPreviewDemo() {
       >
         {[
           {
-            img: "/assets/travelstory.jpg",
+            img: "/corosal/experience.jpg",
             title: "5+ жилийн туршлага",
             text: "Бид 5 гаруй жилийн турш эмнэлэгийн салбарт үйл ажиллагаа явуулж байна.",
           },
           {
-            img: "/assets/about1.jpg",
+            img: "/corosal/pharma.jpg",
             title: "Мэргэжлийн эмч,эм зүйч",
             text: "Манай баг нь мэргэжлийн, туршлагатай эмч,эм зүйч нараас бүрдэнэ.",
           },
           {
-            img: "/assets/about2.jpg",
+            img: "/corosal/well.webp",
             title: "Чанартай үйлчилгээ",
             text: "Бид хэрэглэгч бүрт хамгийн чанартай, найдвартай үйлчилгээг үзүүлэхийг эрхэм зорилгоо болгодог.",
           },
@@ -144,18 +144,18 @@ export function RedesignedLinkPreviewDemo() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              name: "А. Мөнгөнтулга",
+              name: "Бат",
               role: "Гүйцэтгэх захирал",
-              img: "/assets/team1.jpg",
+              img: "/corosal/user1.jpg",
             },
             {
-              name: "А.Оргилбаяр",
-              role: "Аялалын менежер",
+              name: "Болд",
+              role: "Захирал",
               img: "/assets/team2.jpg",
             },
             {
-              name: "Г. Төгөлдөр",
-              role: "Ахлах хөтөч",
+              name: "Цэцэг",
+              role: "Ахлах эм зүйч",
               img: "/assets/team2.jpg",
             },
           ].map((member, i) => (
@@ -178,34 +178,23 @@ export function RedesignedLinkPreviewDemo() {
         </div>
       </motion.section>
 
-      {/* Developer Credits Section */}
+      {/* Address Section */}
       <motion.div
         variants={itemVariants}
-        className="relative p-8 rounded-xl bg-white/60 dark:bg-gray-800/60 backdrop-blur-md shadow-2xl hover:shadow-3xl transition-shadow duration-300 mt-20"
+        className="relative p-8 rounded-xl bg-white dark:bg-gray-800 shadow-2xl transition-shadow duration-300 mt-20 w-full max-w-4xl mx-auto text-center"
       >
-        <motion.p
-          className="text-neutral-700 dark:text-neutral-200 text-xl md:text-2xl max-w-2xl mx-auto text-center leading-relaxed"
-          whileHover={{ scale: 1.03 }}
-        >
-          Dive into the frontend magic by{" "}
-          <LinkPreview
-            isStatic
-            url="https://github.com/Vegadjay"
-            imageSrc="/developers/Jayvegad.png"
-            className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500 hover:from-blue-500 hover:to-cyan-600 transition-all duration-300"
-          >
-            Jay Vegad
-          </LinkPreview>{" "}
-          and the backend wizardry by{" "}
-          <LinkPreview
-            isStatic
-            url="https://github.com/hemang-patel-9"
-            imageSrc="/developers/Hemangbaldha.png"
-            className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 hover:from-purple-500 hover:to-pink-600 transition-all duration-300"
-          >
-            Hemang Patel
-          </LinkPreview>
+        <motion.h3 className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-300 mb-4">
+          Манай хаяг
+        </motion.h3>
+        <motion.p className="text-gray-700 dark:text-gray-200 mb-6">
+          Улаанбаатар хот, Баянгүл дүүрэг, xx-р хороо, xx-р гудамж, xx-р байр
+          101 тоот
         </motion.p>
+        <motion.img
+          src="/assets/map.jpg" // Make sure this image exists in your public/assets folder
+          className="w-full h-64 object-cover rounded-lg shadow-md"
+          whileHover={{ scale: 1.02 }}
+        />
       </motion.div>
 
       {/* Final Message */}
@@ -217,7 +206,7 @@ export function RedesignedLinkPreviewDemo() {
           className="text-2xl font-semibold text-green-600 dark:text-green-400"
           whileHover={{ scale: 1.07 }}
         >
-          Building the future, one pixel at a time.
+          Таны эрүүл мэндийн төлөө.
         </motion.p>
         <motion.div
           className="flex items-center justify-center gap-4"
@@ -238,7 +227,7 @@ export function RedesignedLinkPreviewDemo() {
             ❤️
           </motion.span>
           <span className="text-red-500 dark:text-red-400 font-medium">
-            Your support makes us stronger!
+            Таны дэмжлэг бидэнд урам дэм өгдөг!
           </span>
         </motion.div>
       </motion.div>
@@ -248,9 +237,7 @@ export function RedesignedLinkPreviewDemo() {
         <motion.p
           className="italic text-gray-600 dark:text-gray-400"
           whileHover={{ color: "#6D28D9", scale: 1.1 }}
-        >
-          "From concept to reality, we create with purpose."
-        </motion.p>
+        ></motion.p>
       </motion.footer>
     </motion.div>
   );
