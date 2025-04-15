@@ -398,7 +398,7 @@ export function Navbar() {
                   >
                     <User size={16} /> Профайл
                   </button>
-                  <button
+                  {/* <button
                     onClick={() => {
                       triggerRender();
                       router.push("/findproduct");
@@ -407,7 +407,7 @@ export function Navbar() {
                     className="flex items-center gap-2 w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
                   >
                     <BrainCircuit size={16} /> StyleSnap AI
-                  </button>
+                  </button> */}
                   <button
                     onClick={() => {
                       triggerRender();

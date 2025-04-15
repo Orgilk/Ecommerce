@@ -83,13 +83,13 @@ export function ProductFilters({
   );
 
   const minPrice = Math.min(...products.map((p) => p.price));
-  const maxPrice = 20000000;
+  const maxPrice = 50000;
 
   const placeholders = [
-    "What's you looking for.",
-    "What you need ???",
-    "What's in your mind",
-    "Find what you need.",
+    "Та юу хайж байна.",
+    "Юу хэрэгтэй байна ???",
+    "Таны бодолд юу байна",
+    "Хэрэгтэй юмаа ол",
   ];
 
   const debouncedPriceRangeChange = useDebounce((range: number[]) => {
@@ -199,7 +199,7 @@ export function ProductFilters({
     <div className={`space-y-6 ${className}`}>
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-medium">Search</h3>
+          <h3 className="text-sm font-medium">Хайх</h3>
           {searchQuery && (
             <button
               onClick={() => onSearchChange("")}
@@ -295,7 +295,7 @@ export function ProductFilters({
 
       {uniqueSizes.length > 0 && (
         <div className="space-y-2">
-          <h3 className="text-sm font-medium">Model</h3>
+          <h3 className="text-sm font-medium">Шүүлтүүр</h3>
           <div className="space-y-2">
             {uniqueSizes.map((size) => (
               <div key={size} className="flex items-center space-x-2">
@@ -340,7 +340,7 @@ export function ProductFilters({
       )} */}
 
       <div className="space-y-2">
-        <h3 className="text-sm font-medium">Sort By</h3>
+        <h3 className="text-sm font-medium">Ангилах</h3>
         <Select value={sortBy} onValueChange={handleSortChange}>
           <SelectTrigger className="w-full bg-white hover:bg-gray-50">
             <SelectValue placeholder="Choose sorting" />
@@ -350,19 +350,19 @@ export function ProductFilters({
               value="default"
               className="hover:bg-red-50 focus:bg-red-50 cursor-pointer"
             >
-              Default
+              Энгийн
             </SelectItem>
             <SelectItem
               value="price-asc"
               className="hover:bg-red-50 focus:bg-red-50 cursor-pointer"
             >
-              Price: Low to High
+              Үнэ: Багаас ихлүү
             </SelectItem>
             <SelectItem
               value="price-desc"
               className="hover:bg-red-50 focus:bg-red-50 cursor-pointer"
             >
-              Price: High to Low
+              Үнэ: Ихээс багаруу
             </SelectItem>
           </SelectContent>
         </Select>

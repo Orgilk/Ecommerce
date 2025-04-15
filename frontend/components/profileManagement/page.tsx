@@ -4,7 +4,7 @@ import { signOut } from "next-auth/react";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
-import { useRenderContext } from '@/contexts/RenderContext';
+import { useRenderContext } from "@/contexts/RenderContext";
 
 const ProfileDropdown = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -34,14 +34,13 @@ const ProfileDropdown = () => {
     router.push("/");
   };
 
-  
   return (
     <div className="relative inline-block text-left">
       <button
         onClick={handleToggleDropdown}
         className="flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
-        Profile
+        Профайл
       </button>
 
       {isDropdownOpen && (
@@ -50,13 +49,13 @@ const ProfileDropdown = () => {
             onClick={handleUpdateProfile}
             className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
           >
-            Update Profile
+            Шинэчлэх
           </button>
           <button
             onClick={handleSignOut}
             className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
           >
-            Logout
+            Гарах
           </button>
         </div>
       )}

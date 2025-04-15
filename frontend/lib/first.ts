@@ -27,7 +27,7 @@ export const products: Product[] = [
   {
     id: 1,
     name: "Витагрипп Чацарганатай 20гр",
-    price: 2899,
+    price: 3000,
     rating: 5,
     reviews: 1500,
     answers: 120,
@@ -105,7 +105,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: "Залтирон 10мл",
-    price: 3199,
+    price: 8000,
     rating: 4.5,
     reviews: 120,
     answers: 50,
@@ -183,7 +183,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: "Терафлюы",
-    price: 4899,
+    price: 5000,
     rating: 3.5,
     reviews: 700,
     answers: 234,
@@ -261,7 +261,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: "Ацц 600мг уусдаг шахмал",
-    price: 4299,
+    price: 3400,
     rating: 2.6,
     reviews: 520,
     answers: 34,
@@ -339,7 +339,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: "Кардионат 250мг",
-    price: 4899,
+    price: 22000,
     rating: 5,
     reviews: 1200,
     answers: 234,
@@ -417,7 +417,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: "Нейромалин 50мг",
-    price: 4799,
+    price: 5200,
     rating: 4.5,
     reviews: 900,
     answers: 234,
@@ -495,7 +495,7 @@ export const products: Product[] = [
   {
     id: 7,
     name: "Ясурамин 10мл",
-    price: 4999,
+    price: 5000,
     rating: 4,
     reviews: 800,
     answers: 234,
@@ -573,7 +573,7 @@ export const products: Product[] = [
   {
     id: 8,
     name: "Цефазолин 1гр",
-    price: 3399,
+    price: 7800,
     rating: 4.2,
     reviews: 850,
     answers: 234,
@@ -651,7 +651,7 @@ export const products: Product[] = [
   {
     id: 9,
     name: "Предизин 35мг",
-    price: 1499,
+    price: 31000,
     rating: 4.3,
     reviews: 860,
     answers: 234,
@@ -729,7 +729,7 @@ export const products: Product[] = [
   {
     id: 10,
     name: "Цефтриаксон 1гр",
-    price: 4899,
+    price: 2200,
     rating: 4.2,
     reviews: 830,
     answers: 234,
@@ -808,7 +808,7 @@ export const products: Product[] = [
   {
     id: 11,
     name: "Нэг удаагийн малгай",
-    price: 5999,
+    price: 15000,
     rating: 4.5,
     reviews: 740,
     answers: 156,
@@ -887,7 +887,7 @@ export const products: Product[] = [
   {
     id: 12,
     name: "Маск KF94",
-    price: 5999,
+    price: 1000,
     rating: 5,
     reviews: 200,
     answers: 34,
@@ -966,7 +966,7 @@ export const products: Product[] = [
   {
     id: 13,
     name: "Уян боолт 10смx4,5м",
-    price: 5499,
+    price: 8000,
     rating: 4.2,
     reviews: 1020,
     answers: 304,
@@ -1045,7 +1045,7 @@ export const products: Product[] = [
   {
     id: 14,
     name: "Зүү 1 удаагийн 21гр",
-    price: 5699,
+    price: 4000,
     rating: 4.6,
     reviews: 745,
     answers: 127,
@@ -1124,7 +1124,7 @@ export const products: Product[] = [
   {
     id: 15,
     name: "Зүү 1 удаагийн 22гр",
-    price: 5999,
+    price: 4500,
     rating: 4.5,
     reviews: 723,
     answers: 97,
@@ -1203,7 +1203,7 @@ export const products: Product[] = [
   {
     id: 16,
     name: "Чагнуур хар",
-    price: 3299,
+    price: 18000,
     rating: 4.9,
     reviews: 1203,
     answers: 345,
@@ -1284,7 +1284,7 @@ export const products: Product[] = [
   {
     id: 17,
     name: "Санитас төхөөрөмж",
-    price: 3299,
+    price: 50000,
     rating: 4.8,
     reviews: 1067,
     answers: 237,

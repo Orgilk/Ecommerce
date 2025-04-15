@@ -146,17 +146,17 @@ export function RedesignedLinkPreviewDemo() {
             {
               name: "Бат",
               role: "Гүйцэтгэх захирал",
-              img: "/corosal/user1.jpg",
+              img: "/corosal/user1.png",
             },
             {
               name: "Болд",
               role: "Захирал",
-              img: "/assets/team2.jpg",
+              img: "/corosal/user2.png",
             },
             {
               name: "Цэцэг",
               role: "Ахлах эм зүйч",
-              img: "/assets/team2.jpg",
+              img: "/corosal/user3.jpg",
             },
           ].map((member, i) => (
             <motion.div
@@ -191,7 +191,7 @@ export function RedesignedLinkPreviewDemo() {
           101 тоот
         </motion.p>
         <motion.img
-          src="/assets/map.jpg" // Make sure this image exists in your public/assets folder
+          src="/corosal/building.jpeg" // Make sure this image exists in your public/assets folder
           className="w-full h-64 object-cover rounded-lg shadow-md"
           whileHover={{ scale: 1.02 }}
         />

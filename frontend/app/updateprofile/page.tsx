@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { InputField } from '@/components/layout/inputBox';
-import { useRouter } from 'next/navigation';
-import Cookie from 'js-cookie';
-import Loader from '@/components/Loader';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { InputField } from "@/components/layout/inputBox";
+import { useRouter } from "next/navigation";
+import Cookie from "js-cookie";
+import Loader from "@/components/Loader";
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const itemVariants = {
@@ -25,22 +25,22 @@ const itemVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      stiffness: 100
-    }
-  }
+      stiffness: 100,
+    },
+  },
 };
 
 export default function UpdateProfile() {
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    phone: '',
+    username: "",
+    email: "",
+    phone: "",
     address: {
-      street: '',
-      city: '',
-      state: '',
-      zipCode: '',
-      country: '',
+      street: "",
+      city: "",
+      state: "",
+      zipCode: "",
+      country: "",
     },
   });
 
@@ -51,15 +51,15 @@ export default function UpdateProfile() {
 
   const router = useRouter();
 
-  const userId = Cookie.get("userId")
+  const userId = Cookie.get("userId");
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const response = await fetch(`/api/admin/user/${userId}`, {
-          method: 'GET',
+          method: "GET",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
         });
 
@@ -67,11 +67,11 @@ export default function UpdateProfile() {
           const userData = await response.json();
           setFormData(userData.data);
         } else {
-          setApiMessage('Failed to load user data');
+          setApiMessage("Failed to load user data");
         }
       } catch (error) {
-        setApiMessage('Error loading user data');
-        console.error('Error fetching user data:', error);
+        setApiMessage("Error loading user data");
+        console.error("Error fetching user data:", error);
       } finally {
         setIsDataLoaded(true);
       }
@@ -83,26 +83,26 @@ export default function UpdateProfile() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    setApiMessage('');
+    setApiMessage("");
 
     if (!formData.username || !formData.email) {
-      setApiMessage('Username and email are required.');
+      setApiMessage("Username and email are required.");
       setIsLoading(false);
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setApiMessage('Please enter a valid email address.');
+      setApiMessage("Please enter a valid email address.");
       setIsLoading(false);
       return;
     }
 
     try {
       const response = await fetch(`/api/admin/user/${userId}`, {
-        method: 'PUT',
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -110,16 +110,16 @@ export default function UpdateProfile() {
       const data = await response.json();
 
       if (response.ok) {
-        setApiMessage('Profile updated successfully!');
+        setApiMessage("Profile updated successfully!");
         setTimeout(() => {
-          router.push('/updateprofile');
+          router.push("/updateprofile");
         }, 1500);
       } else {
-        setApiMessage(data.error || 'Update failed.');
+        setApiMessage(data.error || "Update failed.");
       }
     } catch (error) {
-      setApiMessage('An error occurred. Please try again.');
-      console.error('Error during update:', error);
+      setApiMessage("An error occurred. Please try again.");
+      console.error("Error during update:", error);
     } finally {
       setIsLoading(false);
     }
@@ -127,12 +127,12 @@ export default function UpdateProfile() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    if (name.includes('.')) {
-      const [parent, child] = name.split('.');
+    if (name.includes(".")) {
+      const [parent, child] = name.split(".");
       setFormData((prev) => ({
         ...prev,
         [parent]: {
-          ...prev[parent as keyof typeof formData] as object,
+          ...(prev[parent as keyof typeof formData] as object),
           [child]: value,
         },
       }));
@@ -145,19 +145,18 @@ export default function UpdateProfile() {
   };
 
   if (!isDataLoaded) {
-    return (
-      <Loader/>
-    );
+    return <Loader />;
   }
 
   return (
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="fixed inset-0 -z-10"
+      <div
+        className="fixed inset-0 -z-10"
         style={{
           backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
           url('/jaipuri-bg.svg')`,
-          backgroundSize: '400px',
-          backgroundRepeat: 'repeat'
+          backgroundSize: "400px",
+          backgroundRepeat: "repeat",
         }}
       />
       <motion.div
@@ -173,11 +172,9 @@ export default function UpdateProfile() {
               variants={itemVariants}
             >
               <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
-                Update Profile
+                Профайл шинэчлэх
               </h2>
-              <p className="mt-4 text-lg text-orange-600">
-                Modify your account information
-              </p>
+              <p className="mt-4 text-lg text-orange-600">Мэдээлэл шинэчлэх</p>
             </motion.div>
 
             <motion.form
@@ -266,9 +263,10 @@ export default function UpdateProfile() {
                   disabled={isLoading}
                   className="w-full px-8 py-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-xl font-medium hover:opacity-90 transition-opacity shadow-lg"
                 >
-                  {isLoading ? 'Updating...' : 'Update Profile'}
+                  {isLoading ? "Updating..." : "Update Profile"}
                 </motion.button>
-                <br/><br/>
+                <br />
+                <br />
                 <Link href={""}>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
@@ -284,8 +282,11 @@ export default function UpdateProfile() {
 
             {apiMessage && (
               <motion.div
-                className={`mt-4 p-3 rounded-md text-center ${apiMessage.includes('successfully') ? 'text-green-600' : 'text-red-600'
-                  }`}
+                className={`mt-4 p-3 rounded-md text-center ${
+                  apiMessage.includes("successfully")
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
                 variants={itemVariants}
               >
                 {apiMessage}

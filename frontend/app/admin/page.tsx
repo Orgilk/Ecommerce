@@ -187,11 +187,9 @@ export default function Login() {
                   <User size={40} className="text-white" />
                 </motion.div>
                 <h2 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
-                  Welcome Admin
+                  Админ
                 </h2>
-                <p className="mt-3 text-gray-600">
-                  Sign in to manage your website
-                </p>
+                <p className="mt-3 text-gray-600">Нэвтэрж сайтаа удирдаарай</p>
               </motion.div>
 
               <motion.form onSubmit={handleSubmit} className="space-y-6">
@@ -200,7 +198,7 @@ export default function Login() {
                   icon={Mail}
                   name="email"
                   type="text"
-                  placeholder="Enter your email"
+                  placeholder="Email оруулна уу"
                   value={formData.email}
                   onChange={handleInputChange}
                   error={undefined}
@@ -210,7 +208,7 @@ export default function Login() {
                   icon={Lock}
                   name="password"
                   type="password"
-                  placeholder="Enter your password"
+                  placeholder="Нууц үгээ оруулна уу"
                   value={formData.password}
                   onChange={handleInputChange}
                   error={undefined}
@@ -229,7 +227,7 @@ export default function Login() {
                     "Signing in..."
                   ) : (
                     <>
-                      Sign In
+                      Нэвтрэх
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </>
                   )}
