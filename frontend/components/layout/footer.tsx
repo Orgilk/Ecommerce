@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Github, Instagram, Youtube, Linkedin } from "lucide-react";
-
+ 
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
