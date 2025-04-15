@@ -134,7 +134,7 @@ export default function Footer() {
                     href="mailto:contact@rajwadiposhak.com"
                     className="text-orange-600 hover:text-orange-700 font-medium"
                   >
-                    contact@rajwadiposhak.com
+                    pharmacy1111@gmail.com
                   </a>
                 </p>
                 <p className="text-gray-800">
