@@ -92,7 +92,7 @@ export async function POST(req: Request) {
     user.orders.push(savedOrder._id);
     await user.save();
 
-    await sendEmail(savedOrder, user.email);
+    // await sendEmail(savedOrder, user.email);
     await Cart.deleteOne({ userId: parsedData.userId });
     return NextResponse.json(
       { success: true, data: savedOrder },

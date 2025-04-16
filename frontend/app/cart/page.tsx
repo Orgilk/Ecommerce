@@ -195,16 +195,16 @@ export default function OptimizedCoolCartPage() {
       >
         <ShoppingCart className="h-16 w-16 text-gray-500 mx-auto mb-4" />
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
-          Your Cart is Empty
+          Таны карт хоосон байна
         </h2>
         <p className="text-gray-600 mb-4">
-          Looks like you haven't added anything to your cart yet.
+          Та хараахан бараа нэмээгүй байна
         </p>
         <Button
           onClick={() => router.push("/")}
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
         >
-          Start Shopping
+          Худалдан авалт хийгээрэй
         </Button>
       </motion.div>
     );
@@ -220,7 +220,7 @@ export default function OptimizedCoolCartPage() {
       <div className="px-4 py-5 sm:p-6">
         <h1 className="text-3xl font-extrabold text-gray-900 flex items-center mb-8">
           <ShoppingBag className="w-8 h-8 mr-2 text-red-600" />
-          Your Stylish Cart
+          Карт
         </h1>
 
         {cartData && cartData.data && cartData.data.length > 0 ? (
