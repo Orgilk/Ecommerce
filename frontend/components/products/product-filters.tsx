@@ -160,7 +160,7 @@ export function ProductFilters({
     category: string,
     search: string,
     price: number[],
-    model: string[]
+    size: string[]
   ) => {
     let filtered = products;
 
@@ -178,12 +178,12 @@ export function ProductFilters({
       (product) => product.price >= price[0] && product.price <= price[1]
     );
 
-    if (model.length > 0) {
+    if (size.length > 0) {
       filtered = filtered.filter((product) =>
-        model.some((m) => product.model?.includes(m))
+        size.some((m) => product.model?.includes(m))
       );
     }
-
+    console.log("filtered: ", filtered)
     setFilteredProducts(filtered);
   };
 
