@@ -36,17 +36,41 @@ const Hospital = () => {
   const productId = params?.id;
 
   // Convert string to number (only if it's a single string, not an array)
-  const numericId = typeof productId === "string" ? parseInt(productId, 10) : null;
 
   const [selectedProduct, setSelectedProduct] = useState<ProductL | null>(null);
-
   useEffect(() => {
-    if (numericId !== null && !isNaN(numericId)) {
-      console.log("numericId: ", numericId)
-      const foundProduct = productData.find((p) => p.id === numericId);
-      setSelectedProduct(foundProduct || null);
+    async function fetchData() {
+      try {
+        const response = await fetch('/api/product');
+        const data = await response.json();
+
+        const productsArray = Array.isArray(data)
+          ? data
+          : data.data
+          ? data.data
+          : [];
+
+        if (productId !== null) {
+          console.log("numericId: ", productId);
+          const foundProduct = productsArray.find((p) => p.id === productId);
+          setSelectedProduct(foundProduct || null);
+        }
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
     }
-  }, [numericId]);
+
+    if (productId !== null) { // Check if productId exists before fetching
+      fetchData();
+    }
+  }, [productId]);
+  // useEffect(() => {
+  //   if (numericId !== null && !isNaN(numericId)) {
+  //     console.log("numericId: ", numericId)
+  //     const foundProduct = productData.find((p) => p.id === numericId);
+  //     setSelectedProduct(foundProduct || null);
+  //   }
+  // }, [numericId]);
 
   if (!selectedProduct) {
     return <div className="p-4">Loading or Product not found</div>;
