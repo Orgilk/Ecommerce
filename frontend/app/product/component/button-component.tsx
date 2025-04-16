@@ -81,7 +81,7 @@ export function AddToCartModal({
           totalPrice: 0,
         }),
       }).then((res) => res.json());
-
+      console.log("cart: ", response);
       if (!response.success) {
         alert("1Failed to add to cart. Please try again.");
         return;

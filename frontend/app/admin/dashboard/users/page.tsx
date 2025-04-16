@@ -58,6 +58,7 @@ export default function AdminUsersPage() {
     const fetchUsers = async () => {
       try {
         const response = await fetch("/api/admin/user");
+        console.log("response: ", response);
         if (!response.ok) {
           throw new Error("Failed to fetch users");
         }

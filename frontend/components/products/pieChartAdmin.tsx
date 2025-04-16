@@ -72,7 +72,7 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
   const [selectedSize, setSelectedSize] = useState<string>("All");
   const [selectedRating, setSelectedRating] = useState<number>(0);
   const [selectedColor, setSelectedColor] = useState<string>("All");
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 50000]);
 
   const allSizes = useMemo(
     () =>
@@ -128,15 +128,13 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
   return (
     <Card className="w-full max-w-4xl mx-auto">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">Product Filters</CardTitle>
-        <CardDescription>
-          Filter products and see the distribution
-        </CardDescription>
+        <CardTitle className="text-2xl font-bold">Барааг шүүж харах</CardTitle>
+        <CardDescription>Бараануудыг шүүж харах</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
           {/* Size Filter */}
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <label htmlFor="size-filter" className="text-sm font-medium">
               Filter by Size:
             </label>
@@ -157,19 +155,19 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
                 ))}
               </SelectContent>
             </Select>
-          </div>
+          </div> */}
 
           {/* Rating Filter */}
           <div className="space-y-2">
             <label htmlFor="rating-filter" className="text-sm font-medium">
-              Filter by Rating:
+              Үнэлгээгээр шүүх:
             </label>
             <Select
               value={selectedRating.toString()}
               onValueChange={(value) => setSelectedRating(Number(value))}
             >
               <SelectTrigger id="rating-filter">
-                <SelectValue placeholder="Select rating" />
+                <SelectValue placeholder="Үнэлгээг сонгох" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="0">All</SelectItem>
@@ -179,7 +177,7 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
                     value={rating.toString()}
                     className="bg-white text-black hover:text-white"
                   >
-                    {rating} star{rating > 1 ? "s" : ""} and above
+                    {rating} од{rating > 1 ? "s" : ""} болон дээш
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -187,7 +185,7 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
           </div>
 
           {/* Color Filter */}
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <label htmlFor="color-filter" className="text-sm font-medium">
               Filter by Color:
             </label>
@@ -208,12 +206,12 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
                 ))}
               </SelectContent>
             </Select>
-          </div>
+          </div> */}
 
           {/* Price Range Filter */}
           <div className="space-y-2">
             <label htmlFor="price-range-filter" className="text-sm font-medium">
-              Filter by Price:
+              Үнээр шүүх:
             </label>
             <Slider
               id="price-range-filter"
@@ -234,7 +232,7 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
         </div>
 
         <div className="mb-4">
-          <h3 className="text-lg font-semibold mb-2">Applied Filters:</h3>
+          <h3 className="text-lg font-semibold mb-2">Сонгосон шүүлтүүрүүд:</h3>
           <div className="flex flex-wrap gap-2">
             {selectedSize !== "All" && (
               <Badge variant="secondary">Size: {selectedSize}</Badge>
@@ -246,7 +244,7 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
               <Badge variant="secondary">Color: {selectedColor}</Badge>
             )}
             <Badge variant="secondary">
-              Price: ₮{priceRange[0]} - ₮{priceRange[1]}
+              Үнэ: ₮{priceRange[0]} - ₮{priceRange[1]}
             </Badge>
           </div>
         </div>
@@ -292,7 +290,7 @@ const ProductDetail = ({ products }: { products: Product[] }) => {
 
         <div>
           <h3 className="text-lg font-semibold mb-2">
-            Filtered Products: {filteredProducts.length}
+            Шүүсэн бараанууд: {filteredProducts.length}
           </h3>
           <ul className="list-disc pl-5">
             {filteredProducts.slice(0, 5).map((product) => (

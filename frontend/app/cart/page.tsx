@@ -112,7 +112,7 @@ export default function OptimizedCoolCartPage() {
               totalPrice: 0,
             }),
           }).then((res) => res.json());
-
+          console.log("cart res; ", response);
           if (!response.success) throw new Error(response.error);
           await fetchCartData();
         } catch (err) {

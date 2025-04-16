@@ -85,21 +85,26 @@ const CategoryProductListingPage = () => {
 
   // Fetch Products
   useEffect(() => {
-    const fetchProducts = async () => {
+    async function fetchData() {
       try {
         setIsLoading(true);
-        const products = productData.filter(
-          (product) => product.id >= 1 && product.id <= 400
-        );
+        const response = await fetch("/api/product");
+        const data = await response.json();
+
+        const productsArray = Array.isArray(data)
+          ? data
+          : data.data
+          ? data.data
+          : [];
 
         const productsToSet = categoryFromURL
-          ? products.filter(
+          ? productsArray.filter(
               (product: Product) => product.category === categoryFromURL
             )
-          : products;
-        console.log("produyct: ", products);
-        setAllProducts(products);
-        setFilteredProducts(products);
+          : productsArray;
+
+        setAllProducts(productsArray);
+        setFilteredProducts(productsToSet);
       } catch (error) {
         console.error("Error fetching products:", error);
         setAllProducts([]);
@@ -107,10 +112,56 @@ const CategoryProductListingPage = () => {
       } finally {
         setIsLoading(false);
       }
-    };
+    }
 
-    fetchProducts();
+    fetchData();
   }, [categoryFromURL]);
+
+  // Fetch Products
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     const response = await fetch("/api/product");
+
+  //     const data = await response.json();
+
+  //     const productsArray = Array.isArray(data)
+  //       ? data
+  //       : data.data
+  //       ? data.data
+  //       : [];
+  //     console.log("productsToSet: ", productsArray);
+
+  //     const productsToSet = categoryFromURL
+  //       ? productsArray.filter(
+  //           (product: Product) => product.category === categoryFromURL
+  //         )
+  //       : productsArray;
+
+  //     try {
+  //       setIsLoading(true);
+  //       const products = productData.filter(
+  //         (product) => product.id >= 1 && product.id <= 400
+  //       );
+
+  //       const productsToSet = categoryFromURL
+  //         ? products.filter(
+  //             (product: Product) => product.category === categoryFromURL
+  //           )
+  //         : products;
+  //       console.log("produyct: ", products);
+  //       setAllProducts(products);
+  //       setFilteredProducts(products);
+  //     } catch (error) {
+  //       console.error("Error fetching products:", error);
+  //       setAllProducts([]);
+  //       setFilteredProducts([]);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
+
+  //   fetchProducts();
+  // }, [categoryFromURL]);
 
   // Apply Filters and Sorting
   useEffect(() => {

@@ -278,7 +278,7 @@ const AdminCategoryDashboard = () => {
               {formatCategoryName(getCategoryFromPath())}
             </h1>
             <p className="text-gray-600 text-sm sm:text-base">
-              Managing {categoryProducts.length} products
+              Барааны тоо {categoryProducts.length}
             </p>
           </div>
 
@@ -290,7 +290,7 @@ const AdminCategoryDashboard = () => {
               className="text-black hover:text-white w-full sm:w-auto"
             >
               <Download className="mr-2 h-4 w-4" />
-              Export Data
+              Татаж авах
             </Button>
             <Button
               onClick={() => {
@@ -298,7 +298,7 @@ const AdminCategoryDashboard = () => {
               }}
               className="text-white w-full sm:w-auto"
             >
-              Add New Product
+              Шинэ бараа нэмэх
             </Button>
           </div>
         </div>
@@ -307,48 +307,48 @@ const AdminCategoryDashboard = () => {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
-                Total Products
+                Нийт барааны тоо
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
                 {categoryProducts.length}
               </div>
-              <p className="text-xs text-muted-foreground">
-                +2 from last month
-              </p>
+              <p className="text-xs text-muted-foreground">+2 өмнөх сараас</p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Total Sales</CardTitle>
+              <CardTitle className="text-sm font-medium">
+                Нийт зарсан барааны тоо
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
                 {totalSales.toLocaleString()}
               </div>
               <p className="text-xs text-muted-foreground">
-                +12.3% from last month
+                +12.3% өмнөх сараас
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Revenue</CardTitle>
+              <CardTitle className="text-sm font-medium">Нийт орлого</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
                 ₮{totalRevenue.toLocaleString()}
               </div>
               <p className="text-xs text-muted-foreground">
-                +8.1% from last month
+                +8.1% өмнөх сараас
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
-                Low Stock Items
+                Нөөц багатай барааны тоо
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -356,7 +356,7 @@ const AdminCategoryDashboard = () => {
                 {categoryProducts.filter((p) => p.stock < 10).length}
               </div>
               <p className="text-xs text-muted-foreground">
-                Requires attention
+                Анхаарал хандуулах
               </p>
             </CardContent>
           </Card>
@@ -367,7 +367,7 @@ const AdminCategoryDashboard = () => {
             <div className="flex-1">
               <input
                 type="text"
-                placeholder="Search products..."
+                placeholder="Бараа хайх..."
                 className="w-full px-4 py-2 border rounded-lg"
                 value={searchTerm}
                 onChange={handleSearch}
@@ -378,7 +378,7 @@ const AdminCategoryDashboard = () => {
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline">
                     <Filter className="mr-2 h-4 w-4" />
-                    Sort By
+                    Шүүх
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
@@ -481,10 +481,8 @@ const AdminCategoryDashboard = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
           <Card>
             <CardHeader>
-              <CardTitle>Monthly Revenue Trend</CardTitle>
-              <CardDescription>
-                Revenue analysis over the past months
-              </CardDescription>
+              <CardTitle>Сарын дундаж орлого</CardTitle>
+              <CardDescription>Өмнөх саруудын дүн шинжилгээ</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="h-[400px]">
@@ -502,7 +500,7 @@ const AdminCategoryDashboard = () => {
                       strokeWidth={2}
                       dot={{ r: 4 }}
                       activeDot={{ r: 6 }}
-                      name="Monthly Revenue"
+                      name="Сарын дундаж орлого"
                     />
                   </LineChart>
                 </ResponsiveContainer>
