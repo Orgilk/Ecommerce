@@ -78,18 +78,12 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   }, [product._id]);
 
   const fetchMoreLikeThis = () => {
-    //category nemeh
-    const products = productData.filter(
-      (product) => product.id >= 30 && product.id <= 34
+    const similarProducts = productData.filter(
+      (product) => product.category === product.category 
     );
-    setSimmilarProducts(products);
-
-    // const res = await fetch(`/api/product/category/${product.category}`).then((res) => res.json());
-    // if (res.success) {
-    //   setSimmilarProducts(res.data);
-    // }
+    setSimmilarProducts(similarProducts);
   };
-
+  
   const handleWishlistToggle = () => {
     const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
 
