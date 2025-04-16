@@ -84,9 +84,17 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   //   );
   //   setSimmilarProducts(similarProducts);
   // };
-  const fetchMoreLikeThis = () => {
-    const similarProducts = productData.filter(
-      (p) => p._id !== product._id && p.category === product.category
+  const fetchMoreLikeThis = async() => {
+    const response = await fetch('/api/product');
+        const data = await response.json();
+
+        const productsArray = Array.isArray(data)
+          ? data
+          : data.data
+            ? data.data
+            : [];
+    const similarProducts = productsArray.filter(
+      (p:any) => p._id !== product._id && p.category === product.category
     );
     setSimmilarProducts(similarProducts);
   };
