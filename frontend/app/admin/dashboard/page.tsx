@@ -138,18 +138,18 @@ const DashboardStats = () => {
   const product = [
     {
       chartData: [
-        { month: "Jan", "Total Sales": 3029900 },
-        { month: "Feb", "Total Sales": 2928800 },
-        { month: "Mar", "Total Sales": 3680500 },
-        { month: "Apr", "Total Sales": 3620100 },
-        { month: "May", "Total Sales": 3373800 },
-        { month: "Jun", "Total Sales": 3104900 },
-        { month: "Jul", "Total Sales": 3157000 },
-        { month: "Aug", "Total Sales": 3666000 },
-        { month: "Sep", "Total Sales": 3755000 },
-        { month: "Oct", "Total Sales": 3367800 },
-        { month: "Nov", "Total Sales": 3376400 },
-        { month: "Dec", "Total Sales": 2982400 },
+        { month: "Jan", "Нийт орлого": 3029900 },
+        { month: "Feb", "Нийт орлого": 2928800 },
+        { month: "Mar", "Нийт орлого": 3680500 },
+        { month: "Apr", "Нийт орлого": 3620100 },
+        { month: "May", "Нийт орлого": 3373800 },
+        { month: "Jun", "Нийт орлого": 3104900 },
+        { month: "Jul", "Нийт орлого": 3157000 },
+        { month: "Aug", "Нийт орлого": 3666000 },
+        { month: "Sep", "Нийт орлого": 3755000 },
+        { month: "Oct", "Нийт орлого": 3367800 },
+        { month: "Nov", "Нийт орлого": 3376400 },
+        { month: "Dec", "Нийт орлого": 2982400 },
       ],
     },
   ];
@@ -247,7 +247,7 @@ const DashboardStats = () => {
             <Legend />
             <Line
               type="monotone"
-              dataKey="Total Sales"
+              dataKey="Нийт орлого"
               stroke="#8884d8"
               strokeWidth={2}
             />
