@@ -7,32 +7,15 @@ const CategoryGrid = () => {
   const basePath = "/admin/dashboard";
   const categories = [
     {
-      title: "Нэг удаагийн хэрэглэл",
-      path: `${basePath}/category/Нэгудаагийнхэрэглэл`,
+      title: "Нэг удаагийн хэрэгсэл",
+      path: `${basePath}/category/Нэг%20удаагийн%20хэрэгсэл`,
     },
     {
       title: "Захиалгат хэрэгсэл",
-      path: `${basePath}/category/Захиалгатхэрэгсэл`,
+      path: `${basePath}/category/Захиалгат%20хэрэгсэл`,
     },
-    { title: "Ханиадны эм", path: `${basePath}/category/Ханиадныэм` },
-    { title: "Үе мөчний тариа", path: `${basePath}/category/Үемөчнийтариа` },
-    { title: "Зүрхний эм", path: `${basePath}/category/Зүрхнийэм` },
-    {
-      title: "Үрэвслийн эсрэг тариа",
-      path: `${basePath}/category/Үрэвслийнэсрэгтариа`,
-    },
-    {
-      title: "Нэг удаагийн эмчилгээний хэрэглэл",
-      path: `${basePath}/category/Нэгудаагийнэмчилгээнийхэрэглэл`,
-    },
-    {
-      title: "Эмнэлэгийн хэрэгсэл",
-      path: `${basePath}/category/Эмнэлэгийн хэрэгсэл`,
-    },
-    {
-      title: "Захиалгын төхөөрөмж",
-      path: `${basePath}/category/Захиалгын төхөөрөмж`,
-    },
+    { title: "Эм", path: `${basePath}/category/Эм` },
+    { title: "Тариа", path: `${basePath}/category/Үемөчнийтариа` },
   ];
 
   return (

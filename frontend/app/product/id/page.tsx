@@ -29,6 +29,7 @@ import { products as productData } from "@/app/product/data";
 
 export interface Product {
   id: number;
+  _id: string;
   name: string | "";
   sale?: string;
   price: number;
@@ -57,10 +58,10 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(
-    product.size ? product.size[0] : "5 meter"
+    product.size ? product.size[0] : ""
   );
   const [selectedColor, setSelectedColor] = useState(
-    product.color ? product.color[0] : "Red Color"
+    product.color ? product.color[0] : ""
   );
   const [isSaved, setIsSaved] = useState(false);
   const [showShareMenu, setShowShareMenu] = useState(false);
@@ -77,13 +78,19 @@ const Product: React.FC<ProductProps> = ({ product }) => {
     }, 2200);
   }, [product._id]);
 
+  // const fetchMoreLikeThis = () => {
+  //   const similarProducts = productData.filter(
+  //     (product) => product.category === product.category
+  //   );
+  //   setSimmilarProducts(similarProducts);
+  // };
   const fetchMoreLikeThis = () => {
     const similarProducts = productData.filter(
-      (product) => product.category === product.category 
+      (p) => p._id !== product._id && p.category === product.category
     );
     setSimmilarProducts(similarProducts);
   };
-  
+
   const handleWishlistToggle = () => {
     const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
 
