@@ -90,8 +90,9 @@ const AdminCategoryDashboard = () => {
   const router = useRouter();
 
   const getCategoryFromPath = () => {
-    const segments = pathname?.split("/") || [];
-    return segments[segments.length - 1] || "";
+    // const segments = pathname?.split("/") || [];
+    // return segments[segments.length - 1] || "";
+    return "Эм"
   };
 
   const sizeCount: Record<string, number> = {};
