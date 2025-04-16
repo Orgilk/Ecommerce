@@ -169,9 +169,7 @@ export default function OptimizedCoolCartPage() {
         className="max-w-md mx-auto mt-10 bg-white p-8 rounded-lg shadow-lg text-center"
       >
         <AlertCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">
-          Oops! Something went wrong
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">Алдаа гарлаа</h2>
         <p className="text-gray-600 mb-4">
           {error || "Unable to load cart data"}
         </p>
@@ -179,7 +177,7 @@ export default function OptimizedCoolCartPage() {
           onClick={() => window.location.reload()}
           className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
         >
-          Try Again
+          Дахин оролдоно уу
         </Button>
       </motion.div>
     );
@@ -197,9 +195,7 @@ export default function OptimizedCoolCartPage() {
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
           Таны карт хоосон байна
         </h2>
-        <p className="text-gray-600 mb-4">
-          Та хараахан бараа нэмээгүй байна
-        </p>
+        <p className="text-gray-600 mb-4">Та хараахан бараа нэмээгүй байна</p>
         <Button
           onClick={() => router.push("/")}
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
@@ -249,7 +245,7 @@ export default function OptimizedCoolCartPage() {
                   <h3 className="text-lg font-medium text-gray-900">
                     {item.name}
                   </h3>
-                  <p className="text-gray-500">Size: {item.size}</p>
+                  {/* <p className="text-gray-500">Size: {item.size}</p> */}
                   <p className="text-red-600 font-semibold">₮{item.price}</p>
                   <div className="flex items-center mt-2">
                     <Button
@@ -314,7 +310,7 @@ export default function OptimizedCoolCartPage() {
                   ) : (
                     <Trash2 className="w-4 h-4" />
                   )}
-                  <span>Remove</span>
+                  <span>Устгах</span>
                 </Button>
               </motion.div>
             ))}
@@ -326,13 +322,15 @@ export default function OptimizedCoolCartPage() {
             transition={{ delay: 0.3 }}
             className="text-center text-gray-500 my-8"
           >
-            Your cart is empty. Let's add some fabulous items!
+            Хоосон байна
           </motion.p>
         )}
 
         <div className="mt-8">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-lg font-medium text-gray-900">Subtotal</span>
+            <span className="text-lg font-medium text-gray-900">
+              Нийт үнийн дүн
+            </span>
             <span className="text-2xl font-bold text-red-600">
               ₮{parseFloat(cartData?.totalPrice?.toString() || "0").toFixed(2)}
             </span>
@@ -351,7 +349,7 @@ export default function OptimizedCoolCartPage() {
                 <LucideLoader className="w-5 h-5 animate-spin mr-2" />
               ) : (
                 <>
-                  <span>Proceed to Checkout</span>
+                  <span>Худалдаж авах</span>
                   <ChevronRight className="w-5 h-5 ml-2" />
                 </>
               )}

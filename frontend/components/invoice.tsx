@@ -92,9 +92,7 @@ export default function EnhancedInvoiceComponent({
           >
             <Card className="w-full">
               <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0 pb-2">
-                <CardTitle className="text-2xl font-bold">
-                  Tax Invoice
-                </CardTitle>
+                <CardTitle className="text-2xl font-bold">Нэхэмжлэл</CardTitle>
                 <Button
                   variant="ghost"
                   size="icon"
@@ -111,45 +109,39 @@ export default function EnhancedInvoiceComponent({
                       <div>
                         <Image
                           src="/logo.png"
-                          alt="Rajwadi Poshak Logo"
                           width={150}
                           height={50}
                           className="mb-2"
                         />
-                        <h1 className="text-xl sm:text-2xl font-bold mt-2">
-                          {companyDetails.name}
-                        </h1>
                         <p className="text-xs sm:text-sm text-gray-600">
-                          {companyDetails.address}
+                          Хаяг: Улаанбаатар хот, Баянгүл дүүрэг, xx-р хороо,
+                          xx-р гудамж, xx-р байр 101 тоот
                         </p>
                         <p className="text-xs sm:text-sm text-gray-600">
-                          GSTIN: {companyDetails.gstin}
+                          Email: pharmacy1111@gmail.com
                         </p>
                         <p className="text-xs sm:text-sm text-gray-600">
-                          Email: {companyDetails.email}
+                          Phone: +976 99998888
                         </p>
                         <p className="text-xs sm:text-sm text-gray-600">
-                          Phone: {companyDetails.phone}
-                        </p>
-                        <p className="text-xs sm:text-sm text-gray-600">
-                          Website: {companyDetails.website}
+                          Website: www.pharmacy.mn
                         </p>
                       </div>
                       <div className="text-left sm:text-right">
                         <h2 className="text-lg sm:text-xl font-bold">
-                          Invoice #{invoiceDetails.invoiceNumber}
+                          Нэхэмжлэл #{invoiceDetails.invoiceNumber}
                         </h2>
                         <p className="text-xs sm:text-sm text-gray-600">
-                          Date: {invoiceDetails.date}
+                          Захиалсан өдөр: {invoiceDetails.date}
                         </p>
                         <p className="text-xs sm:text-sm text-gray-600">
-                          Due Date: {invoiceDetails.dueDate}
+                          Хүргэдэх өдөр: {invoiceDetails.dueDate}
                         </p>
                       </div>
                     </div>
                     <div className="mb-8">
                       <h3 className="text-base sm:text-lg font-semibold mb-2">
-                        Bill To:
+                        Төлөх хэрэглэгч:
                       </h3>
                       <p className="font-medium">
                         {invoiceDetails.customerName}
@@ -168,12 +160,18 @@ export default function EnhancedInvoiceComponent({
                       <Table>
                         <TableHeader>
                           <TableRow>
-                            <TableHead className="w-[40%]">Item</TableHead>
-                            <TableHead className="text-right">
-                              Quantity
+                            <TableHead className="w-[40%]">
+                              Барааны нэр
                             </TableHead>
-                            <TableHead className="text-right">Price</TableHead>
-                            <TableHead className="text-right">Total</TableHead>
+                            <TableHead className="text-right">
+                              Тоо ширхэг
+                            </TableHead>
+                            <TableHead className="text-right">
+                              Нэгж үнэ
+                            </TableHead>
+                            <TableHead className="text-right">
+                              Нийт үнэ
+                            </TableHead>
                           </TableRow>
                         </TableHeader>
                         <TableBody>
@@ -202,31 +200,31 @@ export default function EnhancedInvoiceComponent({
                     <div className="mt-8 flex justify-end mr-0 ">
                       <div className="w-full sm:w-1/2 text-center sm:text-center md:text-right space-y-1">
                         <p className="text-sm text-gray-600">
-                          Subtotal: ₮
+                          Барааны нийт үнэ: ₮
                           {parseFloat(
                             invoiceDetails?.subtotal.toString()
                           ).toFixed(2)}
                         </p>
                         <p className="text-sm text-gray-600">
-                          CGST (9%): ₮
+                          Гаалын татвар (9%): ₮
                           {parseFloat(invoiceDetails?.cgst.toString()).toFixed(
                             2
                           )}
                         </p>
                         <p className="text-sm text-gray-600">
-                          SGST (9%): ₮
+                          НӨАТ (9%): ₮
                           {parseFloat(invoiceDetails?.sgst.toString()).toFixed(
                             2
                           )}
                         </p>
                         <p className="text-sm text-gray-600">
-                          Shipping: ₮
+                          Хүргэлт: ₮
                           {parseFloat(
                             invoiceDetails?.shipping.toString()
                           ).toFixed(2)}
                         </p>
                         <p className="text-lg sm:text-xl font-bold mt-2">
-                          Total: ₮
+                          Нийт үнэ: ₮
                           {parseFloat(invoiceDetails?.total.toString()).toFixed(
                             2
                           )}
@@ -235,24 +233,24 @@ export default function EnhancedInvoiceComponent({
                     </div>
                     <div className="mt-8 border-t pt-4">
                       <h3 className="text-base sm:text-lg font-semibold mb-2">
-                        Payment Terms:
+                        Төлбөрийн журам:
                       </h3>
                       <p className="text-xs sm:text-sm text-gray-600">
-                        {invoiceDetails.paymentTerms}
+                        Төлбөрийг 5 хоногийн дотор төлнө
                       </p>
                     </div>
                     <div className="mt-4">
                       <h3 className="text-base sm:text-lg font-semibold mb-2">
-                        Notes:
+                        Тэмдэглэл:
                       </h3>
                       <p className="text-xs sm:text-sm text-gray-600">
-                        {invoiceDetails.notes}
+                        Худалдаж авсанд баярлалаа
                       </p>
                     </div>
                     <div className="mt-8 text-center text-xs sm:text-sm text-gray-500">
                       <p>
-                        This is a computer-generated invoice. No signature is
-                        required.
+                        Энэ нэхэмжлжэл нь компьютерээр үүссэн тул гарын үсэн
+                        шаардлагагүй.
                       </p>
                     </div>
                   </div>

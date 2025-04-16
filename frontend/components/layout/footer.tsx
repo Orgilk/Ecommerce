@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Github, Instagram, Youtube, Linkedin } from "lucide-react";
- 
+
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -174,7 +174,7 @@ export default function Footer() {
           className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-orange-200/50 text-center text-gray-800"
         >
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} All rights reserved.
+            &copy; {new Date().getFullYear()} Бүх эрх хуулиар хамгаалагдсан.
           </p>
         </motion.div>
       </motion.div>

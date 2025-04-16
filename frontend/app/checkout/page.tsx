@@ -356,21 +356,21 @@ export default function AnimatedCheckout() {
             className="data-[state=active]:bg-red-200"
           >
             <ShoppingBag className="w-5 h-5 mr-2" />
-            Products
+            Бараанууд
           </TabsTrigger>
           <TabsTrigger
             value="address"
             className="data-[state=active]:bg-red-200"
           >
             <Truck className="w-5 h-5 mr-2" />
-            Address
+            Хаяг
           </TabsTrigger>
           <TabsTrigger
             value="payment"
             className="data-[state=active]:bg-red-200"
           >
             <CreditCard className="w-5 h-5 mr-2" />
-            Payment
+            Төлбөр
           </TabsTrigger>
         </TabsList>
         <div className="p-6">
@@ -384,7 +384,7 @@ export default function AnimatedCheckout() {
             >
               <TabsContent value="products">
                 <h2 className="text-2xl font-bold mb-4 text-red-800">
-                  Your Products
+                  Таны бараанууд
                 </h2>
                 <AnimatePresence>
                   {products.data?.map((item: any) => (
@@ -409,7 +409,7 @@ export default function AnimatedCheckout() {
                         <h3 className="text-lg font-medium text-gray-900">
                           {item.name}
                         </h3>
-                        <p className="text-gray-500">Size: {item.size}</p>
+                        {/* <p className="text-gray-500">Size: {item.size}</p> */}
                         <p className="text-purple-600 font-semibold">
                           Price: ₮{item.price} X {item.quantity}
                         </p>
@@ -417,17 +417,17 @@ export default function AnimatedCheckout() {
                     </motion.div>
                   ))}
                   <p className="text-lg font-semibold text-gray-900">
-                    Total Payable Amount: ₮{products.totalPrice}
+                    Төлөх үнийн дүн: ₮{products.totalPrice}
                   </p>
                 </AnimatePresence>
               </TabsContent>
               <TabsContent value="address">
                 <h2 className="text-2xl font-bold mb-4 text-red-800">
-                  Delivery Address
+                  Хүргэх хаяг
                 </h2>
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="address">Address</Label>
+                    <Label htmlFor="address">Хаяг</Label>
                     <Input
                       id="Street"
                       value={address.street ?? ""}
@@ -437,7 +437,7 @@ export default function AnimatedCheckout() {
                       placeholder="Enter your full address"
                       className="mt-1"
                     />
-                    <Label htmlFor="city">City</Label>
+                    <Label htmlFor="city">Хот</Label>
                     <Input
                       id="city"
                       value={address.city ?? ""}
@@ -447,7 +447,7 @@ export default function AnimatedCheckout() {
                       placeholder="Enter your city"
                       className="mt-1"
                     />
-                    <Label htmlFor="state">State</Label>
+                    <Label htmlFor="state">Хороолол</Label>
                     <Input
                       id="state"
                       value={address.state ?? ""}
@@ -467,7 +467,7 @@ export default function AnimatedCheckout() {
                       placeholder="Enter your pincode"
                       className="mt-1"
                     />
-                    <Label htmlFor="country">Country</Label>
+                    <Label htmlFor="country">Улс</Label>
                     <Input
                       id="country"
                       value={address.country ?? ""}
@@ -477,7 +477,7 @@ export default function AnimatedCheckout() {
                       placeholder="Enter your country"
                       className="mt-1"
                     />
-                    <Label htmlFor="phone">Phone</Label>
+                    <Label htmlFor="phone">Утасны дугаар</Label>
                     <Input
                       id="phone"
                       value={user.phone ?? ""}
@@ -490,12 +490,12 @@ export default function AnimatedCheckout() {
               </TabsContent>
               <TabsContent value="payment">
                 <h2 className="text-2xl font-bold mb-4 text-red-800">
-                  Payment Details
+                  Төлбөрийн мэдээлэл
                 </h2>
                 <div className="space-y-4">
                   <div>
                     <Label className="text-lg font-semibold">
-                      Select Payment Method
+                      Төлбөрийн төрөл сонгох
                     </Label>
                     <div className="mt-2 space-y-2">
                       <label className="flex items-center space-x-2 cursor-pointer">
@@ -508,7 +508,7 @@ export default function AnimatedCheckout() {
                           className="form-radio text-red-600"
                           disabled={paymentStatus === "completed"}
                         />
-                        <span>Razorpay</span>
+                        <span>Qpay</span>
                       </label>
                       <label className="flex items-center space-x-2 cursor-pointer">
                         <input
@@ -520,7 +520,7 @@ export default function AnimatedCheckout() {
                           className="form-radio text-red-600"
                           disabled={paymentStatus === "completed"}
                         />
-                        <span>Cash on Delivery</span>
+                        <span>Хүргэлтээ аваад төлөх</span>
                       </label>
                     </div>
                   </div>
@@ -544,7 +544,7 @@ export default function AnimatedCheckout() {
                           ) : paymentStatus === "completed" ? (
                             "Paid"
                           ) : (
-                            "Pay Online"
+                            "Цахимаар төлөх"
                           )}
                         </Button>
                       </motion.div>
@@ -559,8 +559,7 @@ export default function AnimatedCheckout() {
                         transition={{ duration: 0.3 }}
                       >
                         <p className="text-sm text-gray-600">
-                          Pay with cash upon delivery. Additional fees may
-                          apply.
+                          Хүргэлт аваад төлөхөд илүү төлбөр нэмэгдэнэ.
                         </p>
                       </motion.div>
                     )}
@@ -575,20 +574,20 @@ export default function AnimatedCheckout() {
                       disabled={paymentStatus == "completed"}
                     />
                     <Label htmlFor="urgent" className="ml-2">
-                      Urgent Delivery (Additional charges may apply)
+                      Яаралтай хүргэлт (илүү төлбөр нэмэгдэнэ)
                     </Label>
                   </div>
                   <div>
                     <Label htmlFor="couponCode">Coupon Code</Label>
                     <p className="text-xs text-red-600 mt-2 ml-1 font-semibold">
-                      Try DEAL25
+                      Coupon
                     </p>
                     <div className="flex mt-1">
                       <Input
                         id="couponCode"
                         value={couponCode}
                         onChange={(e) => setCouponCode(e.target.value)}
-                        placeholder="Enter coupon code"
+                        placeholder="Coupon code оруулна уу"
                         className="flex-grow"
                         disabled={couponValue > 0 ? true : false}
                       />
@@ -601,22 +600,20 @@ export default function AnimatedCheckout() {
                         {spinner == "coupon" ? (
                           <LucideLoader className="w-4 h-4 animate-spin" />
                         ) : (
-                          <>Apply</>
+                          <>Дарах</>
                         )}
                       </Button>
                     </div>
                   </div>
                   <div className="bg-red-100 p-4 rounded-md">
-                    <h3 className="font-semibold text-lg mb-2">
-                      Order Summary
-                    </h3>
+                    <h3 className="font-semibold text-lg mb-2">Захиалга</h3>
                     <div className="flex justify-between">
-                      <span>Subtotal:</span>
+                      <span>Барааны үнийн дүн:</span>
                       <span>₮{products.totalPrice}</span>
                     </div>
                     <div className="flex justify-between mt-2">
-                      <span>Shipping:</span>
-                      <span>+ ₮99</span>
+                      <span>Хүргэлт:</span>
+                      <span>+ ₮500</span>
                     </div>
                     {couponValue > 0 && (
                       <div className="flex justify-between mt-2">
@@ -625,21 +622,21 @@ export default function AnimatedCheckout() {
                       </div>
                     )}
                     <div className="flex justify-between mt-2">
-                      <span>CGST (9%):</span>
+                      <span>Гаалын татвар (9%):</span>
                       <span>+ ₮{(products.totalPrice * 0.09).toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between mt-2">
-                      <span>SGST (9%):</span>
+                      <span>Нөат (9%):</span>
                       <span>+ ₮{(products.totalPrice * 0.09).toFixed(2)}</span>
                     </div>
                     {urgent && (
                       <div className="flex justify-between mt-2">
-                        <span>Urgent Delivery Charges:</span>
-                        <span>+ ₮100</span>
+                        <span>Яаралтай хүргэлтийн төлбөр:</span>
+                        <span>+ ₮500</span>
                       </div>
                     )}
                     <div className="flex justify-between mt-2 font-bold">
-                      <span>Total:</span>
+                      <span>Нийт:</span>
                       <span>
                         ₮
                         {paymentStatus == "completed"
@@ -657,14 +654,14 @@ export default function AnimatedCheckout() {
                     </div>
                   </div>
                   <div>
-                    <Label htmlFor="orderNotes">Order Notes</Label>
+                    <Label htmlFor="orderNotes">Захиалгын зурвас</Label>
                     <Input
                       id="orderNotes"
                       value={orderNotes}
                       onChange={(e) => {
                         setOrderNotes(e.target.value);
                       }}
-                      placeholder="Enter any special instructions (max 200 characters)"
+                      placeholder="200 хүртэлх үг бичнэ үү"
                       maxLength={200}
                       className="mt-1"
                     />
@@ -692,7 +689,7 @@ export default function AnimatedCheckout() {
                   <LucideLoader className="w-4 h-4 animate-spin" />
                 ) : (
                   <>
-                    Place Order <Check className="w-4 h-4 ml-2" />
+                    Захиалга өгөх <Check className="w-4 h-4 ml-2" />
                   </>
                 )}
               </Button>

@@ -170,11 +170,11 @@ export default function OrderDetailsPage() {
         <div className="text-center">
           <AlertTriangle className="h-12 w-12 text-red-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            Oops! Something went wrong
+            Алдаа гарлаа
           </h2>
           <p className="text-gray-600 mb-4">{error || "Order not found"}</p>
           <Button onClick={() => router.push("/orders")} variant="outline">
-            Back to Orders
+            Захиалгуудруу буцах
           </Button>
         </div>
       </div>
@@ -186,7 +186,9 @@ export default function OrderDetailsPage() {
       <Toaster position="top-right" />
       <div className="max-w-5xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">Order Details</h1>
+          <h1 className="text-3xl font-bold text-gray-800">
+            Захиалгын мэдээлэл
+          </h1>
           <Button
             onClick={() => setIsEditing(!isEditing)}
             variant={isEditing ? "destructive" : "default"}
@@ -194,11 +196,12 @@ export default function OrderDetailsPage() {
           >
             {isEditing ? (
               <>
-                <Edit className="mr-2 h-4 w-4" /> Cancel
+                <Edit className="mr-2 h-4 w-4" /> буцах
               </>
             ) : (
               <>
-                <Edit className="text-white mr-2 h-4 w-4" /> Edit Order
+                <Edit className="text-white mr-2 h-4 w-4" />
+                захиалга засах
               </>
             )}
           </Button>
@@ -213,13 +216,13 @@ export default function OrderDetailsPage() {
               <div>
                 <h2 className="text-xl font-semibold mb-2 flex items-center">
                   <Package className="w-5 h-5 mr-2 text-gray-500" />
-                  Order Information
+                  Захиалгын мэдээлэл
                 </h2>
-                <p className="text-gray-600">Order ID: {order._id}</p>
-                <p className="text-gray-600">User ID: {order.userId}</p>
+                <p className="text-gray-600">Захиалгын ID: {order._id}</p>
+                <p className="text-gray-600">Хэрэглэгчийн ID: {order.userId}</p>
                 <div className="mt-2">
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Status
+                    Статус
                   </label>
                   {isEditing ? (
                     <Select
@@ -233,16 +236,16 @@ export default function OrderDetailsPage() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="pending" className="bg-white">
-                          Pending
+                          Хүлээгдэж байгаа
                         </SelectItem>
                         <SelectItem value="shipped" className="bg-white">
-                          Shipped
+                          Замд явж байгаа
                         </SelectItem>
                         <SelectItem value="delivered" className="bg-white">
-                          Delivered
+                          Хүргэгдсэн
                         </SelectItem>
                         <SelectItem value="cancelled" className="bg-white">
-                          Cancelled
+                          Цуцлагдсан
                         </SelectItem>
                       </SelectContent>
                     </Select>
@@ -264,7 +267,7 @@ export default function OrderDetailsPage() {
                 </div>
                 <div className="mt-2">
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Urgent
+                    Яаралтай
                   </label>
                   {isEditing ? (
                     <Select
@@ -278,10 +281,10 @@ export default function OrderDetailsPage() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem className="bg-white" value="true">
-                          Yes
+                          Тийм
                         </SelectItem>
                         <SelectItem className="bg-white" value="false">
-                          No
+                          Үгүй
                         </SelectItem>
                       </SelectContent>
                     </Select>
@@ -290,7 +293,7 @@ export default function OrderDetailsPage() {
                       className="bg-blue-500 text-white"
                       variant={order.urgent ? "destructive" : "secondary"}
                     >
-                      {order.urgent ? "Urgent" : "Not Urgent"}
+                      {order.urgent ? "Яаралтай" : "яаралтай биш"}
                     </Badge>
                   )}
                 </div>
@@ -298,16 +301,16 @@ export default function OrderDetailsPage() {
               <div>
                 <h2 className="text-xl font-semibold mb-2 flex items-center">
                   <CreditCard className="w-5 h-5 mr-2 text-gray-500" />
-                  Payment Details
+                  Төлөлтийн мэдээлэл
                 </h2>
                 <p className="text-gray-600">
-                  Total Price: ₮{order.totalPrice.toFixed(2)}
+                  Нийт үнэ: ₮{order.totalPrice.toFixed(2)}
                 </p>
+                {/* <p className="text-gray-600">
+                  Төлөлтийн төрөл: {order.paymentMethod}
+                </p> */}
                 <p className="text-gray-600">
-                  Payment Method: {order.paymentMethod}
-                </p>
-                <p className="text-gray-600">
-                  Payment Status: {order.paymentStatus}
+                  Төлөлтийн статус: {order.paymentStatus}
                 </p>
               </div>
             </div>
@@ -315,7 +318,7 @@ export default function OrderDetailsPage() {
             <div>
               <h2 className="text-xl font-semibold mb-2 flex items-center">
                 <MapPin className="w-5 h-5 mr-2 text-gray-500" />
-                Shipping Address
+                Хүргэх хаяг
               </h2>
               {isEditing ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -362,7 +365,7 @@ export default function OrderDetailsPage() {
             <div>
               <h2 className="text-xl font-semibold mb-2 flex items-center">
                 <Truck className="w-5 h-5 mr-2 text-gray-500" />
-                Shipping Details
+                Хүргэлтийн мэдээлэл
               </h2>
               {isEditing ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -370,13 +373,13 @@ export default function OrderDetailsPage() {
                     name="shippingDetails.carrier"
                     value={editedOrder.shippingDetails?.carrier || ""}
                     onChange={handleInputChange}
-                    placeholder="Carrier"
+                    placeholder="Дамжлага"
                   />
                   <Input
                     name="shippingDetails.trackingNumber"
                     value={editedOrder.shippingDetails?.trackingNumber || ""}
                     onChange={handleInputChange}
-                    placeholder="Tracking Number"
+                    placeholder="Бараа хянах"
                   />
                   <Input
                     name="shippingDetails.estimatedDeliveryDate"
@@ -387,7 +390,7 @@ export default function OrderDetailsPage() {
                       )[0] || ""
                     }
                     onChange={handleInputChange}
-                    placeholder="Estimated Delivery Date"
+                    placeholder="Хүргэх өдөр"
                   />
                 </div>
               ) : (
@@ -412,20 +415,20 @@ export default function OrderDetailsPage() {
             <div>
               <h2 className="text-xl font-semibold mb-2 flex items-center">
                 <Package className="w-5 h-5 mr-2 text-gray-500" />
-                Products
+                Бараа
               </h2>
               <ul className="space-y-2">
                 {order.products.map((product, index) => (
                   <li key={index} className="text-gray-600">
                     {product.quantity}x {product.name} ({product.size}) - ₮
-                    {parseFloat(product.price).toFixed(2)} each
+                    {parseFloat(product.price).toFixed(2)} тус бүр
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold mb-2">Order Notes</h2>
+              <h2 className="text-xl font-semibold mb-2">Захиалгын зурвас</h2>
               {isEditing ? (
                 <Textarea
                   name="orderNotes"
@@ -444,7 +447,7 @@ export default function OrderDetailsPage() {
             {order.cancellationReason && (
               <div>
                 <h2 className="text-xl font-semibold mb-2 text-red-500">
-                  Cancellation Reason
+                  Цуцласан шалтгаан
                 </h2>
                 <p className="text-red-600">{order.cancellationReason}</p>
               </div>
@@ -453,13 +456,13 @@ export default function OrderDetailsPage() {
             <div>
               <h2 className="text-xl font-semibold mb-2 flex items-center">
                 <Calendar className="w-5 h-5 mr-2 text-gray-500" />
-                Dates
+                Өдөр
               </h2>
               <p className="text-gray-600">
-                Created: {format(new Date(order.createdAt), "PPP")}
+                Үүссэн: {format(new Date(order.createdAt), "PPP")}
               </p>
               <p className="text-gray-600">
-                Updated: {format(new Date(order.updatedAt), "PPP")}
+                Засагдсан: {format(new Date(order.updatedAt), "PPP")}
               </p>
             </div>
           </div>
@@ -471,7 +474,7 @@ export default function OrderDetailsPage() {
                   Cancel
                 </Button>
                 <Button onClick={handleSave} className="text-white">
-                  <Save className="text-white mr-2 h-4 w-4" /> Save Changes
+                  <Save className="text-white mr-2 h-4 w-4" /> Хадгалах
                 </Button>
               </div>
             </div>

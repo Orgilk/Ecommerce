@@ -16,210 +16,210 @@ import { useRouter } from "next/navigation";
 const recentCustomers = [
   {
     id: 1,
-    name: "Aarav Sharma",
+    name: "Бат",
     date: "2024-02-05",
     amount: 4399,
     avatar: "/avatars/01.png",
   },
   {
     id: 2,
-    name: "Vihaan Patel",
+    name: "Болд",
     date: "2024-02-04",
     amount: 7979,
     avatar: "/avatars/02.png",
   },
   {
     id: 3,
-    name: "Ishaan Gupta",
+    name: "Цэцэгээ",
     date: "2024-02-03",
     amount: 6399,
     avatar: "/avatars/03.png",
   },
   {
     id: 4,
-    name: "Kabir Reddy",
+    name: "Төрөө",
     date: "2024-02-02",
     amount: 9949,
     avatar: "/avatars/04.png",
   },
   {
     id: 5,
-    name: "Aadhya Nair",
+    name: "Нараа",
     date: "2024-02-01",
     amount: 5419,
     avatar: "/avatars/05.png",
   },
   {
     id: 6,
-    name: "Anika Bose",
+    name: "Сараа",
     date: "2024-01-31",
     amount: 3997,
     avatar: "/avatars/06.png",
   },
   {
     id: 7,
-    name: "Rohan Mehta",
+    name: "Санчир",
     date: "2024-01-30",
     amount: 8999,
     avatar: "/avatars/07.png",
   },
   {
     id: 8,
-    name: "Mira Iyer",
+    name: "Энхээ",
     date: "2024-01-29",
     amount: 6997,
     avatar: "/avatars/08.png",
   },
   {
     id: 9,
-    name: "Arjun Choudhury",
+    name: "Цогт",
     date: "2024-01-28",
     amount: 4499,
     avatar: "/avatars/09.png",
   },
   {
     id: 10,
-    name: "Neha Malhotra",
+    name: "Даваа",
     date: "2024-01-27",
     amount: 7459,
     avatar: "/avatars/10.png",
   },
   {
     id: 11,
-    name: "Rajesh Kumar",
+    name: "Мягмар",
     date: "2024-01-26",
     amount: 5829,
     avatar: "/avatars/11.png",
   },
   {
     id: 12,
-    name: "Priya Singh",
+    name: "Лхагва",
     date: "2024-01-25",
     amount: 3429,
     avatar: "/avatars/12.png",
   },
   {
     id: 13,
-    name: "Devansh Thakur",
+    name: "Пүрэв",
     date: "2024-01-24",
     amount: 7599,
     avatar: "/avatars/13.png",
   },
   {
     id: 14,
-    name: "Simran Kaur",
+    name: "Баасан",
     date: "2024-01-23",
     amount: 5969,
     avatar: "/avatars/14.png",
   },
   {
     id: 15,
-    name: "Aman Verma",
+    name: "Бямба",
     date: "2024-01-22",
     amount: 4269,
     avatar: "/avatars/15.png",
   },
   {
     id: 16,
-    name: "Riya Bhatia",
+    name: "Ням",
     date: "2024-01-21",
     amount: 9499,
     avatar: "/avatars/16.png",
   },
   {
     id: 17,
-    name: "Gautam Joshi",
+    name: "Сайнаа",
     date: "2024-01-20",
     amount: 6469,
     avatar: "/avatars/17.png",
   },
   {
     id: 18,
-    name: "Tanvi Saxena",
+    name: "Од",
     date: "2024-01-19",
     amount: 5649,
     avatar: "/avatars/18.png",
   },
   {
     id: 19,
-    name: "Krishna Pillai",
+    name: "Жаргал",
     date: "2024-01-18",
     amount: 3689,
     avatar: "/avatars/19.png",
   },
   {
     id: 20,
-    name: "Sneha Menon",
+    name: "Даш",
     date: "2024-01-17",
     amount: 7996,
     avatar: "/avatars/20.png",
   },
   {
     id: 21,
-    name: "Aditya Rao",
+    name: "Тэмүүлэн",
     date: "2024-01-16",
     amount: 6469,
     avatar: "/avatars/21.png",
   },
   {
     id: 22,
-    name: "Pooja Desai",
+    name: "Ганаа",
     date: "2024-01-15",
     amount: 4359,
     avatar: "/avatars/22.png",
   },
   {
     id: 23,
-    name: "Harsh Jain",
+    name: "Хонгороо",
     date: "2024-01-14",
     amount: 9991,
     avatar: "/avatars/23.png",
   },
   {
     id: 24,
-    name: "Meera Kapoor",
+    name: "Марал",
     date: "2024-01-13",
     amount: 1589,
     avatar: "/avatars/24.png",
   },
   {
     id: 25,
-    name: "Varun Bhatt",
+    name: "Хишигээ",
     date: "2024-01-12",
     amount: 7409,
     avatar: "/avatars/25.png",
   },
   {
     id: 26,
-    name: "Sanya Agarwal",
+    name: "Сүрэн",
     date: "2024-01-11",
     amount: 5059,
     avatar: "/avatars/26.png",
   },
   {
     id: 27,
-    name: "Raghav Kulkarni",
+    name: "Нярав",
     date: "2024-01-10",
     amount: 6029,
     avatar: "/avatars/27.png",
   },
   {
     id: 28,
-    name: "Kiran Joshi",
+    name: "Галт",
     date: "2024-01-09",
     amount: 4709,
     avatar: "/avatars/28.png",
   },
   {
     id: 29,
-    name: "Akshay Mishra",
+    name: "Хүдэр",
     date: "2024-01-08",
     amount: 8099,
     avatar: "/avatars/29.png",
   },
   {
     id: 30,
-    name: "Swati Tiwari",
+    name: "Алт",
     date: "2024-01-07",
     amount: 6699,
     avatar: "/avatars/30.png",
@@ -303,11 +303,11 @@ export default function ProductDetails({ params }: PageProps) {
         <div className="flex justify-between items-center">
           <div className="flex-1">
             <h1 className="text-3xl font-bold text-gray-900">{product.name}</h1>
-            <p className="text-gray-500 mt-2">Model: {product.model}</p>
+            <p className="text-gray-500 mt-2">Төрөл: {product.model}</p>
           </div>
           <Button onClick={handleEdit} className="flex items-center text-white">
             <Edit2 className="w-4 h-4 mr-2" />
-            Edit Product
+            Барааны мэдээлэл засах
           </Button>
         </div>
       </div>
@@ -316,11 +316,11 @@ export default function ProductDetails({ params }: PageProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg font-medium">Price</CardTitle>
+            <CardTitle className="text-lg font-medium">Үнэ</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
-              Rs. {product.price.toLocaleString()}
+              ₮ {product.price.toLocaleString()}
               {product.sale && (
                 <span className="ml-2 text-sm text-green-600 font-normal">
                   {product.sale} OFF
@@ -332,7 +332,9 @@ export default function ProductDetails({ params }: PageProps) {
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg font-medium">Stock Status</CardTitle>
+            <CardTitle className="text-lg font-medium">
+              Байгаа эсэх төлөв
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex items-center gap-2">
@@ -350,7 +352,7 @@ export default function ProductDetails({ params }: PageProps) {
         <Card>
           <CardHeader>
             <CardTitle className="text-lg font-medium">
-              Rating & Reviews
+              Үнэлгээ болон сэтгэгдэл
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -363,7 +365,7 @@ export default function ProductDetails({ params }: PageProps) {
       {/* Sales Chart */}
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle>Sales Performance</CardTitle>
+          <CardTitle>Орлогын мэдээлэл</CardTitle>
         </CardHeader>
         <CardContent>
           <ProductChart chartData={product.chartData} />
@@ -373,7 +375,7 @@ export default function ProductDetails({ params }: PageProps) {
       {/* Recent Customers */}
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle>Recent Customers</CardTitle>
+          <CardTitle>Cүүлийн хэрэлэгчид</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-2">
@@ -396,7 +398,7 @@ export default function ProductDetails({ params }: PageProps) {
                     <div>
                       <p className="font-medium">{customer.name}</p>
                       <p className="text-sm text-gray-500">
-                        Purchased on {customer.date}
+                        Худалдаж авсан огноо {customer.date}
                       </p>
                     </div>
                   </div>
@@ -413,16 +415,16 @@ export default function ProductDetails({ params }: PageProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Card>
           <CardHeader>
-            <CardTitle>Product Details</CardTitle>
+            <CardTitle>Барааны мэдээлэл</CardTitle>
           </CardHeader>
           <CardContent>
             <dl className="space-y-4">
               <div>
-                <dt className="font-medium text-gray-500">Category</dt>
+                <dt className="font-medium text-gray-500">Төрөл</dt>
                 <dd className="mt-1 text-gray-900">{product.category}</dd>
               </div>
-              <div>
-                <dt className="font-medium text-gray-500">Seller</dt>
+              {/* <div>
+                <dt className="font-medium text-gray-500">Зар</dt>
                 <dd className="mt-1 text-gray-900">{product.seller}</dd>
               </div>
               {product.color && (
@@ -438,8 +440,8 @@ export default function ProductDetails({ params }: PageProps) {
                     ))}
                   </dd>
                 </div>
-              )}
-              {product.size && (
+              )} */}
+              {/* {product.size && (
                 <div>
                   <dt className="font-medium text-gray-500">Available Sizes</dt>
                   <dd className="mt-1 text-gray-900 flex gap-2">
@@ -450,14 +452,14 @@ export default function ProductDetails({ params }: PageProps) {
                     ))}
                   </dd>
                 </div>
-              )}
+              )} */}
             </dl>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle>Features</CardTitle>
+            <CardTitle>Мэдээлэл</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">

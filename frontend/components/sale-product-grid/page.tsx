@@ -81,7 +81,7 @@ const ProductGridComponent: React.FC = () => {
                     )}
                     {product.inStock <= 5 && product.inStock > 0 && (
                       <div className="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded-md text-xs">
-                        барааны үлдэгдэл {product.inStock} !
+                        {/* барааны үлдэгдэл {product.inStock} ! */}
                       </div>
                     )}
                   </div>

@@ -101,18 +101,17 @@ export default function TrackYourOrder() {
         {trackingInfo && (
           <div className="mt-10 bg-white shadow-lg rounded-lg p-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-              Tracking Details
+              Мэдээлэл
             </h2>
             <ul className="space-y-4">
               <li className="text-gray-700">
-                <strong>Order Status:</strong> {trackingInfo.orderStatus}
+                <strong>Статус:</strong> {trackingInfo.orderStatus}
               </li>
               <li className="text-gray-700">
-                <strong>Tracking Number:</strong> {trackingInfo.trackingNumber}
+                <strong>Тандах дугаар:</strong> {trackingInfo.trackingNumber}
               </li>
               <li className="text-gray-700">
-                <strong>Expected Delivery:</strong>{" "}
-                {trackingInfo.expectedDelivery}
+                <strong>Хүргэх огноо:</strong> {trackingInfo.expectedDelivery}
               </li>
               <li className="text-gray-700">
                 <strong>Courier:</strong> {trackingInfo.courier}
@@ -134,7 +133,7 @@ export default function TrackYourOrder() {
 
       <footer className="bg-gray-100 py-6 mt-16">
         <div className="text-center text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Jaipur Kurti. All rights reserved.
+          &copy; {new Date().getFullYear()} Бүх эрх хуулиар хамгаалагдсан.
         </div>
       </footer>
     </div>

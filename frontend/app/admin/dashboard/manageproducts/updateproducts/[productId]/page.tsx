@@ -263,7 +263,7 @@ const ProductUpdateForm: React.FC = () => {
     >
       <Toaster position="top-right" />
       <h1 className="text-3xl font-bold text-red-800 mb-6 text-center">
-        Update Product
+        Барааны мэдээлэл өөрчлөх
       </h1>
 
       {/* Basic Information */}
@@ -297,7 +297,7 @@ const ProductUpdateForm: React.FC = () => {
       </div>
 
       {/* Size Selection */}
-      <div className="relative">
+      {/* <div className="relative">
         <button
           type="button"
           onClick={() => setIsSizeDropdownOpen(!isSizeDropdownOpen)}
@@ -329,10 +329,10 @@ const ProductUpdateForm: React.FC = () => {
             ))}
           </div>
         )}
-      </div>
+      </div> */}
 
       {/* Color Selection */}
-      <div className="relative">
+      {/* <div className="relative">
         <button
           type="button"
           onClick={() => setIsColorDropdownOpen(!isColorDropdownOpen)}
@@ -364,7 +364,7 @@ const ProductUpdateForm: React.FC = () => {
             ))}
           </div>
         )}
-      </div>
+      </div> */}
 
       {/* Delivery and Date */}
       <div className="grid md:grid-cols-2 gap-4">
@@ -518,12 +518,12 @@ const ProductUpdateForm: React.FC = () => {
           {isSaving ? (
             <>
               <Loader2 className="animate-spin mr-2" />
-              Updating...
+              Засаж байна...
             </>
           ) : (
             <>
               <Save className="mr-2" />
-              Update Product
+              Засах
             </>
           )}
         </motion.button>
@@ -537,7 +537,7 @@ const ProductUpdateForm: React.FC = () => {
           disabled={isSaving}
         >
           <X className="mr-2" />
-          Cancel
+          Буцах
         </motion.button>
       </div>
 

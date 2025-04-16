@@ -199,13 +199,13 @@ export default function AdminUsersPage() {
                       <div className="flex items-center space-x-2">
                         <Calendar className="h-4 w-4 text-gray-400" />
                         <span className="text-sm text-gray-600">
-                          Joined:{" "}
+                          Элссэн:{" "}
                           {new Date(user.createdAt).toLocaleDateString()}
                         </span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <span className="text-sm font-semibold text-gray-700">
-                          Orders: {user.orders.length}
+                          Захиалгууд: {user.orders.length}
                         </span>
                       </div>
                       <div className="flex items-center space-x-2">
@@ -219,7 +219,7 @@ export default function AdminUsersPage() {
                           {spinner ? (
                             <LucideLoader className="w-4 h-4 animate-spin" />
                           ) : (
-                            "View More"
+                            "Илүү харах"
                           )}
                         </Button>
                       </div>

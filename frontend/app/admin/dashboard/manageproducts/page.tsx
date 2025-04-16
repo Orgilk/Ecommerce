@@ -235,10 +235,10 @@ const ManageProducts = () => {
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-sm font-medium text-gray-700 mb-2">
-                      Price Range
+                      Үнээр
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                      {["all", "low", "medium", "high"].map((range) => (
+                      {["all", "бага", "дунд", "их"].map((range) => (
                         <motion.button
                           key={range}
                           whileHover={{ scale: 1.05 }}
@@ -253,7 +253,7 @@ const ManageProducts = () => {
                           }`}
                         >
                           {range === "all"
-                            ? "All Prices"
+                            ? "Бүх үнэ"
                             : `${
                                 range.charAt(0).toUpperCase() + range.slice(1)
                               }`}

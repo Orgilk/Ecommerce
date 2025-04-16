@@ -125,11 +125,11 @@ export default function AdminOrdersPage() {
         <div className="text-center">
           <AlertTriangle className="h-12 w-12 text-red-500 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            Oops! Something went wrong
+            Алдаа гарлаа
           </h2>
           <p className="text-gray-600 mb-4">{error}</p>
           <Button onClick={() => window.location.reload()} variant="outline">
-            Try Again
+            Дахин оролдоно уу
           </Button>
         </div>
       </div>
@@ -180,7 +180,7 @@ export default function AdminOrdersPage() {
                     </div>
                     <div>
                       <h2 className="text-lg font-semibold text-gray-800">
-                        Order #{order._id.slice(-6)}
+                        Захиалга #{order._id.slice(-6)}
                       </h2>
                       <p className="text-sm text-gray-500">
                         {format(new Date(order.createdAt), "PPP")}
@@ -218,7 +218,7 @@ export default function AdminOrdersPage() {
                         <div>
                           <h3 className="text-lg font-semibold mb-2 flex items-center">
                             <MapPin className="w-5 h-5 mr-2 text-gray-500" />
-                            Shipping Address
+                            Хүргэх хаяг
                           </h3>
                           <p className="text-sm text-gray-600">
                             {order.shippingAddress.street},{" "}
@@ -231,16 +231,16 @@ export default function AdminOrdersPage() {
                         <div>
                           <h3 className="text-lg font-semibold mb-2 flex items-center">
                             <Truck className="w-5 h-5 mr-2 text-gray-500" />
-                            Shipping Details
+                            Захиалгын мэдээлэл
                           </h3>
                           <p className="text-sm text-gray-600">
-                            Carrier: {order.shippingDetails.carrier}
+                            Дамжлага: {order.shippingDetails.carrier}
                           </p>
                           <p className="text-sm text-gray-600">
-                            Tracking: {order.shippingDetails.trackingNumber}
+                            Бараа хянах: {order.shippingDetails.trackingNumber}
                           </p>
                           <p className="text-sm text-gray-600">
-                            Estimated Delivery:{" "}
+                            Хүргэх өдөр:{" "}
                             {format(
                               new Date(
                                 order.shippingDetails.estimatedDeliveryDate
@@ -253,13 +253,14 @@ export default function AdminOrdersPage() {
                       <div>
                         <h3 className="text-lg font-semibold mb-2 flex items-center">
                           <Package className="w-5 h-5 mr-2 text-gray-500" />
-                          Products
+                          Бараа
                         </h3>
                         <ul className="space-y-2">
                           {order.products.map((product, index) => (
                             <li key={index} className="text-sm text-gray-600">
                               {product.quantity}x {product.name} ({product.size}
-                              ) - ₮{parseFloat(product.price).toFixed(2)} each
+                              ) - ₮{parseFloat(product.price).toFixed(2)} тус
+                              бүр
                             </li>
                           ))}
                         </ul>
@@ -268,28 +269,29 @@ export default function AdminOrdersPage() {
                         <div>
                           <h3 className="text-lg font-semibold mb-2 flex items-center">
                             <CreditCard className="w-5 h-5 mr-2 text-gray-500" />
-                            Payment
+                            Төлөлт
                           </h3>
                           <p className="text-sm text-gray-600">
-                            Method: {order.paymentMethod}
+                            Төлөлтийн төрөл: {order.paymentMethod}
                           </p>
                           <p className="text-sm text-gray-600">
-                            Status: {order.paymentStatus}
+                            Статус: {order.paymentStatus}
                           </p>
                           <p className="text-sm font-semibold text-gray-800">
-                            Total: ₮{order.totalPrice.toFixed(2)}
+                            Нийт: ₮{order.totalPrice.toFixed(2)}
                           </p>
                         </div>
                         <div>
                           <h3 className="text-lg font-semibold mb-2 flex items-center">
                             <Calendar className="w-5 h-5 mr-2 text-gray-500" />
-                            Dates
+                            Өдөр
                           </h3>
                           <p className="text-sm text-gray-600">
-                            Created: {format(new Date(order.createdAt), "PPP")}
+                            Үүссэн: {format(new Date(order.createdAt), "PPP")}
                           </p>
                           <p className="text-sm text-gray-600">
-                            Updated: {format(new Date(order.updatedAt), "PPP")}
+                            Засагдсан:{" "}
+                            {format(new Date(order.updatedAt), "PPP")}
                           </p>
                         </div>
                       </div>
@@ -323,7 +325,7 @@ export default function AdminOrdersPage() {
                         {spinner ? (
                           <LucideLoader className="w-4 h-4 animate-spin" />
                         ) : (
-                          "View More"
+                          "Илүү үзэх"
                         )}
                       </Button>
                     </motion.div>

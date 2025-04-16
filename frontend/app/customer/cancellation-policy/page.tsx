@@ -2,76 +2,76 @@ import Head from "next/head";
 
 export default function CancellationPolicy() {
   return (
-    <div className="min-h-screen  text-gray-900 p-6">
+    <div className="min-h-screen text-gray-900 p-6">
       <Head>
-        <title>Cancellation Policy - Jaipuriadaah</title>
+        <title>Захиалга цуцлах бодлого </title>
       </Head>
       <div className="max-w-4xl mx-auto bg-white p-8">
         <h1 className="text-4xl text-red-600 font-extrabold mb-8 text-center">
-          Cancellation Policy
+          Захиалга цуцлах бодлого
         </h1>
         <p className="text-lg text-gray-700 mb-6">
-          We understand that sometimes plans change. Here is our cancellation
-          policy for a smooth experience.
+          Бид заримдаа төлөвлөгөө өөрчлөгдөж болохыг ойлгодог. Тиймээс бид
+          захиалгаа цуцлахтай холбоотой дараах бодлогыг баримталдаг.
         </p>
         <div className="space-y-6">
           <div>
             <h2 className="text-2xl font-semibold text-red-500 border-red-500 pb-2">
-              1. Cancellation Period
+              1. Цуцлах хугацаа
             </h2>
             <p className="text-gray-700">
-              Cancellation can be done within 24 hours of the order placed.
+              Захиалгаа өгснөөс хойш 24 цагийн дотор цуцлах боломжтой.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-red-500 border-red-500 pb-2">
-              2. Refund Charges
+              2. Мөнгө буцаалтын шимтгэл
             </h2>
             <p className="text-gray-700">
-              Please note that if a paid order is refunded after cancellation, a
-              2% payment gateway charge will be deducted from the total paid
-              amount.
+              Хэрэв төлбөртэй захиалгыг цуцалсны дараа мөнгийг буцаах бол 2%
+              хэмжээтэй төлбөрийн гарцын шимтгэл нийт дүнгээс хасагдана гэдгийг
+              анхаарна уу.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-red-500 border-red-500 pb-2">
-              3. Our Commitment
+              3. Манай амлалт
             </h2>
             <p className="text-gray-700">
-              We are committed to making your shopping experience as fuss-free
-              and enjoyable as much as possible!
+              Бид таны онлайн худалдан авалтын туршлагыг аль болох энгийн,
+              асуудалгүй, таатай байлгахыг зорьдог.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-semibold text-red-500 border-red-500 pb-2">
-              4. Contact Customer Service
+              4. Харилцагчийн үйлчилгээтэй холбогдох
             </h2>
             <p className="text-gray-700">
-              If you need assistance with cancellation, please contact our
-              customer service team:
+              Хэрэв захиалгаа цуцлахтай холбоотой тусламж хэрэгтэй бол дараах
+              байдлаар бидэнтэй холбогдоно уу:
             </p>
             <ul className="list-inside list-disc text-gray-700">
               <li>
-                Email: <span className="text-blue-500">orgio111@gmail.com</span>
+                Имэйл: <span className="text-blue-500">orgio111@gmail.com</span>
               </li>
               <li>
-                Phone: <span className="text-blue-500">+91 8000715538</span>{" "}
-                (Mon-Sat, 10am - 6pm)
+                Утас: <span className="text-blue-500">+976 80007155</span>{" "}
+                (Даваа-Баасан, 10:00 - 18:00)
               </li>
             </ul>
             <p className="text-gray-700">
-              Our helpful and experienced team will help you deal with
-              cancellation.
+              Манай найрсаг, туршлагатай баг танд захиалгаа цуцлахад туслахад
+              бэлэн байна.
             </p>
           </div>
         </div>
 
         <footer className="mt-12 text-center text-gray-600 text-sm">
           <p>
-            &copy; {new Date().getFullYear()} Jaipuriadaah. All rights reserved.
+            &copy; {new Date().getFullYear()} Бүх эрх хуулиар хамгаалагдсан.
           </p>
         </footer>
       </div>

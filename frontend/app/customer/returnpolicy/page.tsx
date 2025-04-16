@@ -7,146 +7,130 @@ export default function ReturnExchangePolicy() {
     <div className="bg-gray-50 min-h-screen">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h1 className="text-3xl font-bold text-orange-800 text-center mb-8">
-          Return/Exchange Policy
+          Буцаалт / Солилтын Бодлого
         </h1>
 
         <p className="text-gray-700 mb-6 text-sm sm:text-base">
-          We are committed to making your shopping experience hassle-free and
-          enjoyable! Please read the following terms and conditions carefully
-          before making a purchase. Your purchase indicates that you have
-          acknowledged, understood, and agreed to the terms.
+          Бид таны онлайн худалдан авалтын туршлагыг таатай, хялбар болгохын
+          төлөө ажилладаг! Худалдан авалт хийхийн өмнө доорх нөхцөл, болзлыг
+          анхааралтай уншина уу. Та худалдан авалт хийснээр эдгээр нөхцөлийг
+          хүлээн зөвшөөрсөн гэж үзнэ.
         </p>
 
         <section className="space-y-8">
           <div>
             <h2 className="text-xl font-semibold text-orange-700 mb-2">
-              General Return Policy
+              Ерөнхий Буцаалтын Бодлого
             </h2>
             <p className="text-gray-700">
-              Products can be returned within 7 days from the date of delivery.
-              Refunds are only applicable for manufacturing defects or delivery
-              of incorrect sizes. In other cases, a credit note (valid for 90
-              days) will be issued.
+              Барааг хүлээн авснаас хойш 7 хоногийн дотор буцаах боломжтой.
+              Бараа гэмтэлтэй эсвэл буруу размертэй ирсэн тохиолдолд мөнгийг
+              буцаана. Бусад тохиолдолд 90 хоногийн хугацаатай зээлийн баримт
+              (credit note) олгоно.
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-semibold text-orange-700 mb-2">
-              Return Process
+              Буцаах Үйл Явц
             </h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>
-                Contact our customer support at{" "}
+                Хүргэлт хийгдсэнээс хойш 7 хоногийн дотор бидэнтэй холбогдоно
+                уу:{" "}
                 <a
                   href="tel:+919314966969"
                   className="text-orange-600 hover:text-orange-700 underline"
                 >
-                  (+91) 8849251028
+                  (+976) 8849251028
                 </a>{" "}
-                or email us at{" "}
-                <a
-                  href="mailto:jayvegad10@gmail.com"
-                  className="text-orange-600 hover:text-orange-700 underline"
-                >
-                  jayvegad10@gmail.com
-                </a>{" "}
-                within 7 days of delivery.
+                эсвэл{" "}
+                <a className="text-orange-600 hover:text-orange-700 underline">
+                  pharmacy@gmail.com
+                </a>
               </li>
               <li>
-                Provide details like order number, courier tracking ID, and
-                reason for the return.
+                Захиалгын дугаар, хүргэлтийн дугаар, шалтгааныг мэдээлнэ үү.
               </li>
               <li>
-                Ship the product to our address, or request a pickup (pickup
-                charge: ₮200).
+                Барааг манай хаяг руу илгээнэ эсвэл ₮200 хүргэлтийн хураамжтай
+                буцаан авах хүсэлт гаргаж болно.
               </li>
-              <li>
-                Keep a video of packing and shipping to avoid conflicts during
-                the return process.
-              </li>
+              <li>Бараа илгээж буй бичлэг хийхийг зөвлөж байна.</li>
             </ul>
           </div>
 
           <div>
             <h2 className="text-xl font-semibold text-orange-700 mb-2">
-              Refund Policy
+              Буцаалтын Мөнгөний Бодлого
             </h2>
             <p className="text-gray-700">
-              Refunds will be processed within 7-10 business days for eligible
-              returns. A credit note will be issued for other cases, valid for
-              90 days.
+              Зөвшөөрөгдсөн буцаалтын мөнгийг 7–10 ажлын өдрийн дотор шилжүүлнэ.
+              Бусад тохиолдолд 90 хоногийн хугацаатай зээлийн баримт өгнө.
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-semibold text-orange-700 mb-2">
-              Exchange Policy
+              Солилтын Бодлого
             </h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>
-                Exchanges are allowed only for size-related issues within 15
-                days of delivery.
+                Солилт зөвхөн размер таарахгүй тохиолдолд, бараа хүлээн авснаас
+                хойш 15 хоногийн дотор хийгдэнэ.
               </li>
-              <li>
-                If the desired size is unavailable, a credit note will be
-                provided for future purchases.
-              </li>
-              <li>Exchange requests are allowed once per order.</li>
+              <li>Хүссэн размер байхгүй бол зээлийн баримт олгоно.</li>
+              <li>Нэг захиалга тутамд нэг удаа солих боломжтой.</li>
             </ul>
           </div>
 
           <div>
             <h2 className="text-xl font-semibold text-orange-700 mb-2">
-              Cancellation Policy
+              Захиалга Цуцлах Бодлого
             </h2>
             <p className="text-gray-700">
-              Orders can be canceled within 24 hours of placement. Contact us at{" "}
+              Захиалгыг зөвхөн 24 цагийн дотор цуцлах боломжтой. Бидэнтэй холбоо
+              барина уу:{" "}
               <a
                 href="tel:+918849251028"
                 className="text-orange-600 hover:text-orange-700 underline"
               >
-                (+91) 8849251028
+                (+976) 8849251028
               </a>{" "}
-              or{" "}
+              эсвэл{" "}
               <a
                 href="mailto:jayvegad10@gmail.com"
                 className="text-orange-600 hover:text-orange-700 underline"
               >
-                jayvegad10@gmail.com
-              </a>{" "}
-              to request a cancellation.
+                pharmacy0@gmail.com
+              </a>
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-semibold text-orange-700 mb-2">
-              Shipping Address
+              Хүргэлтийн Хаяг
             </h2>
             <address className="not-italic text-gray-700">
-              Nandani Creation Ltd., Rajwadi Poshak,
+              Улаанбаатар хот, Баянгүл дүүрэг,
               <br />
-              G/13, Kartarpura Industrial Area,
+              xx-р хороо, xx-р гудамж,
               <br />
-              Bais Godam, Jaipur (Raj), India.
+              xx-р байр 101 тоот
               <br />
-              Pin: 302006
+              Шуудангийн код: 302006
               <br />
-              Phone: (+91) 8849251028 / 9016482643 / 9106709922
+              Утас: (+976) 8849251028 / 9016482643 / 9106709922
               <br />
-              Email:{" "}
-              <a
-                href="mailto:jayvegad10@gmail.com"
-                className="underline text-red-500"
-              >
-                rajwadiposhak@gmail.com
-              </a>
+              Имэйл:{" "}
+              <a className="underline text-red-500">pharmacy0@gmail.com</a>
             </address>
           </div>
         </section>
 
         <div className="mt-10">
           <h3 className="text-lg font-semibold text-orange-700 mb-4">
-            Quick Links
+            Шууд Холбогдох Холбоосууд
           </h3>
           <ul className="space-y-3">
             <li>
@@ -154,7 +138,7 @@ export default function ReturnExchangePolicy() {
                 className="text-orange-600 hover:text-orange-800 underline"
                 href="/shipping-policy"
               >
-                Shipping Policy
+                Хүргэлтийн Бодлого
               </Link>
             </li>
             <li>
@@ -162,7 +146,7 @@ export default function ReturnExchangePolicy() {
                 className="text-orange-600 hover:text-orange-800 underline"
                 href="/track-your-order"
               >
-                Track Your Order
+                Захиалгаа Хянах
               </Link>
             </li>
             <li>
@@ -170,7 +154,7 @@ export default function ReturnExchangePolicy() {
                 className="text-orange-600 hover:text-orange-800 underline"
                 href="/faq"
               >
-                Frequently Asked Questions
+                Түгээмэл Асуултууд
               </Link>
             </li>
           </ul>
@@ -179,8 +163,7 @@ export default function ReturnExchangePolicy() {
 
       <footer className="bg-gray-100 py-6 mt-12">
         <div className="text-center text-gray-600 text-sm">
-          &copy; {new Date().getFullYear()} Rajwadi Poshak. All rights reserved.
-          Subject to Jaipur jurisdiction.
+          &copy; {new Date().getFullYear()} Бүх эрх хуулиар хамгаалагдсан.
         </div>
       </footer>
     </div>

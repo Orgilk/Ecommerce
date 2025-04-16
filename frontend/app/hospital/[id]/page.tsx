@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { ProductCard } from "@/components/ui/product-card";
 import { ProductFilters } from "@/components/products/product-filters";
 import { ProductSkeleton } from "@/components/products/product-skeleton";
-import { products as productData } from '@/app/product/data';
+import { products as productData } from "@/app/product/data";
 import Product from "@/app/product/id/page";
 
 export interface ProductL {
@@ -41,7 +41,7 @@ const Hospital = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('/api/product');
+        const response = await fetch("/api/product");
         const data = await response.json();
 
         const productsArray = Array.isArray(data)
@@ -60,7 +60,8 @@ const Hospital = () => {
       }
     }
 
-    if (productId !== null) { // Check if productId exists before fetching
+    if (productId !== null) {
+      // Check if productId exists before fetching
       fetchData();
     }
   }, [productId]);
@@ -73,7 +74,7 @@ const Hospital = () => {
   // }, [numericId]);
 
   if (!selectedProduct) {
-    return <div className="p-4">Loading or Product not found</div>;
+    return <div className="p-4">Уншиж байна</div>;
   }
 
   return (
