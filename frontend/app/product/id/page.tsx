@@ -29,7 +29,7 @@ import { products as productData } from "@/app/product/data";
 
 export interface Product {
   id: number;
-  _id: string;
+
   name: string | "";
   sale?: string;
   price: number;
@@ -86,7 +86,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   // };
   const fetchMoreLikeThis = () => {
     const similarProducts = productData.filter(
-      (p) => p._id !== product._id && p.category === product.category
+      (p) => p.id !== product.id && p.category === product.category
     );
     setSimmilarProducts(similarProducts);
   };
