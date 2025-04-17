@@ -161,10 +161,10 @@ export function AddToCartModal({
                   <Check className="w-8 h-8 text-green-500" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  Added to Cart!
+                  Картанд нэмэгдлээ
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 text-center">
-                  {product.name} has been added to your cart successfully.
+                  {product.name} амжилттай нэмэгдлээ
                 </p>
               </motion.div>
             ) : (
@@ -180,31 +180,25 @@ export function AddToCartModal({
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600 dark:text-gray-300">
-                      Product:
+                      Бараа:
                     </span>
                     <span className="font-medium">{product.name}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600 dark:text-gray-300">
-                      Quantity:
+                      Тоо ширхэг:
                     </span>
                     <span className="font-medium">{quantity}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600 dark:text-gray-300">
-                      Price:
+                      Нэгж үнэ:
                     </span>
                     <span className="font-medium">{product.price}</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 dark:text-gray-300">
-                      Size:
-                    </span>
-                    <span className="font-medium">{selectedSize}</span>
-                  </div>
                   <div className="flex justify-between items-center border-t pt-4">
                     <span className="text-gray-600 dark:text-gray-300">
-                      Total:
+                      Нийт үнэ:
                     </span>
                     <span className="font-bold text-lg">
                       ₮{(product.price * quantity).toFixed(2)}
