@@ -120,7 +120,7 @@ const ProductUpdateForm: React.FC = () => {
         const productId = pathname.split("/").pop();
 
         if (!productId) {
-          throw new Error("Product ID not found");
+          throw new Error("Product ID oldsongui");
         }
 
         const response = await fetch(`/api/product/${productId}`);
@@ -129,7 +129,7 @@ const ProductUpdateForm: React.FC = () => {
         }
 
         const result = await response.json();
-        console.log("Fetched product data:", result); // Debug log
+        console.log("Fetch product data:", result); 
 
         if (result.success && result.data) {
           const formattedData = {
@@ -140,14 +140,14 @@ const ProductUpdateForm: React.FC = () => {
               ? result.data.features
               : [],
           };
-          console.log("Formatted data:", formattedData); // Debug log
+          console.log("Formatted data:", formattedData); 
           setProductData(formattedData);
         } else {
-          throw new Error(result.error || "Failed to load product data");
+          throw new Error(result.error || "Failed");
         }
       } catch (error) {
-        console.error("Error fetching product:", error);
-        toast.error("Failed to load product data");
+        console.error("Error:", error);
+        toast.error("Faileda");
         router.push("/admin/dashboard/manageproducts");
       } finally {
         setIsLoading(false);
@@ -163,7 +163,6 @@ const ProductUpdateForm: React.FC = () => {
     const { name, value } = e.target;
     let parsedValue = value;
 
-    // Handle numeric fields
     if (name === "price" || name === "inStock") {
       parsedValue = (parseFloat(value) || 0).toString();
     }
@@ -174,28 +173,6 @@ const ProductUpdateForm: React.FC = () => {
     }));
   };
 
-  const toggleSize = (size: string) => {
-    setProductData((prev) => ({
-      ...prev,
-      size: prev.size.includes(size)
-        ? prev.size.filter((s) => s !== size)
-        : [...prev.size, size],
-    }));
-  };
-
-  const handleColorToggle = (color: string) => {
-    console.log("Before color toggle:", productData.color);
-    setProductData((prev) => {
-      const newColors = prev.color.includes(color)
-        ? prev.color.filter((c) => c !== color)
-        : [...prev.color, color];
-      console.log("After color toggle:", newColors);
-      return {
-        ...prev,
-        color: newColors,
-      };
-    });
-  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -215,14 +192,13 @@ const ProductUpdateForm: React.FC = () => {
         inStock: Number(productData.inStock),
         rating: Number(productData.rating),
         reviews: Number(productData.reviews),
-        // Explicitly ensure arrays are included
         color: Array.isArray(productData.color) ? productData.color : [],
         size: Array.isArray(productData.size) ? productData.size : [],
         features: Array.isArray(productData.features)
           ? productData.features
           : [],
       };
-      // Log the data being sent
+ 
       console.log("Sending update data:", dataToSend);
       const response = await fetch(`/api/product/${productId}`, {
         method: "PUT",
@@ -234,15 +210,15 @@ const ProductUpdateForm: React.FC = () => {
 
       if (!response.ok) {
         const result = await response.json();
-        throw new Error(result.error || "Failed to update product");
+        throw new Error(result.error || "Failed");
       }
 
-      toast.success("Product Updated Successfully");
+      toast.success("Success");
       router.refresh();
     } catch (error) {
-      console.error("Product update failed:", error);
+      console.error("failed:", error);
       toast.error(
-        error instanceof Error ? error.message : "Failed to update product"
+        error instanceof Error ? error.message : "Failed"
       );
     } finally {
       setIsSaving(false);
@@ -295,78 +271,7 @@ const ProductUpdateForm: React.FC = () => {
           </span>
         </div>
       </div>
-
-      {/* Size Selection */}
-      {/* <div className="relative">
-        <button
-          type="button"
-          onClick={() => setIsSizeDropdownOpen(!isSizeDropdownOpen)}
-          className="w-full p-3 border rounded-lg flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-red-300"
-        >
-          <span>
-            {productData.size?.length > 0
-              ? productData.size.join(", ")
-              : "Select Sizes"}
-          </span>
-          <ChevronDown className="text-red-500" />
-        </button>
-
-        {isSizeDropdownOpen && (
-          <div className="absolute z-10 w-full bg-white border rounded-lg shadow-lg mt-1 max-h-60 overflow-y-auto">
-            {SIZE_OPTIONS.map((size) => (
-              <div
-                key={size}
-                onClick={() => toggleSize(size)}
-                className={`p-2 cursor-pointer hover:bg-red-50 
-                                ${
-                                  productData.size?.includes(size)
-                                    ? "bg-red-100"
-                                    : ""
-                                }`}
-              >
-                {size}
-              </div>
-            ))}
-          </div>
-        )}
-      </div> */}
-
-      {/* Color Selection */}
-      {/* <div className="relative">
-        <button
-          type="button"
-          onClick={() => setIsColorDropdownOpen(!isColorDropdownOpen)}
-          className="w-full p-3 border rounded-lg flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-red-300"
-        >
-          <span>
-            {productData.color?.length > 0
-              ? productData.color.join(", ")
-              : "Select Colors"}
-          </span>
-          <ChevronDown className="text-red-500" />
-        </button>
-
-        {isColorDropdownOpen && (
-          <div className="absolute z-10 w-full bg-white border rounded-lg shadow-lg mt-1 max-h-60 overflow-y-auto">
-            {COLOR_OPTIONS.map((color) => (
-              <div
-                key={color}
-                onClick={() => handleColorToggle(color)}
-                className={`p-2 cursor-pointer hover:bg-red-50 
-                                ${
-                                  productData.color.includes(color)
-                                    ? "bg-red-100"
-                                    : ""
-                                }`}
-              >
-                {color}
-              </div>
-            ))}
-          </div>
-        )}
-      </div> */}
-
-      {/* Delivery and Date */}
+   
       <div className="grid md:grid-cols-2 gap-4">
         <div className="relative">
           <input

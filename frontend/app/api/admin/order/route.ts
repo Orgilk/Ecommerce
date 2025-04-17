@@ -15,8 +15,8 @@ export async function GET(req: Request) {
 			{
 				$match: {
 					createdAt: {
-						$gte: new Date(new Date().setHours(0, 0, 0, 0)), // Start of today
-						$lte: new Date(new Date().setHours(23, 59, 59, 999)), // End of today
+						$gte: new Date(new Date().setHours(0, 0, 0, 0)), 
+						$lte: new Date(new Date().setHours(23, 59, 59, 999)), 
 					},
 				},
 			},

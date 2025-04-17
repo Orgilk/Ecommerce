@@ -82,13 +82,13 @@ export default function OrderDetailsPage() {
       try {
         const response = await fetch(`/api/admin/order/${params.orderId}`);
         if (!response.ok) {
-          throw new Error("Failed to fetch order");
+          throw new Error("Failed");
         }
         const data = await response.json();
         setOrder(data.data);
         setEditedOrder(data.data);
       } catch (err) {
-        setError("An error occurred while fetching order data");
+        setError("error");
       } finally {
         setIsLoading(false);
       }
@@ -102,7 +102,6 @@ export default function OrderDetailsPage() {
   ) => {
     const { name, value } = e.target;
 
-    // Handle nested fields
     if (name.includes(".")) {
       const [parent, child] = name.split(".");
       setEditedOrder((prev: any) => ({
@@ -138,16 +137,16 @@ export default function OrderDetailsPage() {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to update order");
+        throw new Error("Failed");
       }
 
       const updatedOrder = await response.json();
       setOrder(updatedOrder.data);
       setIsEditing(false);
-      toast.success("Order updated successfully");
+      toast.success("success");
       router.refresh();
     } catch (err) {
-      toast.error("Failed to update order");
+      toast.error("Failed");
     }
   };
 
@@ -306,9 +305,6 @@ export default function OrderDetailsPage() {
                 <p className="text-gray-600">
                   Нийт үнэ: ₮{order.totalPrice.toFixed(2)}
                 </p>
-                {/* <p className="text-gray-600">
-                  Төлөлтийн төрөл: {order.paymentMethod}
-                </p> */}
                 <p className="text-gray-600">
                   Төлөлтийн статус: {order.paymentStatus}
                 </p>

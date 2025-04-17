@@ -60,13 +60,13 @@ export default function AdminUsersPage() {
         const response = await fetch("/api/admin/user");
         console.log("response: ", response);
         if (!response.ok) {
-          throw new Error("Failed to fetch users");
+          throw new Error("Failed");
         }
         const data = await response.json();
         setUsers(data.data);
         setFilteredUsers(data.data);
       } catch (err) {
-        setError("An error occurred while fetching users");
+        setError("error");
       } finally {
         setIsLoading(false);
       }

@@ -14,7 +14,7 @@ export async function GET(
 
     if (!userId) {
       return NextResponse.json(
-        { success: true, error: "User ID is required" },
+        { success: true, error: "User ID хэрэгтэй" },
         { status: 400 }
       );
     }
@@ -75,7 +75,7 @@ export async function DELETE(
 
     if (!cartId) {
       return NextResponse.json(
-        { success: false, error: "Cart id is required!" },
+        { success: false, error: "Cart id хэрэгтэй" },
         { status: 400 }
       );
     }

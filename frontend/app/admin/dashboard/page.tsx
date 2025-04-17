@@ -38,16 +38,16 @@ const DashboardStats = () => {
     const fetchOrderStats = async () => {
       try {
         const response = await fetch("/api/admin/order");
-        if (!response.ok) throw new Error("Failed to fetch order statistics");
+        if (!response.ok) throw new Error("fetch hiihed aldaa garlaa");
         const result = await response.json();
         if (result.success && result.data) {
           setOrderStats(result.data);
         } else {
-          throw new Error("Invalid response format");
+          throw new Error("aldaa");
         }
       } catch (err: any) {
-        console.error("Error fetching order stats:", err);
-        setError(err.message || "Failed to load order statistics");
+        console.error("stats avahad aldaa garlaa:", err);
+        setError(err.message || "unshihad aldaa garlaa");
       } finally {
         setIsLoading(false);
       }
