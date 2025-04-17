@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const MONGODB_URL = process.env.MONGODB_URL;
 
 if (!MONGODB_URL) {
-    throw new Error("Please define the MONGODB_URL environment variable inside .env");
+    throw new Error("MONGODB_URL .env-d todorhoil"); 
 }
 
 let cached = (global as any).mongoose || { conn: null, promise: null };
