@@ -15,19 +15,16 @@ import Intercom from "@intercom/messenger-js-sdk";
 const cards = [
   {
     id: 1,
-    // videoUrl: "/website_videos/big1.mp4",
     className: "col-span-2",
     orientation: "landscape",
   },
   {
     id: 2,
-    // videoUrl: "/website_videos/long2.mp4",
     className: "row-span-2",
     orientation: "portrait",
   },
   {
     id: 3,
-    // videoUrl: "/website_videos/landscap.mp4",
     className: "col-span-2",
     orientation: "landscape",
   },
@@ -123,22 +120,6 @@ function MainComponent() {
           <ProductGridComponent />
         </div>
       </div>
-
-      {/* <div className="mt-10 sm:mt-20">
-        <Heading text="Video Gallery" />
-        <div className="w-full mt-32 lg:mt-0 md:mt-0">
-          <VideoGrid cards={cards} />
-        </div>
-      </div> */}
-
-      {/* Hero Scroll Section */}
-      {/* <div className="-mt-20 sm:-mt-32">
-        <HeroScrollDemo
-          title="Top Pick of the Season"
-          discription="Checkout Here"
-          imageId={`678fc51e553541b1cace06b4`}
-        />
-      </div> */}
 
       <div className="mt-12 sm:mt-20 hidden md:block">
         <Heading text="Хурдан шуурхай хүргэлт, Таны гарт!" />

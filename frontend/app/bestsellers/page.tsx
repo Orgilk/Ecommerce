@@ -21,11 +21,13 @@ const CategoryProductListingPage = () => {
   const searchParams = useSearchParams();
   const categoryFromURL = searchParams.get("category");
 
-  const [selectedCategory, setSelectedCategory] = useState(categoryFromURL || "All");
+  const [selectedCategory, setSelectedCategory] = useState(
+    categoryFromURL || "All"
+  );
   const [sortBy, setSortBy] = useState("default");
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [priceRange, setPriceRange] = useState([0, 10000]);
+  const [priceRange, setPriceRange] = useState([0, 50000]);
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
@@ -40,10 +42,10 @@ const CategoryProductListingPage = () => {
     };
 
     checkMobileSize();
-    window.addEventListener('resize', checkMobileSize);
+    window.addEventListener("resize", checkMobileSize);
 
     return () => {
-      window.removeEventListener('resize', checkMobileSize);
+      window.removeEventListener("resize", checkMobileSize);
     };
   }, []);
 
@@ -62,8 +64,8 @@ const CategoryProductListingPage = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile]);
 
   // Fetch Products
@@ -71,17 +73,19 @@ const CategoryProductListingPage = () => {
     async function fetchData() {
       try {
         setIsLoading(true);
-        const response = await fetch('/api/product');
+        const response = await fetch("/api/product");
         const data = await response.json();
 
         const productsArray = Array.isArray(data)
           ? data
           : data.data
-            ? data.data
-            : [];
+          ? data.data
+          : [];
 
         const productsToSet = categoryFromURL
-          ? productsArray.filter((product: Product) => product.category === categoryFromURL)
+          ? productsArray.filter(
+              (product: Product) => product.category === categoryFromURL
+            )
           : productsArray;
 
         setAllProducts(productsArray);
@@ -104,28 +108,32 @@ const CategoryProductListingPage = () => {
       let result = [...allProducts];
 
       if (selectedCategory !== "All") {
-        result = result.filter(product => product.category === selectedCategory);
+        result = result.filter(
+          (product) => product.category === selectedCategory
+        );
       }
 
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
-        result = result.filter(product =>
-          product.name.toLowerCase().includes(query) ||
-          product.description?.toLowerCase().includes(query) ||
-          product.category.toLowerCase().includes(query)
+        result = result.filter(
+          (product) =>
+            product.name.toLowerCase().includes(query) ||
+            product.description?.toLowerCase().includes(query) ||
+            product.category.toLowerCase().includes(query)
         );
       }
 
-      result = result.filter(product =>
-        product.price >= priceRange[0] && product.price <= priceRange[1]
+      result = result.filter(
+        (product) =>
+          product.price >= priceRange[0] && product.price <= priceRange[1]
       );
 
       if (selectedSizes.length > 0) {
-        result = result.filter(product =>
+        result = result.filter((product) =>
           selectedSizes.includes(product.model)
         );
       }
-      
+
       switch (sortBy) {
         case "price-asc":
           result.sort((a, b) => a.price - b.price);
@@ -145,13 +153,20 @@ const CategoryProductListingPage = () => {
     };
 
     applyFilters();
-  }, [selectedCategory, sortBy, searchQuery, priceRange, selectedSizes, allProducts]);
+  }, [
+    selectedCategory,
+    sortBy,
+    searchQuery,
+    priceRange,
+    selectedSizes,
+    allProducts,
+  ]);
 
   // Reset Filters
   const resetFilters = () => {
     setSortBy("default");
     setSearchQuery("");
-    setPriceRange([0, 10000]);
+    setPriceRange([0, 50000]);
     setSelectedSizes([]);
     setSelectedCategory("All");
     setShowFilters(false);
@@ -169,9 +184,9 @@ const CategoryProductListingPage = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const productCardVariants = {
@@ -181,16 +196,16 @@ const CategoryProductListingPage = () => {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
     hover: {
       scale: 1.05,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
   return (
@@ -243,11 +258,13 @@ const CategoryProductListingPage = () => {
       {/* Desktop Filters Sidebar */}
       {!isMobile && (
         <motion.aside
-          className={`lg:w-64 flex-shrink-0 transition-all duration-300 ${isScrolled ? "lg:sticky lg:top-4" : ""}`}
+          className={`lg:w-64 flex-shrink-0 transition-all duration-300 ${
+            isScrolled ? "lg:sticky lg:top-4" : ""
+          }`}
           style={{
             position: isScrolled ? "sticky" : "relative",
             top: isScrolled ? "1rem" : "0",
-            height: "fit-content"
+            height: "fit-content",
           }}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -305,33 +322,31 @@ const CategoryProductListingPage = () => {
           animate="visible"
         >
           <AnimatePresence mode="wait">
-            {isLoading ? (
-              Array.from({ length: 6 }).map((_, i) => (
-                <motion.div
-                  key={`skeleton-${i}`}
-                  variants={productCardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="hidden"
-                >
-                  <ProductSkeleton />
-                </motion.div>
-              ))
-            ) : (
-              filteredProducts.map((product) => (
-                <motion.div
-                  key={product._id}
-                  variants={productCardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover="hover"
-                  className="transform-gpu"
-                >
-                  {/* @ts-ignore */}
-                  <ProductCard {...product} />
-                </motion.div>
-              ))
-            )}
+            {isLoading
+              ? Array.from({ length: 6 }).map((_, i) => (
+                  <motion.div
+                    key={`skeleton-${i}`}
+                    variants={productCardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="hidden"
+                  >
+                    <ProductSkeleton />
+                  </motion.div>
+                ))
+              : filteredProducts.map((product) => (
+                  <motion.div
+                    key={product._id}
+                    variants={productCardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover="hover"
+                    className="transform-gpu"
+                  >
+                    {/* @ts-ignore */}
+                    <ProductCard {...product} />
+                  </motion.div>
+                ))}
           </AnimatePresence>
         </motion.div>
 
@@ -343,7 +358,7 @@ const CategoryProductListingPage = () => {
             className="text-center py-12"
           >
             <p className="text-xl text-neutral-600 dark:text-neutral-400">
-            Таны хайлтанд тохирох бүтээгдэхүүн олдсонгүй
+              Таны хайлтанд тохирох бүтээгдэхүүн олдсонгүй
             </p>
             <button
               onClick={resetFilters}
@@ -358,4 +373,4 @@ const CategoryProductListingPage = () => {
   );
 };
 
-export default CategoryProductListingPage;  
+export default CategoryProductListingPage;
