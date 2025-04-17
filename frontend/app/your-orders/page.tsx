@@ -132,7 +132,7 @@ export default function EnhancedOrdersPage() {
         transition={{ duration: 0.5 }}
         className="text-4xl font-bold text-center text-gray-800 mb-8"
       >
-        Your Fabulous Orders
+         Таны захиалгууд
       </motion.h1>
       <AnimatePresence>
         {orders.map((order, index) => (
@@ -147,7 +147,7 @@ export default function EnhancedOrdersPage() {
               <CardHeader className="bg-gradient-to-r from-red-50 to-red-200 py-4">
                 <CardTitle className="flex justify-between items-center">
                   <span className="text-lg font-semibold">
-                    Order #{order._id.slice(-6)}
+                    Захиалга #{order._id.slice(-6)}
                   </span>
                   <div className="flex items-center space-x-2">
                     <Badge
@@ -157,7 +157,7 @@ export default function EnhancedOrdersPage() {
                     </Badge>
                     {order.urgent && (
                       <Badge variant="destructive" className="animate-pulse">
-                        Urgent
+                        Яаралтай
                       </Badge>
                     )}
                   </div>
@@ -168,13 +168,13 @@ export default function EnhancedOrdersPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-2 flex items-center">
                       <Calendar className="w-5 h-5 mr-2 text-purple-600" />
-                      Order Details
+                       Захиалгын мэдээлэл
                     </h3>
                     <p className="text-sm text-gray-600">
-                      Date: {format(new Date(order.createdAt), "PPP")}
+                      Өдөр: {format(new Date(order.createdAt), "PPP")}
                     </p>
                     <p className="text-sm text-gray-600 font-semibold">
-                      Total: ₮{order.totalPrice.toFixed(2)}
+                      Нийт үнэ: ₮{order.totalPrice.toFixed(2)}
                     </p>
                     <div className="flex items-center mt-2">
                       <CreditCard className="w-5 h-5 mr-2 text-purple-600" />
@@ -191,13 +191,13 @@ export default function EnhancedOrdersPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-2 flex items-center">
                       <Truck className="w-5 h-5 mr-2 text-purple-600" />
-                      Shipping
+                      Хүргэлт
                     </h3>
                     <p className="text-sm text-gray-600">
                       {order.shippingDetails.carrier}
                     </p>
                     <p className="text-sm text-gray-600">
-                      Tracking:
+                      Хянах:
                       <a
                         href={`https://www.fedex.com/fedextrack/?trknbr=${order.shippingDetails.trackingNumber}`}
                         target="_blank"
@@ -208,7 +208,7 @@ export default function EnhancedOrdersPage() {
                       </a>
                     </p>
                     <p className="text-sm text-gray-600">
-                      Estimated Delivery:{" "}
+                      Хүргэх өдөр:{" "}
                       {format(
                         new Date(order.shippingDetails.estimatedDeliveryDate),
                         "PPP"
@@ -231,7 +231,7 @@ export default function EnhancedOrdersPage() {
                     <AccordionTrigger>
                       <h3 className="text-lg font-semibold flex items-center">
                         <Package className="w-5 h-5 mr-2 text-purple-600" />
-                        Products ({order.products.length})
+                        Барааны төрлийн тоо ({order.products.length})
                       </h3>
                     </AccordionTrigger>
                     <AccordionContent>
@@ -251,10 +251,7 @@ export default function EnhancedOrdersPage() {
                                   <ExternalLink className="inline-block w-4 h-4 ml-1" />
                                 </Link>
                                 <p className="text-xs text-gray-500">
-                                  Size: {product.id.size}
-                                </p>
-                                <p className="text-xs text-gray-500">
-                                  Quantity: {product.id.quantity}
+                                  Тоо ширхэг: {product.id.quantity}
                                 </p>
                               </div>
                             </div>

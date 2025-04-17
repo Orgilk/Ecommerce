@@ -147,7 +147,7 @@ const ProductCreationForm: React.FC = () => {
         className="max-w-5xl mx-auto bg-white shadow-2xl rounded-2xl p-8 space-y-6"
       >
         <h1 className="text-3xl font-bold text-red-800 mb-6 text-center">
-          Create New Product
+           Бараа нэмэх
         </h1>
 
         <div className="grid md:grid-cols-2 gap-4">
@@ -157,7 +157,7 @@ const ProductCreationForm: React.FC = () => {
               name="name"
               value={productData.name}
               onChange={handleInputChange}
-              placeholder="Product Name"
+              placeholder="Барааны нэр"
               className="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
               required
             />
@@ -169,7 +169,7 @@ const ProductCreationForm: React.FC = () => {
               name="price"
               value={productData.price}
               onChange={handleInputChange}
-              placeholder="Price"
+              placeholder="Үнэ"
               className="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
               required
             />
@@ -179,7 +179,7 @@ const ProductCreationForm: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative">
+        {/* <div className="relative">
           <button
             type="button"
             onClick={() => setIsSizeDropdownOpen(!isSizeDropdownOpen)}
@@ -207,9 +207,9 @@ const ProductCreationForm: React.FC = () => {
               ))}
             </div>
           )}
-        </div>
+        </div> */}
 
-        <div className="relative">
+        {/* <div className="relative">
           <button
             type="button"
             onClick={() => setIsColorDropdownOpen(!isColorDropdownOpen)}
@@ -237,7 +237,7 @@ const ProductCreationForm: React.FC = () => {
               ))}
             </div>
           )}
-        </div>
+        </div> */}
 
         <div className="grid md:grid-cols-2 gap-4">
           <div className="relative">
@@ -246,7 +246,7 @@ const ProductCreationForm: React.FC = () => {
               name="delivery"
               value={productData.delivery}
               onChange={handleInputChange}
-              placeholder="Delivery Type"
+              placeholder="Хүргэлтийн төрөл"
               className="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
             />
             <Truck className="absolute left-3 top-1/2 transform -translate-y-1/2 text-red-500" />
@@ -257,7 +257,7 @@ const ProductCreationForm: React.FC = () => {
               name="category"
               value={productData.category}
               onChange={handleInputChange}
-              placeholder="Category"
+              placeholder="Барааны төрөл"
               className="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
             />
             <Logs className="absolute left-3 top-1/2 transform -translate-y-1/2 text-red-500" />
@@ -270,7 +270,7 @@ const ProductCreationForm: React.FC = () => {
               name="inStock"
               value={productData.inStock}
               onChange={handleInputChange}
-              placeholder="Stock"
+              placeholder="Тоо ширхэг"
               className="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
             />
             <Box className="absolute left-3 top-1/2 transform -translate-y-1/2 text-red-500" />
@@ -281,7 +281,7 @@ const ProductCreationForm: React.FC = () => {
               name="model"
               value={productData.model}
               onChange={handleInputChange}
-              placeholder="Product Model"
+              placeholder="Шүүлтүүрийн төрөл"
               className="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
             />
             <Shirt className="absolute left-3 top-1/2 transform -translate-y-1/2 text-red-500" />
@@ -298,7 +298,7 @@ const ProductCreationForm: React.FC = () => {
             name="description"
             value={productData.description}
             onChange={handleInputChange}
-            placeholder="Product Description"
+            placeholder="Барааны мэдээлэл"
             className="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300 min-h-[150px]"
           />
           <Plus className="absolute left-3 top-4 text-red-500" />
@@ -312,7 +312,7 @@ const ProductCreationForm: React.FC = () => {
             className="px-6 py-2 bg-red-500 text-white rounded-lg flex items-center"
           >
             <Save className="mr-2" />
-            Save Product
+            Хадгалах
           </motion.button>
         </div>
       </motion.form>

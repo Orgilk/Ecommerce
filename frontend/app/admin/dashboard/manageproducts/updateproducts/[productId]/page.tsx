@@ -449,7 +449,7 @@ const ProductUpdateForm: React.FC = () => {
             name="seller"
             value={productData.seller}
             onChange={handleInputChange}
-            placeholder="Seller Name"
+            placeholder=" Нийлүүлэгчийн нэр"
             className="w-full p-3 pl-10 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-300"
           />
           <Plus className="absolute left-3 top-1/2 transform -translate-y-1/2 text-red-500" />
