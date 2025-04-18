@@ -112,7 +112,7 @@ const DashboardStats = () => {
           iconColor: "text-blue-500",
         },
         {
-          label: "Боловсруулж буй захиалгууд",
+          label: "Замд явж буй захиалгууд",
           value: orderStats.totalProcessingOrders.toString(),
           icon: Box,
           bgColor: "bg-teal-50",
