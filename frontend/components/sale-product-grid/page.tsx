@@ -113,7 +113,7 @@ const ProductGridComponent: React.FC = () => {
                     <div className="flex items-center justify-between mb-3">
                       <div className="flex flex-col">
                         <span className="text-sm sm:text-xl font-bold text-gray-900">
-                          ₮{product.price.toLocaleString("en-IN")}
+                          ₮{product.price.toLocaleString("en-Mn")}
                         </span>
                         {product.delivery && (
                           <span className="text-xs text-gray-500">
