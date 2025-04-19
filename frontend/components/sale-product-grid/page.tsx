@@ -6,39 +6,40 @@ import { Star, ImageOff, Info } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { products as productData } from "@/app/product/data";
-// import Product from '@/app/product/id/page';
-import { show } from "@intercom/messenger-js-sdk";
-import { Modal } from "../ui/animated-modal";
-
-export interface Product {
-  id: number;
-  name: string | "";
-  sale?: string;
-  price: number;
-  rating: number;
-  reviews: number;
-  answers: number;
-  inStock: boolean; // Make this a boolean
-  delivery: string;
-  deliveryDate: string;
+interface Product {
+  _id: string;
+  name: string;
+  description?: string;
   category: string;
-  video?: string;
-  model: string;
+  price: number;
   size?: string[];
-  images: string[];
-  features: string[];
-  description: string;
-  chartData: ChartData[];
+  image?: string;
 }
 
 const ProductGridComponent: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>(
-    productData.filter((product) => product.id >= 11 && product.id <= 17)
-  );
+  const [products, setProducts] = useState<Product[]>([]);
 
   const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
   const router = useRouter();
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("/api/product");
+        const data = await response.json();
+
+        const productsArray = Array.isArray(data)
+          ? data
+          : data.data
+          ? data.data
+          : [];
+        setProducts(productsArray.slice(0, 8));
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
 
   const handleImageError = (productId: string) => {
     setImageErrors((prev) => ({ ...prev, [productId]: true }));
@@ -53,7 +54,7 @@ const ProductGridComponent: React.FC = () => {
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
         {products.map((product: any) => {
           const redirectLink =
-            product.redirectLink || `/hospital/${product.id}`;
+            product.redirectLink || `/pharmacy/${product.id}`;
           const hasValidImage = !imageErrors[product._id];
 
           return (
@@ -128,7 +129,7 @@ const ProductGridComponent: React.FC = () => {
                                         hover:bg-red-600 transition-colors duration-200 flex items-center justify-center gap-2 group"
                       >
                         <Info className="w-4 h-4 group-hover:animate-bounce" />
-                        <span onClick={() => router.push("/hospital/1")}>
+                        <span onClick={() => router.push("/pharmacy/1")}>
                           Барааг харах
                         </span>
                       </button>

@@ -15,7 +15,7 @@ const CategoryGrid = () => {
       path: `${basePath}/category/Захиалгат%20хэрэгсэл`,
     },
     { title: "Эм", path: `${basePath}/category/Эм` },
-    { title: "Тариа", path: `${basePath}/category/Үемөчнийтариа` },
+    { title: "Тариа", path: `${basePath}/category/Тариа` },
   ];
 
   return (

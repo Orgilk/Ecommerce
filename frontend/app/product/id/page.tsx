@@ -12,7 +12,6 @@ import {
   Plus,
   Minus,
   Linkedin,
-  GitCompare,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
@@ -48,7 +47,6 @@ export interface Product {
   images: string[];
   features: string[];
   description: string;
-  chartData: ChartData[];
 }
 interface ProductProps {
   product: any;
@@ -555,7 +553,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                     transition={{ duration: 0.5 }}
                     className="group relative flex flex-col overflow-hidden rounded-xl bg-white shadow-md hover:shadow-lg transition-all duration-300"
                   >
-                    <Link href={`/hospital/${product.id}`}>
+                    <Link href={`/pharmacy/${product.id}`}>
                       <div className="relative w-full overflow-hidden">
                         <Image
                           src={product.images[0]}

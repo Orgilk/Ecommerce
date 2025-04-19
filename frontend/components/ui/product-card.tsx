@@ -30,7 +30,7 @@ export function ProductCard({
       transition={{ duration: 0.5 }}
       className="group relative flex flex-col overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300"
     >
-      <Link href={`/hospital/${id}`}>
+      <Link href={`/pharmacy/${id}`}>
         <div className="aspect-square overflow-hidden bg-gray-100 flex-shrink-0">
           <Image
             src={images[0]}

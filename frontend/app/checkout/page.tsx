@@ -45,7 +45,7 @@ export default function AnimatedCheckout() {
     city: "",
     state: "",
     zipCode: "",
-    country: "India",
+    country: "Mongolia",
   });
   const [paymentStatus, setPaymentStatus] = useState<
     "pending" | "completed" | "failed" | "refunded"

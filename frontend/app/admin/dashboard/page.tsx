@@ -79,17 +79,17 @@ const DashboardStats = () => {
     ? [
         {
           title: "Өнөөдрийн захиалгууд",
-          amount: `₮${orderStats.totalMoneyToday.toLocaleString("en-IN")}`,
+          amount: `₮${orderStats.totalMoneyToday.toLocaleString("en-MN")}`,
           bgColor: "bg-teal-600",
         },
         {
           title: "Энэ сард",
-          amount: `₮${orderStats.totalMoneyThisMonth.toLocaleString("en-IN")}`,
+          amount: `₮${orderStats.totalMoneyThisMonth.toLocaleString("en-MN")}`,
           bgColor: "bg-blue-500",
         },
         {
           title: "Нийт орлого",
-          amount: `₮${orderStats.totalMoneyTillNow.toLocaleString("en-IN")}`,
+          amount: `₮${orderStats.totalMoneyTillNow.toLocaleString("en-MN")}`,
           bgColor: "bg-green-600",
         },
       ]

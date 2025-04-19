@@ -28,10 +28,10 @@ export interface ProductL {
   images: string[];
   features: string[];
   description: string;
-  chartData: any[]; // You can replace with actual ChartData interface
+  chartData: any[];
 }
 
-const Hospital = () => {
+const pharmacy = () => {
   const params = useParams();
   const productId = params?.id;
 
@@ -52,7 +52,9 @@ const Hospital = () => {
 
         if (productId !== null) {
           console.log("numericId: ", productId);
-          const foundProduct = productsArray.find((p) => p.id === productId);
+          const foundProduct = productsArray.find(
+            (p: any) => p.id === productId
+          );
           setSelectedProduct(foundProduct || null);
         }
       } catch (error) {
@@ -65,13 +67,6 @@ const Hospital = () => {
       fetchData();
     }
   }, [productId]);
-  // useEffect(() => {
-  //   if (numericId !== null && !isNaN(numericId)) {
-  //     console.log("numericId: ", numericId)
-  //     const foundProduct = productData.find((p) => p.id === numericId);
-  //     setSelectedProduct(foundProduct || null);
-  //   }
-  // }, [numericId]);
 
   if (!selectedProduct) {
     return <div className="p-4">Уншиж байна</div>;
@@ -87,4 +82,4 @@ const Hospital = () => {
   );
 };
 
-export default Hospital;
+export default pharmacy;

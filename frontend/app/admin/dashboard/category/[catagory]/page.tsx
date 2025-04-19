@@ -90,9 +90,22 @@ const AdminCategoryDashboard = () => {
   const router = useRouter();
 
   const getCategoryFromPath = () => {
-    // const segments = pathname?.split("/") || [];
-    // return segments[segments.length - 1] || "";
-    return "Эм"
+    const segments = pathname?.split("/") || [];
+    if (segments[segments.length - 1] === "%D0%AD%D0%BC") {
+      return "Эм";
+    } else if (
+      segments[segments.length - 1] ===
+      "%D0%9D%D1%8D%D0%B3%20%D1%83%D0%B4%D0%B0%D0%B0%D0%B3%D0%B8%D0%B9%D0%BD%20%D1%85%D1%8D%D1%80%D1%8D%D0%B3%D1%81%D1%8D%D0%BB"
+    ) {
+      return "Нэг удаагийн хэрэгсэл";
+    } else if (
+      segments[segments.length - 1] ===
+      "%D0%97%D0%B0%D1%85%D0%B8%D0%B0%D0%BB%D0%B3%D0%B0%D1%82%20%D1%85%D1%8D%D1%80%D1%8D%D0%B3%D1%81%D1%8D%D0%BB"
+    ) {
+      return "Захиалгат хэрэгсэл";
+    } else {
+      return "Тариа";
+    }
   };
 
   const sizeCount: Record<string, number> = {};

@@ -28,7 +28,7 @@ const CategoryProductListingPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [priceRange, setPriceRange] = useState([0, 50000]);
-  const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
+  const [selectedModels, setselectedModels] = useState<string[]>([]);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -128,9 +128,9 @@ const CategoryProductListingPage = () => {
           product.price >= priceRange[0] && product.price <= priceRange[1]
       );
 
-      if (selectedSizes.length > 0) {
+      if (selectedModels.length > 0) {
         result = result.filter((product) =>
-          selectedSizes.includes(product.model)
+          selectedModels.includes(product.model)
         );
       }
 
@@ -158,7 +158,7 @@ const CategoryProductListingPage = () => {
     sortBy,
     searchQuery,
     priceRange,
-    selectedSizes,
+    selectedModels,
     allProducts,
   ]);
 
@@ -167,7 +167,7 @@ const CategoryProductListingPage = () => {
     setSortBy("default");
     setSearchQuery("");
     setPriceRange([0, 50000]);
-    setSelectedSizes([]);
+    setselectedModels([]);
     setSelectedCategory("All");
     setShowFilters(false);
   };
@@ -246,8 +246,8 @@ const CategoryProductListingPage = () => {
               onSearchChange={setSearchQuery}
               priceRange={priceRange}
               onPriceRangeChange={setPriceRange}
-              selectedSizes={selectedSizes}
-              onSizesChange={setSelectedSizes}
+              selectedSizes={selectedModels}
+              onSizesChange={setselectedModels}
               // @ts-ignore
               onReset={resetFilters}
             />
@@ -280,8 +280,8 @@ const CategoryProductListingPage = () => {
               onSearchChange={setSearchQuery}
               priceRange={priceRange}
               onPriceRangeChange={setPriceRange}
-              selectedSizes={selectedSizes}
-              onSizesChange={setSelectedSizes}
+              selectedSizes={selectedModels}
+              onSizesChange={setselectedModels}
               // @ts-ignore
               onReset={resetFilters}
             />
