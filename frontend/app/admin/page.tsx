@@ -106,20 +106,16 @@ export default function Login() {
             httpOnly: false,
           });
         }
-        // if (result.user.role == "admin") {
-        toast.success("Login successfully!");
+        toast.success("Login success!");
         Cookies.set("role", "webadmin");
         router.push("/admin/dashboard");
-        // }
-        // else {
-        // 	toast.error(result.message || 'Login failed, you are not admin.');
-        // }
+ 
       } else {
-        toast.error(result.message || "Login failed, please try again.");
+        toast.error(result.message || "Login failed.");
       }
     } catch (error) {
       console.error("Login error:", error);
-      toast.error("An error occurred. Please try again.");
+      toast.error("error");
     } finally {
       setIsLoading(false);
     }

@@ -88,7 +88,7 @@ export default function EnhancedOrdersPage() {
       setError(
         err instanceof Error
           ? err.message
-          : "An error occurred while fetching orders"
+          : "error"
       );
     } finally {
       setIsLoading(false);

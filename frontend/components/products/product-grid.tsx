@@ -52,15 +52,13 @@ function MainComponent() {
 
   return (
     <div className="mx-auto w-[98vw] px-4 sm:px-6 lg:px-8">
-      {/* Fashion Carousel Section */}
       <div className="mt-6">
         <Heading text="" />
         <div className="w-full overflow-hidden">
           <FashionCarousel />
         </div>
       </div>
-
-      {/* inyt*/}
+      
       <div className="mt-10 sm:mt-20">
         <Heading text="Шинээр нэмэгдсэн" />
         <div className="w-full overflow-hidden">
@@ -77,7 +75,6 @@ function MainComponent() {
 
       <div className="mt-12 sm:mt-20 hidden md:block">
         <Heading text="Хурдан шуурхай хүргэлт, Таны гарт!" />
-        <div className="hidden md:block">{/* <Earthcomponent /> */}</div>
       </div>
       <div className="mt-10 sm:mt-20 w-full overflow-hidden">
         <InfiniteMovingCardsDemo />

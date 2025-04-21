@@ -6,38 +6,7 @@ import { toast, Toaster } from "react-hot-toast";
 import { Plus, Save, ChevronDown, Truck, Box, Logs, Shirt } from "lucide-react";
 import FileUploadInProductAdd from "@/components/FileUploadInProductAdd";
 
-const SIZE_OPTIONS = [
-  "XS",
-  "S",
-  "M",
-  "L",
-  "XL",
-  "2XL",
-  "3XL",
-  "28",
-  "30",
-  "32",
-  "34",
-  "36",
-  "38",
-  "40",
-  "Free Size",
-];
 
-const COLOR_OPTIONS = [
-  "Red",
-  "Blue",
-  "Green",
-  "Black",
-  "White",
-  "Navy Blue",
-  "Gray",
-  "Maroon",
-  "Purple",
-  "Yellow",
-  "Pink",
-  "Orange",
-];
 
 interface ProductData {
   name: string;
@@ -67,7 +36,7 @@ const ProductCreationForm: React.FC = () => {
     inStock: 0,
     delivery: "",
     deliveryDate: "5-7 өдөрт хүргэнэ",
-    seller: "Rajwadi Poshak Co.",
+    seller: "",
     color: [],
     category: "",
     model: "",
@@ -78,8 +47,6 @@ const ProductCreationForm: React.FC = () => {
     chartData: [],
   });
 
-  const [isSizeDropdownOpen, setIsSizeDropdownOpen] = useState(false);
-  const [isColorDropdownOpen, setIsColorDropdownOpen] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -91,25 +58,6 @@ const ProductCreationForm: React.FC = () => {
     }));
   };
 
-  const toggleSize = (size: string) => {
-    setProductData((prev) => {
-      const currentSizes = prev.size;
-      const newSizes = currentSizes.includes(size)
-        ? currentSizes.filter((s) => s !== size)
-        : [...currentSizes, size];
-      return { ...prev, size: newSizes };
-    });
-  };
-
-  const toggleColor = (color: string) => {
-    setProductData((prev) => {
-      const currentColors = prev.color;
-      const newColors = currentColors.includes(color)
-        ? currentColors.filter((c) => c !== color)
-        : [...currentColors, color];
-      return { ...prev, color: newColors };
-    });
-  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -179,65 +127,6 @@ const ProductCreationForm: React.FC = () => {
           </div>
         </div>
 
-        {/* <div className="relative">
-          <button
-            type="button"
-            onClick={() => setIsSizeDropdownOpen(!isSizeDropdownOpen)}
-            className="w-full p-3 border rounded-lg flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-red-300"
-          >
-            <span>
-              {productData.size.length > 0
-                ? productData.size.join(", ")
-                : "Select Sizes"}
-            </span>
-            <ChevronDown className="text-red-500" />
-          </button>
-
-          {isSizeDropdownOpen && (
-            <div className="absolute z-10 w-full bg-white border rounded-lg shadow-lg mt-1 max-h-60 overflow-y-auto">
-              {SIZE_OPTIONS.map((size) => (
-                <div
-                  key={size}
-                  onClick={() => toggleSize(size)}
-                  className={`p-2 cursor-pointer hover:bg-red-50 
-                    ${productData.size.includes(size) ? "bg-red-100" : ""}`}
-                >
-                  {size}
-                </div>
-              ))}
-            </div>
-          )}
-        </div> */}
-
-        {/* <div className="relative">
-          <button
-            type="button"
-            onClick={() => setIsColorDropdownOpen(!isColorDropdownOpen)}
-            className="w-full p-3 border rounded-lg flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-red-300"
-          >
-            <span>
-              {productData.color.length > 0
-                ? productData.color.join(", ")
-                : "Select Colors"}
-            </span>
-            <ChevronDown className="text-red-500" />
-          </button>
-
-          {isColorDropdownOpen && (
-            <div className="absolute z-10 w-full bg-white border rounded-lg shadow-lg mt-1 max-h-60 overflow-y-auto">
-              {COLOR_OPTIONS.map((color) => (
-                <div
-                  key={color}
-                  onClick={() => toggleColor(color)}
-                  className={`p-2 cursor-pointer hover:bg-red-50 
-                    ${productData.color.includes(color) ? "bg-red-100" : ""}`}
-                >
-                  {color}
-                </div>
-              ))}
-            </div>
-          )}
-        </div> */}
 
         <div className="grid md:grid-cols-2 gap-4">
           <div className="relative">

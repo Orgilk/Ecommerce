@@ -91,7 +91,7 @@ const CategoryProductListingPage = () => {
         setAllProducts(productsArray);
         setFilteredProducts(productsToSet);
       } catch (error) {
-        console.error("Error fetching products:", error);
+        console.error("Error fetch:", error);
         setAllProducts([]);
         setFilteredProducts([]);
       } finally {
@@ -102,7 +102,7 @@ const CategoryProductListingPage = () => {
     fetchData();
   }, [categoryFromURL]);
 
-  // Apply Filters and Sorting
+  // Apply Filters,sort
   useEffect(() => {
     const applyFilters = () => {
       let result = [...allProducts];
@@ -133,6 +133,13 @@ const CategoryProductListingPage = () => {
           selectedModels.includes(product.model)
         );
       }
+      // if (selectedModels.length > 0) {
+      //   result = result.filter(
+      //     (product) =>
+      //       product.model?.some((m) => selectedModels.includes(m)) ?? false
+      //   );
+      // }
+      
 
       switch (sortBy) {
         case "price-asc":

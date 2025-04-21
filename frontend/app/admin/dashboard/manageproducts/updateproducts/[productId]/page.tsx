@@ -18,55 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Loader from "@/components/Loader";
 import Image from "next/image";
 
-const SIZE_OPTIONS = [
-  "XS",
-  "S",
-  "M",
-  "L",
-  "XL",
-  "2XL",
-  "3XL",
-  "28",
-  "30",
-  "32",
-  "34",
-  "36",
-  "38",
-  "40",
-  "Free Size",
-];
 
-const COLOR_OPTIONS = [
-  "Red",
-  "Blue",
-  "Green",
-  "Black",
-  "White",
-  "Navy Blue",
-  "Gray",
-  "Maroon",
-  "Purple",
-  "Yellow",
-  "Pink",
-  "Orange",
-  "Cyan",
-  "Magenta",
-  "Turquoise",
-  "Lime Green",
-  "Teal",
-  "Brown",
-  "Beige",
-  "Coral",
-  "Lavender",
-  "Gold",
-  "Silver",
-  "Olive",
-  "Mint Green",
-  "Peach",
-  "Burgundy",
-  "Charcoal",
-  "Sky Blue",
-];
 
 interface ProductData {
   _id?: string;
@@ -110,8 +62,6 @@ const ProductUpdateForm: React.FC = () => {
     chartData: [],
   });
 
-  const [isSizeDropdownOpen, setIsSizeDropdownOpen] = useState(false);
-  const [isColorDropdownOpen, setIsColorDropdownOpen] = useState(false);
 
   useEffect(() => {
     const fetchProductData = async () => {
@@ -445,17 +395,7 @@ const ProductUpdateForm: React.FC = () => {
           Буцах
         </motion.button>
       </div>
-
-      {/* Click Outside Handlers */}
-      {(isSizeDropdownOpen || isColorDropdownOpen) && (
-        <div
-          className="fixed inset-0 z-0"
-          onClick={() => {
-            setIsSizeDropdownOpen(false);
-            setIsColorDropdownOpen(false);
-          }}
-        />
-      )}
+   
     </motion.form>
   );
 };

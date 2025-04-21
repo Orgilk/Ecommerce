@@ -164,7 +164,7 @@ const DashboardStats = () => {
         <Card className="bg-red-50 border-red-200">
           <CardContent className="p-6">
             <h3 className="text-red-600 text-lg font-semibold">
-              Error Loading Dashboard
+              Error 
             </h3>
             <p className="text-red-500 mt-2">{error}</p>
           </CardContent>
@@ -226,12 +226,7 @@ const DashboardStats = () => {
             >
               Бүх захиалгыг харах
             </button>
-            {/* <button
-                            className="p-4 bg-green-300 border border-black rounded-full h-10 w-full sm:w-56 flex items-center justify-center"
-                            onClick={handleChangeProduct}
-                        >
-                            Add Hero Product
-                        </button> */}
+
           </div>
         </div>
 

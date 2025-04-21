@@ -5,7 +5,7 @@ const Pagination = ({ pageCount, currentPage, setCurrentPage }:{
 	currentPage: number;
 	setCurrentPage: (page: number) => void;
 }) => {
-	const visiblePages = 5; // Number of pages to display at a time
+	const visiblePages = 5;
 	let startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
 	let endPage = Math.min(pageCount, startPage + visiblePages - 1);
 

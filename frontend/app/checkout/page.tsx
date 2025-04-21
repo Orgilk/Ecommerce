@@ -129,7 +129,7 @@ export default function AnimatedCheckout() {
       router.push("/login");
     }
     try {
-      //fetch All products
+      //fetch baraanuudiig
       const response = await fetch(`/api/cart/${userId}`).then((res) =>
         res.json()
       );
@@ -139,10 +139,10 @@ export default function AnimatedCheckout() {
         }
         setProducts(response);
       } else {
-        toast.error("Failed to fetch data. Please try again later.");
+        toast.error("Failed to fetch");
         setIsLoading(false);
       }
-      //fetch address
+      //fetch hayg
       const response2 = await fetch(`/api/user/get/${userId}`).then((res) =>
         res.json()
       );
@@ -151,7 +151,7 @@ export default function AnimatedCheckout() {
         setAddress(response2.data.address);
       }
     } catch (error) {
-      toast.error("Failed to fetch data. Please try again later.");
+      toast.error("Failed to fetch");
     } finally {
       setIsLoading(false);
     }

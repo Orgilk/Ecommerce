@@ -23,7 +23,7 @@ function PieChartComponent() {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
-        setIsMounted(true); // Ensures client-side rendering
+        setIsMounted(true); 
     }, []);
 
     const activeIndex = useMemo(
@@ -32,16 +32,16 @@ function PieChartComponent() {
     );
 
     if (!isMounted) {
-        return null; // Render nothing on the server to prevent mismatch
+        return null;
     }
 
     return (
         <div className="p-8 bg-white rounded-lg shadow-md max-w-4xl mx-auto">
             {/* Header Section */}
             <div className="mb-6 text-center">
-                <h1 className="text-3xl font-bold text-gray-800">Monthly Sales Overview</h1>
+                <h1 className="text-3xl font-bold text-gray-800">Сарын дундаж барааны заралт</h1>
                 <p className="text-gray-600">
-                    Click on a section of the pie chart to view detailed sales data.
+                 Сарын дундаж барааны заралтын мэдээллийг задалж харах
                 </p>
             </div>
 
@@ -49,7 +49,7 @@ function PieChartComponent() {
             <div className="mb-6 text-center">
                 <h2 className="text-2xl font-semibold capitalize text-gray-700">{activeMonth}</h2>
                 <p className="text-gray-500">
-                    Total sales for <strong>{activeMonth}</strong>:{' '}
+                     <strong>{activeMonth}</strong>:{' '} сарын зарсан бараа
                     <span className="text-indigo-600 font-bold">
                         {data[activeIndex]?.sales.toLocaleString()}
                     </span>

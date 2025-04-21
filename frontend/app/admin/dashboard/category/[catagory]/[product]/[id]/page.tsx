@@ -12,7 +12,7 @@ import Loader from "@/components/Loader";
 import { toast, Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
-// Mock customer data
+// hereglegchiin medeelel
 const recentCustomers = [
   {
     id: 1,
@@ -253,7 +253,7 @@ export default function ProductDetails({ params }: PageProps) {
 
   // const fetchProduct = async (product:any) => {
   //     if (!product) {
-  //         toast.error("Error while fetching product!");
+  //         toast.error("Error);
   //         return
   //     }
   //     setLoading(true);
@@ -266,7 +266,7 @@ export default function ProductDetails({ params }: PageProps) {
   //         }
   //     }
   //     catch (err) {
-  //         toast.error("Error while fetching product!")
+  //         toast.error("Error")
   //     }
   //     finally {
   //         setLoading(false);
@@ -286,10 +286,10 @@ export default function ProductDetails({ params }: PageProps) {
           `/admin/dashboard/manageproducts/updateproducts/${data.data._id}`
         );
       } else {
-        throw new Error("Failed to fetch product details");
+        throw new Error("Failed to fetch");
       }
     } catch (err) {
-      toast.error("Sorry! we are having issue while redirect!");
+      toast.error("error!");
     } finally {
       setLoading(false);
     }
@@ -362,7 +362,7 @@ export default function ProductDetails({ params }: PageProps) {
         </Card>
       </div>
 
-      {/* Sales Chart */}
+      {/* Sales */}
       <Card className="mb-8">
         <CardHeader>
           <CardTitle>Орлогын мэдээлэл</CardTitle>

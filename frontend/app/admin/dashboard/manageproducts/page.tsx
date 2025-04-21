@@ -101,7 +101,7 @@ const ManageProducts = () => {
   };
 
   const handleDeleteProduct = async (productId: string) => {
-    if (window.confirm("Are you sure you want to delete this product?")) {
+    if (window.confirm("ustgahda itgeltei bnu")) {
       try {
         const response = await fetch(`/api/product/${productId}`, {
           method: "DELETE",
@@ -114,7 +114,7 @@ const ManageProducts = () => {
         }
       } catch (err: any) {
         setError(err.message || "Failed to delete product");
-        toast.error("An error occurred");
+        toast.error("error");
       }
     }
   };
@@ -383,40 +383,6 @@ const ManageProducts = () => {
         </Card>
       )}
 
-      {/* {pageCount > 1 && (
-                <div className="flex justify-center mt-8">
-                    <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-                        <button
-                            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                            disabled={currentPage === 1}
-                            className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                        >
-                            <span className="sr-only">Previous</span>
-                            <ChevronLeft className="h-5 w-5" aria-hidden="true" />
-                        </button>
-                        {[...Array(pageCount)].map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setCurrentPage(index + 1)}
-                                className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${currentPage === index + 1
-                                        ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
-                                        : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
-                                    }`}
-                            >
-                                {index + 1}
-                            </button>
-                        ))}
-                        <button
-                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, pageCount))}
-                            disabled={currentPage === pageCount}
-                            className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                        >
-                            <span className="sr-only">Next</span>
-                            <ChevronRight className="h-5 w-5" aria-hidden="true" />
-                        </button>
-                    </nav>
-                </div>
-            )} */}
       <Pagination
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}

@@ -82,7 +82,7 @@ export default function AdminOrdersPage() {
         setOrders(data.data);
         setFilteredOrders(data.data);
       } catch (err) {
-        setError("An error occurred while fetching orders");
+        setError("error");
       } finally {
         setIsLoading(false);
       }

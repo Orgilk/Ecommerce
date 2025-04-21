@@ -128,12 +128,11 @@ const AdminCategoryDashboard = () => {
 
     let filtered: Product[] = [];
     switch (categoryFromUrl) {
-      case "top-rated":
-        // @ts-ignore
-        filtered = products
-          .filter((product) => product.rating >= 4.5)
-          .sort((a, b) => b.rating - a.rating);
-        break;
+      // case "top-rated":
+      //   filtered = products
+      //     .filter((product) => product.rating >= 4.5)
+      //     .sort((a, b) => b.rating - a.rating);
+      //   break;
       default:
         // @ts-ignore
         filtered = products.filter(
@@ -530,8 +529,7 @@ const AdminCategoryDashboard = () => {
             <AlertTriangle className="h-4 w-4" />
             <AlertTitle>Low Stock Alert</AlertTitle>
             <AlertDescription>
-              {categoryProducts.filter((p) => p.stock < 10).length} products are
-              running low on stock. Please review and restock as needed.
+              {categoryProducts.filter((p) => p.stock < 10).length} барааны тоо бага байна
             </AlertDescription>
           </Alert>
         )}
