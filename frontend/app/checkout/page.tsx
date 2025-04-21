@@ -112,12 +112,12 @@ export default function AnimatedCheckout() {
       }).then((res) => res.json());
       if (response.success) {
         setOpenInvoice(true);
-        toast.success("order placed successfully!");
+        toast.success("amjilttai zahialagdlaa");
       } else {
-        toast.error("failed to place order!");
+        toast.error("aldaa garlaa");
       }
     } catch (error) {
-      toast.error("we are having issue to perform this task!");
+      toast.error("aldaa garlaa");
     } finally {
       setSpinner("");
     }
