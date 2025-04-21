@@ -98,7 +98,6 @@ function MainComponent() {
       animate="visible"
       variants={pageTransition}
     >
-      {/* Fashion Carousel Section */}
       <div className="mt-6">
         <Heading text="" />
         <div className="w-full overflow-hidden">
@@ -106,7 +105,6 @@ function MainComponent() {
         </div>
       </div>
 
-      {/* Shop the Look Section */}
       <div className="mt-10 sm:mt-20">
         <Heading text="Шинээр нэмэгдсэн" />
         <div className="w-full overflow-hidden">
@@ -127,8 +125,6 @@ function MainComponent() {
           <Earthcomponent />
         </div>
       </div>
-
-      {/* Feedback Section */}
       <div className="mt-10 sm:mt-20 w-full overflow-hidden">
         <InfiniteMovingCardsDemo />
       </div>
