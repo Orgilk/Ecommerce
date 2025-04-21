@@ -75,7 +75,6 @@ export function AddToCartModal({
               productId: productId || product._id,
               quantity,
               price: product.price.toString(),
-              size: selectedSize ?? "N/A",
             },
           ],
           totalPrice: 0,
@@ -83,14 +82,14 @@ export function AddToCartModal({
       }).then((res) => res.json());
       console.log("cart: ", response);
       if (!response.success) {
-        alert("1Failed to add to cart. Please try again.");
+        alert("Failed to add to cart. .");
         return;
       }
       setIsSuccess(true);
       setTimeout(() => setIsSuccess(false), 2000);
     } catch (error) {
       console.error("Add to cart error:", error);
-      alert("Failed to add to cart. Please try again.");
+      alert("Failed to add to cart.");
     } finally {
       setIsLoading(false);
       setIsHovered(false);
@@ -282,13 +281,13 @@ export function BuyNowButton({
       }).then((res) => res.json());
 
       if (!response.success) {
-        alert("Failed to add to cart. Please try again.");
+        alert("Failed to add to cart");
         return;
       }
       router.push("/cart");
     } catch (error) {
       console.error("Add to cart error:", error);
-      alert("1Failed to add to cart. Please try again.");
+      alert("Failed to add to cart");
     } finally {
       setIsHovered(false);
     }
