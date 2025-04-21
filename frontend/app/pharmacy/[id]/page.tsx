@@ -35,8 +35,6 @@ const pharmacy = () => {
   const params = useParams();
   const productId = params?.id;
 
-  // Convert string to number (only if it's a single string, not an array)
-
   const [selectedProduct, setSelectedProduct] = useState<ProductL | null>(null);
   useEffect(() => {
     async function fetchData() {
@@ -63,7 +61,6 @@ const pharmacy = () => {
     }
 
     if (productId !== null) {
-      // Check if productId exists before fetching
       fetchData();
     }
   }, [productId]);

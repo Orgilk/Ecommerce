@@ -181,18 +181,17 @@ export default function AnimatedCheckout() {
         (urgent ? 100 : 0)
       ).toFixed(2)
     ),
-    paymentTerms: "Payment due within 5 days of the invoice date.",
-    notes:
-      "Thank you for shopping with Rajwadi Poshak! Please contact us for any queries.",
+    paymentTerms: "Төлбөр 7 хоногтоо төлнө.",
+    notes: "Худалдан авалт хийсэнд баярлалаа.",
   };
 
   const demoCompanyDetails = {
-    name: "Rajwadi Poshak",
-    address: "456 Bazaar Street, Jaipur, Rajasthan, India",
-    gstin: "27AABCU9603R1ZL",
-    email: "support@rajwadiposhak.com",
-    phone: "+91-1122334477",
-    website: "www.rajwadiposhak.com",
+    name: "",
+    address: "",
+    gstin: "",
+    email: "",
+    phone: "",
+    website: "",
   };
 
   const generateOrder = async () => {
@@ -229,11 +228,11 @@ export default function AnimatedCheckout() {
 
   const initPayment = (data: any) => {
     const options: any = {
-      key: "rzp_test_EfZ5xkx1ssjM7g",
+      key: "",
       amount: 1000,
       currency: data.currency,
-      name: "Rajwadi Poshak",
-      description: "Pay securely to rajwadi poshak",
+      name: "",
+      description: "",
       image: "R",
       modal: {
         ondismiss: function () {
@@ -296,7 +295,6 @@ export default function AnimatedCheckout() {
 
         if (coupon.discountType === "percentage") {
           discountAmount = (initialTotalPrice * coupon.discountValue) / 100;
-          // Apply max discount amount if specified
           if (
             coupon.maxDiscountAmount &&
             discountAmount > coupon.maxDiscountAmount
@@ -307,15 +305,12 @@ export default function AnimatedCheckout() {
           discountAmount = coupon.discountValue;
         }
 
-        // Ensure discount doesn't exceed the initial total price
         if (discountAmount > initialTotalPrice) {
           discountAmount = initialTotalPrice;
         }
 
-        // Calculate the final payable amount after applying the discount
         const finalPayableAmount = discountAmount;
 
-        // Update the state with the discounted price
         setCouponValue(finalPayableAmount);
         toast.success("Coupon applied successfully!");
       } else {
@@ -409,7 +404,6 @@ export default function AnimatedCheckout() {
                         <h3 className="text-lg font-medium text-gray-900">
                           {item.name}
                         </h3>
-                        {/* <p className="text-gray-500">Size: {item.size}</p> */}
                         <p className="text-purple-600 font-semibold">
                           Price: ₮{item.price} X {item.quantity}
                         </p>

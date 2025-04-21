@@ -58,7 +58,7 @@ const FileUploadInProductAdd = ({
       }));
       setMessage(result.message);
       setMessageType("success");
-      setFiles([]); // Clear files after successful upload
+      setFiles([]);
     } catch (error) {
       setMessage("An error occurred while uploading.");
       setMessageType("error");
