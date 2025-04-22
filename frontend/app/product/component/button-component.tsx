@@ -26,7 +26,7 @@ interface AddToCartModalProps {
   selectedSize: string;
 }
 
-// extract product ID from pathname
+// Helper function to extract product ID from pathname
 const extractProductId = (pathname: string): string | null => {
   const parts = pathname.split("/");
   const productIndex = parts.indexOf("product");
@@ -274,6 +274,7 @@ export function BuyNowButton({
               productId: productId || product._id,
               quantity,
               price: product.price.toString(),
+              size: selectedSize ?? "N/A",
             },
           ],
           totalPrice: 0,

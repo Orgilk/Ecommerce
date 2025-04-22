@@ -85,7 +85,11 @@ export default function EnhancedOrdersPage() {
       const data = await response.json();
       setOrders(data.data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "error");
+      setError(
+        err instanceof Error
+          ? err.message
+          : "error"
+      );
     } finally {
       setIsLoading(false);
     }
@@ -128,7 +132,7 @@ export default function EnhancedOrdersPage() {
         transition={{ duration: 0.5 }}
         className="text-4xl font-bold text-center text-gray-800 mb-8"
       >
-        Таны захиалгууд
+         Таны захиалгууд
       </motion.h1>
       <AnimatePresence>
         {orders.map((order, index) => (
@@ -164,7 +168,7 @@ export default function EnhancedOrdersPage() {
                   <div>
                     <h3 className="text-lg font-semibold mb-2 flex items-center">
                       <Calendar className="w-5 h-5 mr-2 text-purple-600" />
-                      Захиалгын мэдээлэл
+                       Захиалгын мэдээлэл
                     </h3>
                     <p className="text-sm text-gray-600">
                       Өдөр: {format(new Date(order.createdAt), "PPP")}
@@ -276,7 +280,7 @@ export default function EnhancedOrdersPage() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center text-gray-600 mt-8 text-lg"
         >
-          Та одоогоор захиалга хийгээгүй байна
+          You haven't placed any orders yet. Time to go shopping!
         </motion.p>
       )}
     </div>

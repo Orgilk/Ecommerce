@@ -35,7 +35,7 @@ export interface Product {
   rating: number;
   reviews: number;
   answers: number;
-  inStock: boolean;
+  inStock: boolean; // Make this a boolean
   delivery: string;
   deliveryDate: string;
   seller: string;
@@ -76,6 +76,12 @@ const Product: React.FC<ProductProps> = ({ product }) => {
     }, 2200);
   }, [product._id]);
 
+  // const fetchMoreLikeThis = () => {
+  //   const similarProducts = productData.filter(
+  //     (product) => product.category === product.category
+  //   );
+  //   setSimmilarProducts(similarProducts);
+  // };
   const fetchMoreLikeThis = async () => {
     const response = await fetch("/api/product");
     const data = await response.json();
@@ -283,6 +289,17 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                   />
                   {isSaved ? "Saved" : "Save"}
                 </motion.button>
+
+                {/* <Link href={`/product/compare/${product.name}`}>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 text-gray-600 hover:text-yellow-500"
+                  >
+                    <GitCompare />
+                    Compare Products
+                  </motion.button>
+                </Link> */}
               </div>
             </div>
           </motion.div>
@@ -338,6 +355,75 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                 <div className="text-sm text-gray-500 mt-1"></div>
               </div>
 
+              {/* <div className="space-y-2">
+                <label className="block text-sm font-medium text-gray-700">
+                  size
+                </label>
+                <div className="flex gap-2 flex-wrap">
+                  {product.size?.map((size: any) => {
+                    const available = isSizeAvailable(size);
+                    return (
+                      <button
+                        key={size}
+                        onClick={() => available && setSelectedSize(size)}
+                        disabled={!available}
+                        className={`
+                          px-4 py-2 rounded-md relative
+                          ${
+                            available
+                              ? selectedSize === size
+                                ? "bg-red-500 text-white"
+                                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                              : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                          }
+                          ${!available && "hover:cursor-not-allowed"}
+                        `}
+                      >
+                        {size}
+                        {!available && (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-full h-0.5 bg-gray-400 transform rotate-45" />
+                          </div>
+                        )}
+                      </button>
+                    );
+                  })}
+                  {product.size == undefined ? <h1>5 meter</h1> : null}
+                </div>
+              </div> */}
+
+              {/* <div className="space-y-2">
+                <label className="block text-sm font-medium text-gray-700">
+                  Colors
+                </label>
+                <div className="flex gap-2 flex-wrap">
+                  {product.color && product.color.length > 0 && (
+                    <div className="space-y-2 mt-4">
+                      <div className="flex gap-2 flex-wrap">
+                        {product.color.map((color: string) => (
+                          <motion.button
+                            key={color}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={() => setSelectedColor(color)}
+                            className={`
+                          w-8 h-8 rounded-full border-2 
+                          ${
+                            selectedColor === color
+                              ? "ring-2 ring-offset-2 ring-red-500"
+                              : "hover:ring-1 hover:ring-gray-300"
+                          }
+                        `}
+                            style={{ backgroundColor: color }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {product.color == undefined ? <h1>Red Color</h1> : null}
+                </div>
+              </div> */}
+
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
                   Тоо ширхэг
@@ -391,6 +477,9 @@ const Product: React.FC<ProductProps> = ({ product }) => {
                     <Plus className="w-4 h-4" />
                   </motion.button>
                 </div>
+                {/* <p className="text-xs text-gray-500 mt-1">
+                  Enter a quantity between 1 and 10
+                </p> */}
               </div>
 
               <div className="space-y-4">
@@ -458,7 +547,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
               {simmilarProducts.slice(0, 10).map((product: any) => {
                 return (
                   <motion.div
-                    key={product.id}
+                    key={product.id} // Add a unique key
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}

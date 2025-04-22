@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Loader = () => {
-  // shopping bag
+  // Animation variants for the shopping bag
   const bagVariants = {
     initial: { y: 0 },
     animate: {
@@ -16,7 +16,7 @@ const Loader = () => {
     },
   };
 
-  // rotation
+  // Enhanced sparkle variants with rotation
   const sparkleVariants = {
     initial: { scale: 0, opacity: 0, rotate: 0 },
     animate: {
@@ -32,7 +32,7 @@ const Loader = () => {
     },
   };
 
-  // ribbon animation variants
+  // New ribbon animation variants
   const ribbonVariants = {
     initial: { scaleX: 0 },
     animate: {
@@ -47,6 +47,7 @@ const Loader = () => {
   return (
     <div className="flex items-center justify-center h-screen w-[99vw] bg-gradient-to-b from-white to-red-100">
       <div className="relative">
+        {/* Decorative circles in background */}
         <div className="absolute inset-0 -m-8">
           <motion.div
             className="absolute top-0 left-0 w-16 h-16 border-2 border-red-200 rounded-full"
@@ -112,7 +113,9 @@ const Loader = () => {
             </div>
           </div>
 
+          {/* Bag Body with enhanced design */}
           <div className="w-40 h-32 bg-red-400 rounded-lg relative overflow-hidden">
+            {/* Decorative lines */}
             <div className="absolute inset-0 flex flex-col justify-around py-4 opacity-20">
               {[...Array(3)].map((_, i) => (
                 <motion.div

@@ -147,7 +147,7 @@ export function ProductFilters({
     const updatedColors = selectedColors.includes(color)
       ? selectedColors.filter((c) => c !== color)
       : [...selectedColors, color];
-    onColorChange(updatedColors);
+    onColorChange(updatedColors); // Use onColorChange instead of onSizesChange
     filterProducts(
       selectedCategory,
       searchTerm,
@@ -183,7 +183,7 @@ export function ProductFilters({
         size.some((m) => product.model?.includes(m))
       );
     }
-    console.log("filtered: ", filtered);
+    console.log("filtered: ", filtered)
     setFilteredProducts(filtered);
   };
 

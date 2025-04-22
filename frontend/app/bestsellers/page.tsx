@@ -35,6 +35,7 @@ const CategoryProductListingPage = () => {
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
   const [allProducts, setAllProducts] = useState<Product[]>([]);
 
+  // Mobile and Responsive Checks
   useEffect(() => {
     const checkMobileSize = () => {
       setIsMobile(window.innerWidth < 1024);
@@ -48,10 +49,12 @@ const CategoryProductListingPage = () => {
     };
   }, []);
 
+  // Update Selected Category from URL
   useEffect(() => {
     setSelectedCategory(categoryFromURL || "All");
   }, [categoryFromURL]);
 
+  // Scroll and Mobile Filter Handling
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
@@ -136,6 +139,7 @@ const CategoryProductListingPage = () => {
       //       product.model?.some((m) => selectedModels.includes(m)) ?? false
       //   );
       // }
+      
 
       switch (sortBy) {
         case "price-asc":
@@ -175,6 +179,7 @@ const CategoryProductListingPage = () => {
     setShowFilters(false);
   };
 
+  // Toggle Filters (Mobile)
   const toggleFilters = () => {
     setShowFilters(!showFilters);
   };

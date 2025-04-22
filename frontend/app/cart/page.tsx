@@ -114,6 +114,7 @@ export default function OptimizedCoolCartPage() {
           await fetchCartData();
         } catch (err) {
           setError("Failed to update quantity");
+          // Revert the quantity change if the API call fails
           setCartData((prevData: any) => ({
             ...prevData,
             data: prevData.data.map((item: any) =>
@@ -150,7 +151,9 @@ export default function OptimizedCoolCartPage() {
     }
   };
 
-  const handleApplyCoupon = () => {};
+  const handleApplyCoupon = () => {
+    // Implement coupon logic here
+  };
 
   if (isLoading) return <Loader />;
 
@@ -239,6 +242,7 @@ export default function OptimizedCoolCartPage() {
                   <h3 className="text-lg font-medium text-gray-900">
                     {item.name}
                   </h3>
+                  {/* <p className="text-gray-500">Size: {item.size}</p> */}
                   <p className="text-red-600 font-semibold">₮{item.price}</p>
                   <div className="flex items-center mt-2">
                     <Button
