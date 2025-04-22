@@ -30,7 +30,6 @@ function debounce(func: Function, delay: number) {
 interface CartItem {
   productId: string;
   quantity: number;
-  size: string;
   price: string;
   _id: string;
   image: string;
@@ -84,7 +83,6 @@ export default function OptimizedCoolCartPage() {
       async (
         itemId: string,
         newQuantity: number,
-        size: string,
         price: string
       ) => {
         if (!userId || !cartData) return;
@@ -105,7 +103,6 @@ export default function OptimizedCoolCartPage() {
                 {
                   productId: itemId.toString(),
                   quantity: newQuantity,
-                  size: size,
                   price: price,
                 },
               ],
@@ -258,12 +255,10 @@ export default function OptimizedCoolCartPage() {
                         handleQuantityChange(
                           item.productId,
                           newQuantity,
-                          item.size,
                           item.price
                         );
                       }}
                       variant="outline"
-                      size="icon"
                       className="h-8 w-8"
                     >
                       <Minus className="h-4 w-4" />
@@ -283,12 +278,10 @@ export default function OptimizedCoolCartPage() {
                         handleQuantityChange(
                           item.productId,
                           newQuantity,
-                          item.size,
                           item.price
                         );
                       }}
                       variant="outline"
-                      size="icon"
                       className="h-8 w-8"
                     >
                       <Plus className="h-4 w-4" />
