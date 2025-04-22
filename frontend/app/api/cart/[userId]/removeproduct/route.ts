@@ -59,13 +59,15 @@ export async function DELETE(
       );
     }
 
+    //if the length is zero then delete the cart
     if (updatedProducts.length === 0) {
       await Cart.findByIdAndDelete(cartId);
+      //also delete from user.cart
       await User.findOneAndUpdate({ _id: userId }, { $unset: { cart: null } });
       return NextResponse.json({ success: true, data: null }, { status: 200 });
     }
 
-    // Update cart
+    // Update the cart
     cart.products = updatedProducts;
     cart.totalPrice = updatedProducts.reduce(
       (acc: number, product: any) =>
