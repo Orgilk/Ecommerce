@@ -15,8 +15,9 @@ import { useRouter, usePathname } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
 interface Product {
-  _id: string;
+  id: string;
   name: string;
+  mongoId: string;
   price: number;
 }
 
@@ -63,6 +64,8 @@ export function AddToCartModal({
     }
     try {
       setIsLoading(true);
+      console.log(productId)
+      console.log(product.id)
       const response = await fetch("/api/cart", {
         method: "POST",
         headers: {
@@ -72,9 +75,10 @@ export function AddToCartModal({
           userId,
           products: [
             {
-              productId: productId || product._id,
+              productId: product.mongoId,
               quantity,
               price: product.price.toString(),
+              size:"L"
             },
           ],
           totalPrice: 0,
@@ -262,6 +266,7 @@ export function BuyNowButton({
       return;
     }
     try {
+      console.log("mongoID")
       const response = await fetch("/api/cart", {
         method: "POST",
         headers: {
@@ -271,10 +276,10 @@ export function BuyNowButton({
           userId,
           products: [
             {
-              productId: productId || product._id,
+              productId: product.mongoId,
               quantity,
               price: product.price.toString(),
-              size: selectedSize ?? "N/A",
+              size: selectedSize || "L",
             },
           ],
           totalPrice: 0,
@@ -282,7 +287,7 @@ export function BuyNowButton({
       }).then((res) => res.json());
 
       if (!response.success) {
-        alert("Failed to add to cart");
+        alert("Failed to add to cart3");
         return;
       }
       router.push("/cart");

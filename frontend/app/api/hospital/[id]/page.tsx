@@ -25,7 +25,7 @@ export interface ProductL {
   description: string;
 }
 
-const pharmacy = () => {
+const Hospital = () => {
   const params = useParams();
   const productId = params?.id;
   const [selectedProduct, setSelectedProduct] = useState<ProductL | null>(null);
@@ -74,7 +74,7 @@ const pharmacy = () => {
   // }, [numericId]);
 
   if (!selectedProduct) {
-    return <div className="p-4">Бүтээгдэхүүн олдсонгүй</div>;
+    return <div className="p-4">Loading or Product not found</div>;
   }
 
   return (
@@ -87,4 +87,4 @@ const pharmacy = () => {
   );
 };
 
-export default pharmacy;
+export default Hospital;

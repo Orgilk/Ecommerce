@@ -5,35 +5,53 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import { ProductCard } from "@/components/ui/product-card";
 import { ProductFilters } from "@/components/products/product-filters";
-import { ProductSkeleton } from "@/components/products/product-skeleton";
+// import { products as productData } from "product/data"
+import { ProductSkeleton } from "@/components/skeleton";
 
-interface Product {
-  _id: string;
-  name: string;
-  description?: string;
-  category: string;
+import { products as productData } from "@/app/product/data";
+
+export interface Product {
+  id: number;
+  name: string | "";
+  sale?: string;
   price: number;
-  model?: string[];
-  image?: string;
+  rating: number;
+  reviews: number;
+  answers: number;
+  inStock: boolean; // Make this a boolean
+  delivery: string;
+  deliveryDate: string;
+  category: string;
+  video?: string;
+  model: string;
+  size?: string[];
+  images: string[];
+  features: string[];
+  description: string;
 }
 
 const CategoryProductListingPage = () => {
   const searchParams = useSearchParams();
   const categoryFromURL = searchParams.get("category");
 
-  const [selectedCategory, setSelectedCategory] = useState(
-    categoryFromURL || "All"
-  );
+  const [selectedCategory, setSelectedCategory] = useState(categoryFromURL || "All");
   const [sortBy, setSortBy] = useState("default");
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [priceRange, setPriceRange] = useState([0, 50000]);
-  const [selectedModels, setselectedModels] = useState<string[]>([]);
+  const [priceRange, setPriceRange] = useState([0, 10000]);
+  const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+
   const [allProducts, setAllProducts] = useState<Product[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+
+  // Initialize products
+  useEffect(() => {
+    setAllProducts(productData);
+    setIsLoading(false);
+  }, []);
 
   // Mobile and Responsive Checks
   useEffect(() => {
@@ -42,10 +60,10 @@ const CategoryProductListingPage = () => {
     };
 
     checkMobileSize();
-    window.addEventListener("resize", checkMobileSize);
+    window.addEventListener('resize', checkMobileSize);
 
     return () => {
-      window.removeEventListener("resize", checkMobileSize);
+      window.removeEventListener('resize', checkMobileSize);
     };
   }, []);
 
@@ -64,83 +82,70 @@ const CategoryProductListingPage = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [isMobile]);
 
   // Fetch Products
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        setIsLoading(true);
-        const response = await fetch("/api/product");
-        const data = await response.json();
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       setIsLoading(true);
+  //       const response = await fetch('/api/product');
+  //       const data = await response.json();
 
-        const productsArray = Array.isArray(data)
-          ? data
-          : data.data
-          ? data.data
-          : [];
+  //       const productsArray = Array.isArray(data)
+  //         ? data
+  //         : data.data
+  //           ? data.data
+  //           : [];
 
-        const productsToSet = categoryFromURL
-          ? productsArray.filter(
-              (product: Product) => product.category === categoryFromURL
-            )
-          : productsArray;
+  //       const productsToSet = categoryFromURL
+  //         ? productsArray.filter((product: Product) => product.category === categoryFromURL)
+  //         : productsArray;
 
-        setAllProducts(productsArray);
-        setFilteredProducts(productsToSet);
-      } catch (error) {
-        console.error("Error fetch:", error);
-        setAllProducts([]);
-        setFilteredProducts([]);
-      } finally {
-        setIsLoading(false);
-      }
-    }
+  //       setAllProducts(productsArray);
+  //       setFilteredProducts(productsToSet);
+  //     } catch (error) {
+  //       console.error("Error fetching products:", error);
+  //       setAllProducts([]);
+  //       setFilteredProducts([]);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   }
 
-    fetchData();
-  }, [categoryFromURL]);
+  //   fetchData();
+  // }, [categoryFromURL]);
 
-  // Apply Filters,sort
+  // Apply Filters and Sorting
   useEffect(() => {
     const applyFilters = () => {
       let result = [...allProducts];
 
       if (selectedCategory !== "All") {
-        result = result.filter(
-          (product) => product.category === selectedCategory
-        );
+        result = result.filter(product => product.category === selectedCategory);
       }
 
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
-        result = result.filter(
-          (product) =>
-            product.name.toLowerCase().includes(query) ||
-            product.description?.toLowerCase().includes(query) ||
-            product.category.toLowerCase().includes(query)
+        result = result.filter(product =>
+          product.name.toLowerCase().includes(query) ||
+          product.description?.toLowerCase().includes(query) ||
+          product.category.toLowerCase().includes(query)
         );
       }
 
-      result = result.filter(
-        (product) =>
-          product.price >= priceRange[0] && product.price <= priceRange[1]
+      result = result.filter(product =>
+        product.price >= priceRange[0] && product.price <= priceRange[1]
       );
 
-      if (selectedModels.length > 0) {
-        result = result.filter((product) =>
-          selectedModels.includes(product.model)
+      if (selectedSizes.length > 0) {
+        result = result.filter(product =>
+          selectedSizes.includes(product.model)
         );
       }
-      // if (selectedModels.length > 0) {
-      //   result = result.filter(
-      //     (product) =>
-      //       product.model?.some((m) => selectedModels.includes(m)) ?? false
-      //   );
-      // }
       
-
       switch (sortBy) {
         case "price-asc":
           result.sort((a, b) => a.price - b.price);
@@ -160,21 +165,14 @@ const CategoryProductListingPage = () => {
     };
 
     applyFilters();
-  }, [
-    selectedCategory,
-    sortBy,
-    searchQuery,
-    priceRange,
-    selectedModels,
-    allProducts,
-  ]);
+  }, [selectedCategory, sortBy, searchQuery, priceRange, selectedSizes, allProducts]);
 
   // Reset Filters
   const resetFilters = () => {
     setSortBy("default");
     setSearchQuery("");
-    setPriceRange([0, 50000]);
-    setselectedModels([]);
+    setPriceRange([0, 10000]);
+    setSelectedSizes([]);
     setSelectedCategory("All");
     setShowFilters(false);
   };
@@ -191,9 +189,9 @@ const CategoryProductListingPage = () => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        staggerChildren: 0.1,
-      },
-    },
+        staggerChildren: 0.1
+      }
+    }
   };
 
   const productCardVariants = {
@@ -203,16 +201,16 @@ const CategoryProductListingPage = () => {
       y: 0,
       transition: {
         duration: 0.4,
-        ease: "easeOut",
-      },
+        ease: "easeOut"
+      }
     },
     hover: {
       scale: 1.05,
       transition: {
         duration: 0.3,
-        ease: "easeInOut",
-      },
-    },
+        ease: "easeInOut"
+      }
+    }
   };
 
   return (
@@ -253,8 +251,8 @@ const CategoryProductListingPage = () => {
               onSearchChange={setSearchQuery}
               priceRange={priceRange}
               onPriceRangeChange={setPriceRange}
-              selectedSizes={selectedModels}
-              onSizesChange={setselectedModels}
+              selectedSizes={selectedSizes}
+              onSizesChange={setSelectedSizes}
               // @ts-ignore
               onReset={resetFilters}
             />
@@ -265,13 +263,11 @@ const CategoryProductListingPage = () => {
       {/* Desktop Filters Sidebar */}
       {!isMobile && (
         <motion.aside
-          className={`lg:w-64 flex-shrink-0 transition-all duration-300 ${
-            isScrolled ? "lg:sticky lg:top-4" : ""
-          }`}
+          className={`lg:w-64 flex-shrink-0 transition-all duration-300 ${isScrolled ? "lg:sticky lg:top-4" : ""}`}
           style={{
             position: isScrolled ? "sticky" : "relative",
             top: isScrolled ? "1rem" : "0",
-            height: "fit-content",
+            height: "fit-content"
           }}
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -287,8 +283,8 @@ const CategoryProductListingPage = () => {
               onSearchChange={setSearchQuery}
               priceRange={priceRange}
               onPriceRangeChange={setPriceRange}
-              selectedSizes={selectedModels}
-              onSizesChange={setselectedModels}
+              selectedSizes={selectedSizes}
+              onSizesChange={setSelectedSizes}
               // @ts-ignore
               onReset={resetFilters}
             />
@@ -329,31 +325,33 @@ const CategoryProductListingPage = () => {
           animate="visible"
         >
           <AnimatePresence mode="wait">
-            {isLoading
-              ? Array.from({ length: 6 }).map((_, i) => (
-                  <motion.div
-                    key={`skeleton-${i}`}
-                    variants={productCardVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="hidden"
-                  >
-                    <ProductSkeleton />
-                  </motion.div>
-                ))
-              : filteredProducts.map((product) => (
-                  <motion.div
-                    key={product._id}
-                    variants={productCardVariants}
-                    initial="hidden"
-                    animate="visible"
-                    whileHover="hover"
-                    className="transform-gpu"
-                  >
-                    {/* @ts-ignore */}
-                    <ProductCard {...product} />
-                  </motion.div>
-                ))}
+            {isLoading ? (
+              Array.from({ length: 6 }).map((_, i) => (
+                <motion.div
+                  key={`skeleton-${i}`}
+                  variants={productCardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                >
+                  <ProductSkeleton />
+                </motion.div>
+              ))
+            ) : (
+              filteredProducts.map((product) => (
+                <motion.div
+                  key={product.id}
+                  variants={productCardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                  className="transform-gpu"
+                >
+                  {/* @ts-ignore */}
+                  <ProductCard {...product} />
+                </motion.div>
+              ))
+            )}
           </AnimatePresence>
         </motion.div>
 
@@ -365,7 +363,7 @@ const CategoryProductListingPage = () => {
             className="text-center py-12"
           >
             <p className="text-xl text-neutral-600 dark:text-neutral-400">
-              Таны хайлтанд тохирох бүтээгдэхүүн олдсонгүй
+            Таны хайлтанд тохирох бүтээгдэхүүн олдсонгүй
             </p>
             <button
               onClick={resetFilters}
@@ -380,4 +378,4 @@ const CategoryProductListingPage = () => {
   );
 };
 
-export default CategoryProductListingPage;
+export default CategoryProductListingPage;  

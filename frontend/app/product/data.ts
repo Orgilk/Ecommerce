@@ -1,5 +1,6 @@
 interface Product {
   id: number;
+  mongoId?: string | "";
   name: string | "";
   sale?: string;
   price: number;
@@ -494,6 +495,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
+    mongoId: "67ff6b0199c9294c7a30b81c",
     name: "Ясурамин 10мл",
     price: 5000,
     rating: 4,

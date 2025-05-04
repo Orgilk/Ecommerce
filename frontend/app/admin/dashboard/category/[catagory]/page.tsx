@@ -469,12 +469,12 @@ const AdminCategoryDashboard = () => {
                         <p className="text-sm text-gray-500">Stock</p>
                         <p
                           className={`text-lg font-semibold ${
-                            product.inStock < 10
+                            product.stock < 10
                               ? "text-red-600"
                               : "text-green-600"
                           }`}
                         >
-                          {product.inStock}
+                          {product.stock}
                         </p>
                       </div>
                       <div>

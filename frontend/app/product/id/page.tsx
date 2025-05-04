@@ -28,7 +28,7 @@ import { products as productData } from "@/app/product/data";
 
 export interface Product {
   id: number;
-
+  mongoId?: string | "";
   name: string | "";
   sale?: string;
   price: number;
