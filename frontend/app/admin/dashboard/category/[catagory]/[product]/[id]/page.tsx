@@ -375,7 +375,7 @@ export default function ProductDetails({ params }: PageProps) {
       {/* Recent Customers */}
       <Card className="mb-8">
         <CardHeader>
-          <CardTitle>Cүүлийн хэрэлэгчид</CardTitle>
+          <CardTitle>Cүүлийн хэрэглэгчид</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-2">
