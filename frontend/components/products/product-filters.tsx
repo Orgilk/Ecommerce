@@ -66,7 +66,7 @@ export function ProductFilters({
 }: ProductFiltersProps) {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [searchTerm, setSearchTerm] = useState("");
-  const [localPriceRange, setLocalPriceRange] = useState([0, 10000]);
+  const [localPriceRange, setLocalPriceRange] = useState([0, 50000]);
   const [internalPriceRange, setInternalPriceRange] = useState(priceRange);
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
@@ -183,7 +183,7 @@ export function ProductFilters({
         size.some((m) => product.model?.includes(m))
       );
     }
-    console.log("filtered: ", filtered)
+    console.log("filtered: ", filtered);
     setFilteredProducts(filtered);
   };
 
